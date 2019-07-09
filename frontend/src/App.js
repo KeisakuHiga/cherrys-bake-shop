@@ -3,7 +3,9 @@ import "./App.css";
 
 class App extends React.Component {
   async componentDidMount() {
-    const response = await fetch(`${process.env.REACT_APP_API_URL}/HELLO`);
+    console.log(process.env);
+    const response = await fetch(`${process.env.REACT_APP_API_URL}/hello`);
+    console.log(response);
     const data = await response.json();
     console.log(data);
   }
