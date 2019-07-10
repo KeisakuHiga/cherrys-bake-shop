@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const app = new express();
 const cors = require("cors");
-app.use(cors());
 
 mongoose.connect(process.env.DB_URL, { useNewUrlParser: true }, err => {
   if (err) {
@@ -13,14 +12,15 @@ mongoose.connect(process.env.DB_URL, { useNewUrlParser: true }, err => {
   }
 });
 
+const usersRoutes = require('./routes/usersRoutes')
 const port = process.env.PORT || 5000;
 const User = require("./models/User");
 
-app.use(express.json());
+// middleware
+app.use(express.json())
+app.use(cors())
+app.use('/', usersRoutes)
 
-app.get("/hello", (req, res) => {
-  res.json("hello from express");
-});
 
 app.post("/create-user", async (req, res) => {
   try {
