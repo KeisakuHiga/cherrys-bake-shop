@@ -14,13 +14,15 @@ const checkPassword = async (password, hash) => {
 const generateUser = async (username, password) => {
   const hash = await generateHash(password)
   const newUser = new User({
-    name: username,
+    username: username,
     password: hash
   })
   return await newUser.save()
 }
 
 const generateAccessToken = ({ name }) => {
+  console.log('from GAT')
+  console.log({name})
   return jwt.sign({ name }, process.env.JWT_SECRET, {expiresIn: '7d'});
 } 
 

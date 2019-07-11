@@ -6,7 +6,7 @@ const register = async (req, res) => {
   const { username, password } = req.body
   if (username && password) {
     try {
-      const query = await User.findOne({ name: username })
+      const query = await User.findOne({ username })
       console.log(query)
       if (query === null) {
         const user = await generateUser(username, password)
