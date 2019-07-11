@@ -21,22 +21,6 @@ app.use(express.json())
 app.use(cors())
 app.use('/', usersRoutes)
 
-
-app.post("/create-user", async (req, res) => {
-  try {
-    const { username, password } = req.body;
-    const newUser = new User({
-      username: username,
-      password: password
-    });
-    console.log(newUser);
-    const savedUser = await newUser.save();
-    res.status(200).send({ savedUser });
-  } catch (err) {
-    res.status(400).send(err);
-  }
-});
-
 app.listen(port, () => {
   console.log(`listening to port ${port}`);
 });
