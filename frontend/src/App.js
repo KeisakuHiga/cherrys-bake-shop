@@ -1,5 +1,7 @@
 import React from "react";
+import Routes from './Routes'
 import "./App.css";
+
 const axios = require('axios')
 
 class App extends React.Component {
@@ -16,14 +18,8 @@ class App extends React.Component {
   }
 
   render() {
-    
-    const { hello } = this.state
-    console.log(hello)
-    if(!hello) {
-      return null
-    }
     return(
-      <h1>{hello.hello}</h1>
+      <Routes />
     ) 
   }
 }
