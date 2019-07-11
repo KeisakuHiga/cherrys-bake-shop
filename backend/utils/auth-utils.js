@@ -20,10 +20,10 @@ const generateUser = async (username, password) => {
   return await newUser.save()
 }
 
-const generateAccessToken = ({ name }) => {
+const generateAccessToken = ({ username }) => {
   console.log('from GAT')
-  console.log({name})
-  return jwt.sign({ name }, process.env.JWT_SECRET, {expiresIn: '7d'});
+  console.log({ username })
+  return jwt.sign({ username }, process.env.JWT_SECRET, {expiresIn: '7d'});
 } 
 
 module.exports = {

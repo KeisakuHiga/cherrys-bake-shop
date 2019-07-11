@@ -30,7 +30,7 @@ const login = async (req, res) => {
   const { username, password } = req.body
   if (username && password) {
     try {
-      const query = await User.findOne({ name: username })
+      const query = await User.findOne({ username: username })
       if (query !== null) {
         const result = await checkPassword(password, query.password)
         if (!result) {
