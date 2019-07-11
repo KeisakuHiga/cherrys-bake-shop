@@ -43,7 +43,7 @@ const login = async (req, res) => {
         return res.status(403).send('incorrect credentials')
       }
     } catch(err) {
-      return res.status(404).send('an error occurred')
+      return res.status(404).send('an error occurred' + err)
     }
   } else {
     return res.status(403).send('incorrect credentials')
