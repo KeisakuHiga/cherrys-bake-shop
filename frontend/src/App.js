@@ -1,6 +1,8 @@
 import React from "react";
 import Routes from './Routes'
 import "./App.css";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Navbar from './components/Navbar/Navbar'
 
 // const axios = require('axios')
 
@@ -21,8 +23,11 @@ class App extends React.Component {
 
   render() {
     return(
-      <Routes />
-    ) 
+      <div>
+        <Navbar />
+        <Routes />
+      </div>
+      ) 
   }
 }
 
