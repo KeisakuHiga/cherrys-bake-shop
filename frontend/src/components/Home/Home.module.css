@@ -1,0 +1,71 @@
+.homecontainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+}
+
+.gallerycontainer {
+  background-color: yellow;
+  margin: 30px;
+  height: 1024px;
+  width: 1000px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+}
+
+.galleryone {
+  background-color: gray;
+  height: 250px;
+  width: 300px;
+}
+
+.gallerytwo {
+  background-color: gray;
+  height: 250px;
+  width: 300px;
+}
+
+.gallerythree {
+  background-color: gray;
+  height: 250px;
+  width: 300px;
+}
+
+.galleryfour {
+  background-color: gray;
+  height: 250px;
+  width: 300px;
+}
+
+.galleryfive {
+  background-color: gray;
+  height: 250px;
+  width: 300px;
+}
+
+.gallerysix {
+  background-color: gray;
+  height: 250px;
+  width: 300px;
+}
+
+.galleryseven {
+  background-color: gray;
+  height: 250px;
+  width: 300px;
+}
+
+.galleryeight {
+  background-color: gray;
+  height: 250px;
+  width: 300px;
+}
+
+.gallerynine {
+  background-color: gray;
+  height: 250px;
+  width: 300px;
+}
