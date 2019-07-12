@@ -1,15 +1,14 @@
 import React from "react";
-import Routes from './Routes'
+import Routes from "./Routes";
 import "./App.css";
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Navbar from './components/Navbar/Navbar'
+import "bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 // const axios = require('axios')
 
 class App extends React.Component {
-  state = {}
-
-  
+  state = {};
 
   componentDidMount = async () => {
     // const url = process.env.REACT_APP_API_URL
@@ -19,15 +18,16 @@ class App extends React.Component {
     // this.setState({
     //   hello: response.data
     // })
-  }
+  };
 
   render() {
-    return(
+    return (
       <div>
         <Navbar />
         <Routes />
+        <Footer />
       </div>
-      ) 
+    );
   }
 }
 
