@@ -2,6 +2,10 @@ import React from 'react'
 
  function Navbar() {
   return (
+    <>
+    <div>
+      <img src="" alt="Cherry's Logo"/>
+    </div>
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
@@ -23,6 +27,7 @@ import React from 'react'
         </ul>
       </div>
     </nav>
+    </>
   )
 }
 
