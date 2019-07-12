@@ -13,7 +13,7 @@ const quoteSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  userId: { type: Schema.Types.ObjectId, ref: 'User' }
+  user: { type: Schema.Types.ObjectId, ref: 'User' }
 })
 
 module.exports =  mongoose.model('Quote', quoteSchema)

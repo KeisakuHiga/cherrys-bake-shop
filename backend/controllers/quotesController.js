@@ -2,9 +2,10 @@ const User = require('../models/User')
 const Quote = require('../models/Quote')
 
 const getAllQuotes = async (req, res) => {
-  // const allQuotes = await Quote.find().populate('users') 
+  const allQuotes = await Quote.find().populate('users') 
   // console.log(allQuotes)
-  res.status(200).send({hello:'hello'})
+  // res.status(200).send({hello:'hello'})
+  res.status(200).send(allQuotes)
 }
 
 const getOneQuote = async (req, res) => {
@@ -24,11 +25,8 @@ const getOneQuote = async (req, res) => {
 }
 
 const createNewQuote = async (req, res) => {
-  // console.log(req.body)
   try {
     const {
-      // username,
-      // contact,
       firstName,
       lastName,
       email,
@@ -42,16 +40,6 @@ const createNewQuote = async (req, res) => {
       fillingFlavour,
       message
     } = req.body
-
-    // const {
-    //   email,
-    //   phoneNumber
-    // } = contact
-
-    // const {
-    //   firstName,
-    //   lastName
-    // } = username
 
     const newUser = await new User({
       userName: {
@@ -75,7 +63,7 @@ const createNewQuote = async (req, res) => {
       cakeFlavour,
       fillingFlavour,
       message,
-      userId: savedUser._id
+      user: savedUser
     })
     await newQuote.save()
     res.send(newQuote)
