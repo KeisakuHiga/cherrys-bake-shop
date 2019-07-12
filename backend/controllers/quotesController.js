@@ -2,7 +2,7 @@ const User = require('../models/User')
 const Quote = require('../models/Quote')
 
 const getAllQuotes = async (req, res) => {
-  const allQuotes = await Quote.find().populate('users') 
+  const allQuotes = await Quote.find().populate('user') 
   // console.log(allQuotes)
   // res.status(200).send({hello:'hello'})
   res.status(200).send(allQuotes)
@@ -63,7 +63,7 @@ const createNewQuote = async (req, res) => {
       cakeFlavour,
       fillingFlavour,
       message,
-      user: savedUser
+      user: savedUser._id
     })
     await newQuote.save()
     res.send(newQuote)
