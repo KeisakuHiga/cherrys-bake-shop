@@ -34,30 +34,6 @@ const userSchema = new Schema({
   orders: [{ type: Schema.Types.ObjectId, ref: 'Order' }]
 })
 
-const orderSchema = new Schema({
-  typeOfProduct: String,
-  dateOfEvent: Date,
-  typeOfOccasion: String,
-  numberOfGuests: Number,
-  cakeFlavour: String,
-  fillingFlavour: String,
-  message: String,
-  createdAt: {
-    type: Date,
-    default: Date.now
-  },
-  updatedAt: {
-    type: Date,
-    default: Date.now
-  },
-  userId: { type: Schema.Types.ObjectId, ref: 'Order' }
-})
-
-
 const User = mongoose.model('User', userSchema)
-const Order = mongoose.model('Order', orderSchema)
 
-module.exports = {
-  User,
-  Order
-}
+module.exports = User

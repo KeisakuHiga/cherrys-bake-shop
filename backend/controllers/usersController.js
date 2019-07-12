@@ -1,4 +1,4 @@
-const { Order, User } = require('../models/User')
+const { Quote, User } = require('../models/User')
 
 const hello = (req, res) => {
   res.send({
@@ -7,7 +7,7 @@ const hello = (req, res) => {
 }
 
 const getAllUsers = async (req, res) => {
-  const foundUsers = await User.find()//.populate('orders') // 'orders' is the key from User model
+  const foundUsers = await User.find()//.populate('quotes') // 'quotes' is the key from User model
   console.log(foundUsers)
   res.status(200).send(foundUsers)
 }
