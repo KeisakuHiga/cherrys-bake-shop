@@ -1,0 +1,9 @@
+.photocontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cherryphotograph {
+  width: 500px;
+  height: 350px;
+}

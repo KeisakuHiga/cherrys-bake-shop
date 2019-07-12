@@ -1,13 +1,20 @@
 import React, { Component } from "react";
+import Cherryfront from "../About/Cherryfront.png";
+import style from "../About/About.module.css";
+
 class About extends Component {
   state = {};
   render() {
     return (
       <>
-        <div>
-          <img src="" alt="Cherry's Bakeshop and Cafe" />
+        <div className={style.photocontainer}>
+          <img
+            className={style.cherryphotograph}
+            src={Cherryfront}
+            alt="Cherry's Bakeshop and Cafe"
+          />
         </div>
-        <div className="About-container-expand-lg p-2 bg-dark text-white text-justify">
+        <div className="Aboutcontainer-expand-lg p-2 bg-dark text-white text-justify">
           <h1>Our Story</h1>
           <p>
             The Cherry's Bakeshop and Cafe is dream of Mariz and Richard Rico
