@@ -1,6 +1,5 @@
 // This login form is used for only admin account
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom'
 import axios from 'axios'
 
 class Login extends Component {
