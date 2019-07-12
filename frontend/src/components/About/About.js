@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 class About extends Component {
-  state = {  }
-  render() { 
+  state = {};
+  render() {
     return (
-      <h1>Hello from About.js component</h1>
-
+      <div className="About-container">
+        <p>Hello from KK.js component</p>
+      </div>
     );
   }
 }
