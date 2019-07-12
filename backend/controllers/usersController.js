@@ -1,5 +1,3 @@
-const mongoose = require('mongoose') // is it necessary??
-
 const { Order, User } = require('../models/User')
 
 const hello = (req, res) => {
