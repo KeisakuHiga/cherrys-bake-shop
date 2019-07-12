@@ -1,6 +1,5 @@
-const User = require('../models/User')
+const User = require('../models/Quote')
 const { checkPassword, generateUser, generateAccessToken } = require('../utils/auth-utils.js')
-
 // register post endpoint
 const register = async (req, res) => {
   const { username, password } = req.body
