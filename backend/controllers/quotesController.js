@@ -1,9 +1,10 @@
+const User = require('../models/User')
 const Quote = require('../models/Quote')
 
 const getAllQuotes = async (req, res) => {
-  const allQuotes = await Quote.find()//.populate('users') 
-  console.log(allQuotes)
-  res.status(200).send(allQuotes)
+  // const allQuotes = await Quote.find().populate('users') 
+  // console.log(allQuotes)
+  res.status(200).send({hello:'hello'})
 }
 
 const getOneQuote = async (req, res) => {
@@ -23,8 +24,50 @@ const getOneQuote = async (req, res) => {
 }
 
 const createNewQuote = async (req, res) => {
+  // console.log(req.body)
   try {
-    const { 
+    const {
+      // username,
+      // contact,
+      firstName,
+      lastName,
+      email,
+      phoneNumber,
+      password,
+      typeOfProduct,
+      dateOfEvent,
+      typeOfOccasion,
+      numberOfGuests,
+      cakeFlavour,
+      fillingFlavour,
+      message
+    } = req.body
+
+    // const {
+    //   email,
+    //   phoneNumber
+    // } = contact
+
+    // const {
+    //   firstName,
+    //   lastName
+    // } = username
+
+    const newUser = await new User({
+      userName: {
+        firstName,
+        lastName
+      },
+      contact: {
+        email,
+        phoneNumber
+      },
+      password
+    })
+    const savedUser = await newUser.save()
+    console.log(savedUser)
+
+    const newQuote = await new Quote({
       typeOfProduct,
       dateOfEvent,
       typeOfOccasion,
@@ -32,46 +75,19 @@ const createNewQuote = async (req, res) => {
       cakeFlavour,
       fillingFlavour,
       message,
-      createdAt,
-      userId
-    } = req.body
-
-    const newQuote = await new Quote({
-        
-    })
-    ingredients.map( async (ingredient) => {
-      const newIngredient = await Ingredient.create({
-        name: ingredient.name,
-        volume: ingredient.volume
-      })
-      newQuote.ingredients.push(newIngredient._id)
+      userId: savedUser._id
     })
     await newQuote.save()
     res.send(newQuote)
 
-    // let ingArray = []
-    // const newRecipe =  new Recipe({
-    //   name: name,
-    //   ingredients: ingArray,
-    //   methods: methods,
-    //   img: img
-    // })
-
-    // ingredients.map( async ing => {
-    //   const newIngredient = await Ingredient.create({ name: ing.name, volume: ing.volume })
-    //   newRecipe.ingredients.push(newIngredient._id)
-    // })
-    
-    // console.log(newRecipe.ingredients)
-    // await newRecipe.save()
-    // res.send(newRecipe)
-    }catch(err) {
+  }catch(err) {
+    console.log(err)
     res.status(400).send(`There is an error ${err}`)
   }
 }
 
 module.exports = {
   getAllQuotes,
-  getOneQuote,
+  // getOneQuote,
   createNewQuote
 }
