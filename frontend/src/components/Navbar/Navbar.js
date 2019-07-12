@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import style from '../Navbar/Navbar.module.css'
 import CherrysLogo from '../Navbar/cherryslogo.png'
 
- function Navbar() {
+function Navbar() {
   return (
     <>
       <div className={style.logocontainer}>

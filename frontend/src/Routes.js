@@ -8,6 +8,7 @@ import Home from './components/Home/Home'
 import Login from './components/Login/Login'
 import NoMatch from './components/NoMatch/NoMatch'
 import Quote from './components/Quote/Quote'
+import Admin from './components/Admin/Admin'
 
 class Routes extends React.Component {
   state = {}
@@ -19,6 +20,7 @@ class Routes extends React.Component {
         <Route path="/Faq" component={Faq} />
         <Route path="/Login" exact component={Login} />
         <Route path="/Quote" component={Quote} />
+        <Route path="/Admin" component={Admin} />
         <Route path="/" exact component={Home} />
         <Route component={NoMatch} />
       </Switch>

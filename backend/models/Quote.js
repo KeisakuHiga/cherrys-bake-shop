@@ -13,12 +13,7 @@ const quoteSchema = new Schema({
     type: Date,
     default: Date.now
   },
-  updatedAt: {
-    type: Date,
-    default: Date.now
-  },
-  userId: { type: Schema.Types.ObjectId, ref: 'Quote' }
+  user: { type: Schema.Types.ObjectId, ref: 'User' }
 })
 
-const Quote = mongoose.model('Quote', quoteSchema)
-module.exports = Quote
+module.exports =  mongoose.model('Quote', quoteSchema)
