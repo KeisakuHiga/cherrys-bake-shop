@@ -10,14 +10,14 @@ const getAllQuotes = async (req, res) => {
 
 const getOneQuote = async (req, res) => {
   try {
-    const recipeId = req.params
-    // console.log(recipeId)
-    const recipe = await Recipe.findOne(recipeId)
-    if(!recipe) {
-      res.status(400).send(`Can not find by id #${recipeId.id}`)
+    const quoteId = req.params
+    // console.log(quoteId)
+    const quote = await Quote.findOne(quoteId)
+    if(!quote) {
+      res.status(400).send(`Can not find by id #${quoteId.id}`)
     } else {
-      console.log(recipe)
-      res.status(200).send(recipe)
+      console.log(quote)
+      res.status(200).send(quote)
     }
   } catch(err) {
     res.send(`There is an err: ${err}`)
@@ -76,6 +76,6 @@ const createNewQuote = async (req, res) => {
 
 module.exports = {
   getAllQuotes,
-  // getOneQuote,
+  getOneQuote,
   createNewQuote
 }
