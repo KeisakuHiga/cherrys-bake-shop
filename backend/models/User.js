@@ -22,7 +22,6 @@ const userSchema = new Schema({
       required: true
     }
   },
-  password: String,
   createdAt: {
     type: Date,
     default: Date.now
