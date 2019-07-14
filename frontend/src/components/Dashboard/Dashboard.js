@@ -1,11 +1,23 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 const axios = require('axios')
+
 class Admin extends Component {
   state = {  }
 
   getAllQuotes = async () => {
     // const url = 'https://cherrysbakeshopandcafe.khiga2943.now.sh/quote/getAllQuotes'
     const url = 'http://localhost:5000/quote/getAllQuotes'
+    const response = await axios.get(url)
+    const data = response.data
+    this.setState({
+      allQuotes: data
+    })
+  }
+
+  getOneQuote = async () => {
+    // const url = 'https://cherrysbakeshopandcafe.khiga2943.now.sh/quote/:id'
+    const url = 'http://localhost:5000/quote/:id'
     const response = await axios.get(url)
     const data = response.data
     this.setState({
@@ -36,6 +48,7 @@ class Admin extends Component {
           <table className="table table-striped">
             <thead>
               <tr>
+                <th scope="col">#</th>
                 <th scope="col">User First Name</th>
                 <th scope="col">User Last Name</th>
                 <th scope="col">Product Type</th>
@@ -46,8 +59,9 @@ class Admin extends Component {
             <tbody>
               {allQuotes.map((quote, index) => (
                 <tr key={index} className="DashBoard-quotes-container">
-                  <th key={quote.user.userName.firstName} scope="row">{quote.user.userName.firstName}</th>
-                  <th key={quote.user.userName.lastName} >{quote.user.userName.lastName}</th>
+                  <th key={quote._id} scope="row"><Link to={`/QuoteDetail/${quote._id}`}>Quote Detail</Link></th>
+                  <td key={quote.user.userName.firstName}>{quote.user.userName.firstName}</td>
+                  <td key={quote.user.userName.lastName}>{quote.user.userName.lastName}</td>
                   <td key={quote.typeOfProduct}>{quote.typeOfProduct}</td>
                   <td key={quote.dateOfEvent}>{this.dateFormat(quote.dateOfEvent)}</td>
                   <td key={quote.createdAt}>{this.dateFormat(quote.createdAt)}</td>

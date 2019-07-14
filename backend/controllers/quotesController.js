@@ -1,5 +1,6 @@
 const User = require('../models/User')
 const Quote = require('../models/Quote')
+const ObjectId = require('mongoose').Types.ObjectId
 
 const getAllQuotes = async (req, res) => {
   const allQuotes = await Quote.find().populate('user') 
@@ -10,13 +11,12 @@ const getAllQuotes = async (req, res) => {
 
 const getOneQuote = async (req, res) => {
   try {
-    const quoteId = req.params
-    // console.log(quoteId)
-    const quote = await Quote.findOne(quoteId)
+    const params = req.params
+    const quote = await Quote.find(ObjectId(params.id)).populate('user') 
     if(!quote) {
-      res.status(400).send(`Can not find by id #${quoteId.id}`)
+      res.status(400).send(`Can not find by id #${params.id}`)
     } else {
-      console.log(quote)
+      // console.log(quote)
       res.status(200).send(quote)
     }
   } catch(err) {

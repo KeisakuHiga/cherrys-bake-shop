@@ -6,7 +6,7 @@ const router = express.Router()
 router.use(express.json())
 
 router.get('/getAllQuotes', getAllQuotes)
-// router.get('/quotes/:id', getOneQuote)
+router.get('/:id', getOneQuote)
 router.post('/newQuote', createNewQuote)
 
 module.exports = router;

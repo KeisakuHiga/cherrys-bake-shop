@@ -9,6 +9,7 @@ import Login from './components/Login/Login'
 import NoMatch from './components/NoMatch/NoMatch'
 import Quote from './components/Quote/Quote'
 import DashBoard from './components/Dashboard/Dashboard'
+import QuoteDetail from './components/Dashboard/QuoteDetail/QuoteDetail'
 
 class Routes extends React.Component {
   state = {}
@@ -18,9 +19,12 @@ class Routes extends React.Component {
         <Route path="/About" component={About} />
         <Route path="/Contact" component={Contact} />
         <Route path="/Faq" component={Faq} />
-        <Route path="/Login" exact component={Login} />
+        <Route path="/Login" component={Login} />
         <Route path="/Quote" component={Quote} />
         <Route path="/DashBoard" component={DashBoard} />
+        <Route path="/QuoteDetail/:id" render={(props) => {
+          return <QuoteDetail {...props} />
+        }} />
         <Route path="/" exact component={Home} />
         <Route component={NoMatch} />
       </Switch>
