@@ -21,13 +21,15 @@ class QuoteDetail extends Component {
   
   render() { 
     const { oneQuote } = this.state
+    const { dateFormat } =this.props
     if(!oneQuote) {
       return null
     } else {
       return (
         <div className="QuoteDetail-container">
           <h1>Quote Detail</h1>
-          <h3>Quote request date: {oneQuote.dateOfEvent}</h3>
+          <h3>Quote request date: {dateFormat(oneQuote.createdAt)}</h3>
+          <h3>Date of event: {dateFormat(oneQuote.dateOfEvent)}</h3>
           <h3>Type of product: {oneQuote.typeOfProduct}</h3>
           <h3>Type of occasion: {oneQuote.typeOfOccasion}</h3>
           <h3>Number of guests: {oneQuote.numberOfGuests}</h3>

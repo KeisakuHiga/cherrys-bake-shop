@@ -22,10 +22,10 @@ class Routes extends React.Component {
         <Route path="/Login" component={Login} />
         <Route path="/Quote" component={Quote} />
         <Route path="/DashBoard" render={(props) => {
-          return <DashBoard {...props} allQuotes={this.props.allQuotes} />
+          return <DashBoard {...props} allQuotes={this.props.allQuotes} dateFormat={this.props.dateFormat} />
         }} />
         <Route path="/QuoteDetail/:id" render={(props) => {
-          return <QuoteDetail {...props} />
+          return <QuoteDetail {...props} dateFormat={this.props.dateFormat} />
         }} />
         <Route path="/" exact component={Home} />
         <Route component={NoMatch} />
