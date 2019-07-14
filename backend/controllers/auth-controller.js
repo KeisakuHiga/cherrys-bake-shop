@@ -1,6 +1,6 @@
 const User = require('../models/Quote')
 const { checkPassword, generateUser, generateAccessToken } = require('../utils/auth-utils.js')
-// register post endpoint
+
 const register = async (req, res) => {
   const { username, password } = req.body
   if (username && password) {
@@ -23,7 +23,6 @@ const register = async (req, res) => {
   }
 }
 
-// login post endpoint
 const login = async (req, res) => {
   console.log(req.body)
   const { username, password } = req.body

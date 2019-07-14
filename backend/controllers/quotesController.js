@@ -4,7 +4,6 @@ const ObjectId = require('mongoose').Types.ObjectId
 
 const getAllQuotes = async (req, res) => {
   const allQuotes = await Quote.find().populate('user') 
-  // console.log('allQuotes')
   res.status(200).send(allQuotes)
 }
 
@@ -15,7 +14,6 @@ const getOneQuote = async (req, res) => {
     if(!quote) {
       res.status(400).send(`Can not find by id #${params.id}`)
     } else {
-      // console.log(quote)
       res.status(200).send(quote)
     }
   } catch(err) {
@@ -25,6 +23,7 @@ const getOneQuote = async (req, res) => {
 
 const createNewQuote = async (req, res) => {
   try {
+    
     const {
       firstName,
       lastName,
@@ -52,8 +51,6 @@ const createNewQuote = async (req, res) => {
       password
     })
     const savedUser = await newUser.save()
-    console.log(savedUser)
-
     const newQuote = await new Quote({
       typeOfProduct,
       dateOfEvent,
@@ -68,7 +65,6 @@ const createNewQuote = async (req, res) => {
     res.send(newQuote)
 
   }catch(err) {
-    console.log(err)
     res.status(400).send(`There is an error ${err}`)
   }
 }
