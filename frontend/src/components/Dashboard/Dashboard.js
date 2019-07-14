@@ -1,29 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-const axios = require('axios')
 
 class Admin extends Component {
   state = {  }
-
-  getAllQuotes = async () => {
-    // const url = 'https://cherrysbakeshopandcafe.khiga2943.now.sh/quote/getAllQuotes'
-    const url = 'http://localhost:5000/quote/getAllQuotes'
-    const response = await axios.get(url)
-    const data = response.data
-    this.setState({
-      allQuotes: data
-    })
-  }
-
-  getOneQuote = async () => {
-    // const url = 'https://cherrysbakeshopandcafe.khiga2943.now.sh/quote/:id'
-    const url = 'http://localhost:5000/quote/:id'
-    const response = await axios.get(url)
-    const data = response.data
-    this.setState({
-      allQuotes: data
-    })
-  }
 
   dateFormat = (date) => {
     date = new Date(date)
@@ -34,12 +13,8 @@ class Admin extends Component {
     return newDate
   }
 
-  componentDidMount = async () => {
-    this.getAllQuotes()
-  }
-
   render() {     
-    const { allQuotes } = this.state
+    const { allQuotes } = this.props
     if(!allQuotes) {
       return null
     } else {

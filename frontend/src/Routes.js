@@ -21,7 +21,9 @@ class Routes extends React.Component {
         <Route path="/Faq" component={Faq} />
         <Route path="/Login" component={Login} />
         <Route path="/Quote" component={Quote} />
-        <Route path="/DashBoard" component={DashBoard} />
+        <Route path="/DashBoard" render={(props) => {
+          return <DashBoard {...props} allQuotes={this.props.allQuotes} />
+        }} />
         <Route path="/QuoteDetail/:id" render={(props) => {
           return <QuoteDetail {...props} />
         }} />

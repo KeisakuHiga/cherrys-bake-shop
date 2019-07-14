@@ -7,10 +7,8 @@ class QuoteDetail extends Component {
 
   getOneQuote = async () => {
     const id = this.props.match.params.id
-    // const url = 'https://cherrysbakeshopandcafe.khiga2943.now.sh/quote/:id'
-    const url = `http://localhost:5000/quote/${id}`
+    const url = `${process.env.REACT_APP_API_URL}/quote/${id}`
     const response = await axios.get(url)
-    console.log(response)
     const data = await response.data
     this.setState({
       oneQuote: data[0]
@@ -23,7 +21,6 @@ class QuoteDetail extends Component {
   
   render() { 
     const { oneQuote } = this.state
-    console.log(oneQuote)
     if(!oneQuote) {
       return null
     } else {

@@ -4,8 +4,7 @@ const ObjectId = require('mongoose').Types.ObjectId
 
 const getAllQuotes = async (req, res) => {
   const allQuotes = await Quote.find().populate('user') 
-  // console.log(allQuotes)
-  // res.status(200).send({hello:'hello'})
+  // console.log('allQuotes')
   res.status(200).send(allQuotes)
 }
 
