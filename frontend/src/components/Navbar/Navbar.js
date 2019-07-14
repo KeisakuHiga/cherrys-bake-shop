@@ -9,26 +9,24 @@ function Navbar() {
       <div className={style.logocontainer}>
         <img className={style.logoimage} src={CherrysLogo} alt="Cherry's Logo"/>
       </div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">Home</Link>
+      <nav className={style.navbar}>
+          <ul className={style.navbox}>
+            <li className={style.navitem}>
+              <Link className={style.navlink} to="/">Home</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/About">About</Link>
+            <li className={style.navitem}>
+              <Link className={style.navlink} to="/About">About</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Quote">Quote</Link>
+            <li className={style.navitem}>
+              <Link className={style.navlink} to="/Quote">Quote</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Faq">FAQ</Link>
+            <li className={style.navitem}>
+              <Link className={style.navlink} to="/Faq">FAQ</Link>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Contact">Contact</Link>
+            <li className={style.navitem}>
+              <Link className={style.navlink} to="/Contact">Contact</Link>
             </li>
           </ul>
-        </div>
       </nav>
     </>
   )

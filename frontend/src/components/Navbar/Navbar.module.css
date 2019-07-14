@@ -9,3 +9,33 @@
   height: 270px;
 }
 
+.navbar { 
+  width: 100%;
+}
+
+.navbox {
+  text-align: center;
+}
+
+.navitem {
+  display: inline-block; /* Arrange list items in horizontal line */
+  list-style-type: none; /* We don't want bullets on our items */
+  margin: 0;
+  padding: 10px 0; /* Sets height of nav bar */
+}
+
+.navitem:hover {
+  background: white;
+}
+
+.navlink {
+  color: grey;
+  text-decoration: none;
+  padding: 12px;
+  font-size: 30px;
+}
+
+.navlink:hover {
+  color: black;
+  text-decoration: none;
+}
