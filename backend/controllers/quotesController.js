@@ -1,6 +1,8 @@
 const User = require('../models/User')
 const Quote = require('../models/Quote')
 const ObjectId = require('mongoose').Types.ObjectId
+const Joi = require('@hapi/joi')
+
 
 const getAllQuotes = async (req, res) => {
   const allQuotes = await Quote.find().populate('user') 
@@ -21,9 +23,44 @@ const getOneQuote = async (req, res) => {
   }
 }
 
+const validationSchema = Joi.object().keys({
+  firstName: Joi.string()
+    .required(),
+  lastName: Joi.string()
+    .required(),
+  email: Joi.string()
+    .email()
+    .required(),
+  phoneNumber: Joi.string()
+    .required(),
+  typeOfProduct: Joi.string()
+    .required(),
+  dateOfEvent: Joi.date()
+    .required(),
+  typeOfOccasion: Joi.string()
+    .required(),
+  numberOfGuests: Joi.number()
+    .integer()
+    .min(1)
+    .required(),
+  cakeFlavour: Joi.string()
+    .required(),
+  fillingFlavour: Joi.string()
+    .required(),
+  message: Joi.string()
+    .required(),
+  // user: { type: Schema.Types.ObjectId, ref: 'User' }
+})
+
 const createNewQuote = async (req, res) => {
   try {
-    
+    Joi.validate(req.body, validationSchema, (err, value) => {
+      // if err send err message
+      if(err) {
+        console.log('ERROR => ' + err.details[0].message)
+        res.status(400).send(err)
+      }
+    })
     const {
       firstName,
       lastName,
