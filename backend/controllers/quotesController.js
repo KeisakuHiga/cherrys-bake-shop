@@ -1,23 +1,55 @@
 const User = require('../models/User')
 const Quote = require('../models/Quote')
+const ObjectId = require('mongoose').Types.ObjectId
+const Joi = require('@hapi/joi')
+
+const validationSchema = Joi.object().keys({
+  firstName: Joi.string()
+    .alphanum()
+    .required(),
+  lastName: Joi.string()
+    .alphanum()
+    .required(),
+  email: Joi.string()
+    .email({ minDomainSegments: 2 })
+    .required(),
+  phoneNumber: Joi.number()
+    .min(10)
+    .max(12)
+    .required(),
+  typeOfProduct: Joi.string()
+    .required(),
+  dateOfEvent: Joi.date().greater('now')
+    .required(),
+  // pickUpDate: Joi.date().greater('now')
+  //   .required(),
+  typeOfOccasion: Joi.string()
+    .required(),
+  numberOfGuests: Joi.number()
+    .integer()
+    .min(1)
+    .required(),
+  cakeFlavour: Joi.string()
+    .required(),
+  fillingFlavour: Joi.string()
+    .required(),
+  message: Joi.string()
+    .required()
+})
 
 const getAllQuotes = async (req, res) => {
   const allQuotes = await Quote.find().populate('user') 
-  // console.log(allQuotes)
-  // res.status(200).send({hello:'hello'})
   res.status(200).send(allQuotes)
 }
 
 const getOneQuote = async (req, res) => {
   try {
-    const recipeId = req.params
-    // console.log(recipeId)
-    const recipe = await Recipe.findOne(recipeId)
-    if(!recipe) {
-      res.status(400).send(`Can not find by id #${recipeId.id}`)
+    const params = req.params
+    const quote = await Quote.find(ObjectId(params.id)).populate('user') 
+    if(!quote) {
+      res.status(400).send(`Can not find by id #${params.id}`)
     } else {
-      console.log(recipe)
-      res.status(200).send(recipe)
+      res.status(200).send(quote)
     }
   } catch(err) {
     res.send(`There is an err: ${err}`)
@@ -26,12 +58,12 @@ const getOneQuote = async (req, res) => {
 
 const createNewQuote = async (req, res) => {
   try {
+    await validationSchema.validate(req.body, {abortEarly: false})
     const {
       firstName,
       lastName,
       email,
       phoneNumber,
-      password,
       typeOfProduct,
       dateOfEvent,
       typeOfOccasion,
@@ -49,11 +81,10 @@ const createNewQuote = async (req, res) => {
       contact: {
         email,
         phoneNumber
-      },
-      password
+      }
     })
+
     const savedUser = await newUser.save()
-    console.log(savedUser)
 
     const newQuote = await new Quote({
       typeOfProduct,
@@ -67,15 +98,14 @@ const createNewQuote = async (req, res) => {
     })
     await newQuote.save()
     res.send(newQuote)
-
-  }catch(err) {
-    console.log(err)
-    res.status(400).send(`There is an error ${err}`)
+  } catch(validationError){
+    const errorMessage = validationError.details.map(d => d.message)
+    res.status(400).send(`Validation Error(s) => ${errorMessage}`)
   }
 }
 
 module.exports = {
   getAllQuotes,
-  // getOneQuote,
+  getOneQuote,
   createNewQuote
 }

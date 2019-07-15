@@ -1,18 +1,18 @@
 import React, { Component } from "react"
 import { Redirect } from 'react-router-dom'
 
-class Login extends Component {
+class SignUp extends Component {
   state = {}
-  
+
   handleInput = e => {
     this.setState({
       [e.target.id]: e.target.value
     })
   }
 
-  handleLogin = e => {
+  handleSignUp = e => {
     e.preventDefault()
-    this.props.login(this.state)
+    this.props.register(this.state)
   }
 
   logout = () => {
@@ -26,11 +26,32 @@ class Login extends Component {
       return (
         <>
           <form>
+            <label>First Name</label>
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              onChange={this.handleInput}
+            />
+            <label>Last Name</label>
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              onChange={this.handleInput}
+            />
             <label>Email</label>
             <input
               type="text"
               name="email"
               id="email"
+              onChange={this.handleInput}
+            />
+            <label>Phone Number</label>
+            <input
+              type="text"
+              name="phoneNumber"
+              id="phoneNumber"
               onChange={this.handleInput}
             />
             <label>Password</label>
@@ -40,7 +61,7 @@ class Login extends Component {
               id="password"
               onChange={this.handleInput}
             />
-            <input type="submit" value="Submit" onClick={this.handleLogin} />
+            <input type="submit" value="Sign Up" onClick={this.handleSignUp} />
           </form>
           <button onClick={this.logout}>Logout</button>
           {this.state.errorMessage && <h1>{this.state.errorMessage}</h1>}
@@ -50,4 +71,4 @@ class Login extends Component {
   }
 }
 
-export default Login
+export default SignUp
