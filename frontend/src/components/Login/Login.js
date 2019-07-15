@@ -3,20 +3,6 @@ import { Redirect } from 'react-router-dom'
 
 class Login extends Component {
   state = {}
-
-  // login = async (e) => {
-  //   e.preventDefault()
-  //   const url = process.env.REACT_APP_API_URL
-  //   try {
-  //     const response =  await axios.post(`${url}/auth/login`, this.state)
-  //     const token = response.data.token
-  //     localStorage.setItem("token", token)
-  //   } catch (err) {
-  //     this.setState({
-  //       errorMessage: `Wrong credential ${err.message}`
-  //     })
-  //   }
-  // }
   
   handleInput = e => {
     this.setState({
@@ -24,7 +10,7 @@ class Login extends Component {
     })
   }
 
-  handleLogin = (e) => {
+  handleLogin = e => {
     e.preventDefault()
     this.props.login(this.state)
   }

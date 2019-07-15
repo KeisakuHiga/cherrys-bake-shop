@@ -17,13 +17,11 @@ class App extends React.Component {
       this.getAllQuotes()
       const token = localStorage.getItem('token')
       const authentication = await axios.get(`${process.env.REACT_APP_API_URL}/user/current-user`, { headers: { token: token } })
-      console.log(authentication)
       this.setState({
         authentication: true,
         currentUser: authentication.data
       })
     } catch(err) {
-      console.log(err)
       this.setState({
         authentication: false
       })
@@ -37,6 +35,23 @@ class App extends React.Component {
     this.setState({
       allQuotes: data
     })
+  }
+
+  register = async (userInfo) => {
+    const url = process.env.REACT_APP_API_URL
+    try {
+      const response =  await axios.post(`${url}/auth/register`, userInfo)
+      const token = response.data.token
+      localStorage.setItem("token", token)
+      this.setState({
+        authentication: true
+      })
+    } catch (err) {
+      this.setState({
+        authentication: false,
+        errorMessage: `Error => ${err.message}`
+      })
+    }
   }
 
   login = async (userCredentials) => {
@@ -77,6 +92,7 @@ class App extends React.Component {
             allQuotes={allQuotes} 
             authentication={authentication} 
             dateFormat={this.dateFormat} 
+            register={this.register} 
             login={this.login} 
           />
           <Footer />

@@ -15,17 +15,19 @@ import QuoteDetail from './components/Dashboard/QuoteDetail/QuoteDetail'
 class Routes extends React.Component {
   state = {}
   render() {
-    const { authentication} = this.props
+    const { authentication } = this.props
     return (
       <Switch>
         <Route path="/About" component={About} />
         <Route path="/Contact" component={Contact} />
         <Route path="/Faq" component={Faq} />
-        {/* <Route path="/Login" component={Login} /> */}
         <Route path="/Login" render={() => {
           return <Login login={this.props.login} authentication={authentication} />
         }} />
-        <Route path="/SignUp" component={SignUp} />
+        {/* <Route path="/SignUp" component={SignUp} /> */}
+        <Route path="/SignUp" render={() => {
+          return <SignUp register={this.props.register} authentication={authentication} />
+        }} />
         <Route path="/Quote" component={Quote} />
         <Route path="/DashBoard" render={(props) => {
           return <DashBoard {...props} allQuotes={this.props.allQuotes} dateFormat={this.props.dateFormat} />

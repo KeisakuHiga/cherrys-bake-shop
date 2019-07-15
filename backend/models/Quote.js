@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const quoteSchema = new Schema({
   typeOfProduct: String,
   dateOfEvent: Date,
-  // pickUpDate: Date,
+  pickUpDate: Date,
   typeOfOccasion: String,
   numberOfGuests: Number,
   cakeFlavour: String,
