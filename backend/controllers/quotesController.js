@@ -5,18 +5,24 @@ const Joi = require('@hapi/joi')
 
 const validationSchema = Joi.object().keys({
   firstName: Joi.string()
+    .alphanum()
     .required(),
   lastName: Joi.string()
+    .alphanum()
     .required(),
   email: Joi.string()
-    .email()
+    .email({ minDomainSegments: 2 })
     .required(),
-  phoneNumber: Joi.string()
+  phoneNumber: Joi.number()
+    .min(10)
+    .max(12)
     .required(),
   typeOfProduct: Joi.string()
     .required(),
   dateOfEvent: Joi.date().greater('now')
     .required(),
+  // pickUpDate: Joi.date().greater('now')
+  //   .required(),
   typeOfOccasion: Joi.string()
     .required(),
   numberOfGuests: Joi.number()

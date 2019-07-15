@@ -11,17 +11,24 @@ const checkPassword = async (password, hash) => {
   return await bcrypt.compare(password, hash)
 }
 
-const generateUser = async (username, password) => {
+const generateUser = async (firstName, lastName, email, phoneNumber, password) => {
   const hash = await generateHash(password)
   const newUser = new User({
-    username: username,
+    userName: {
+      firstName: firstName,
+      lastName: lastName,
+    },
+    contact: {
+      email: email,
+      phoneNumber: phoneNumber
+    },
     password: hash
   })
   return await newUser.save()
 }
 
-const generateAccessToken = ({ username }) => {
-  return jwt.sign({ username }, process.env.JWT_SECRET, {expiresIn: '7d'})
+const generateAccessToken = ({ contact: { email } }) => {
+  return jwt.sign({ contact: { email } }, process.env.JWT_SECRET, {expiresIn: '7d'})
 } 
 
 const checkAccessToken = (req, res, next) => {
