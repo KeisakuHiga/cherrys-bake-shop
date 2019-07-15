@@ -7,10 +7,27 @@ import Footer from "./components/Footer/Footer";
 const axios = require('axios')
 
 class App extends React.Component {
-  state = {};
+  state = {
+    allQuotes: null,
+    authentication: false
+  }
 
-  componentDidMount = () => {
-    this.getAllQuotes()
+  componentDidMount = async () => {
+    try {
+      this.getAllQuotes()
+      const token = localStorage.getItem('token')
+      const authentication = await axios.get(`${process.env.REACT_APP_API_URL}/user/current-user`, { headers: { token: token } })
+      console.log(authentication)
+      this.setState({
+        authentication: true,
+        currentUser: authentication.data
+      })
+    } catch(err) {
+      console.log(err)
+      this.setState({
+        authentication: false
+      })
+    }
   }
 
   getAllQuotes = async () => {
@@ -20,6 +37,23 @@ class App extends React.Component {
     this.setState({
       allQuotes: data
     })
+  }
+
+  login = async (userCredentials) => {
+    const url = process.env.REACT_APP_API_URL
+    try {
+      const response =  await axios.post(`${url}/auth/login`, userCredentials)
+      const token = response.data.token
+      localStorage.setItem("token", token)
+      this.setState({
+        authentication: true
+      })
+    } catch (err) {
+      this.setState({
+        authentication: false,
+        errorMessage: `Wrong credential ${err.message}`
+      })
+    }
   }
 
   dateFormat = (date) => {
@@ -32,14 +66,19 @@ class App extends React.Component {
   }
 
   render() {
-    const { allQuotes } = this.state
+    const { allQuotes, authentication } = this.state
     if(!allQuotes) {
       return null
     } else {
       return (
         <div>
           <Navbar />
-          <Routes allQuotes={allQuotes} dateFormat={this.dateFormat} />
+          <Routes 
+            allQuotes={allQuotes} 
+            authentication={authentication} 
+            dateFormat={this.dateFormat} 
+            login={this.login} 
+          />
           <Footer />
         </div>
       )
