@@ -4,15 +4,6 @@ import { Link } from 'react-router-dom'
 class Admin extends Component {
   state = {  }
 
-  // dateFormat = (date) => {
-  //   date = new Date(date)
-  //   const month = date.toLocaleString("en-us", { month: "short" })
-  //   const day = date.getDate()
-  //   const year = date.getFullYear()
-  //   const newDate = month+'. '+day+', ' + year
-  //   return newDate
-  // }
-
   render() {     
     const { allQuotes, dateFormat } = this.props
     if(!allQuotes) {

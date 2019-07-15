@@ -1,51 +1,43 @@
-// This login form is used for only admin account
-
-import React, { Component } from "react";
-import axios from "axios";
+import React, { Component } from "react"
+import axios from "axios"
 
 
 class Login extends Component {
-  state = {};
+  state = {}
 
-  authenticate = e => {
-    e.preventDefault();
-    // want to send the state value to back-end
-    const url = process.env.REACT_APP_API_URL;
-    axios
-      .post(`${url}/auth/login`, this.state)
-      .then(response => {
-        console.log(response);
-        const token = response.data.token;
-        console.log(token);
-        localStorage.setItem("token", token);
+  authenticate = async (e) => {
+    e.preventDefault()
+    const url = process.env.REACT_APP_API_URL
+    try {
+      const response =  await axios.post(`${url}/auth/login`, this.state)
+      const token = response.data.token
+      localStorage.setItem("token", token)
+    } catch (err) {
+      this.setState({
+        errorMessage: `Wrong credential ${err.message}`
       })
-      .catch(err => {
-        this.setState({
-          errorMessage: `Wrong credential ${err.message}`
-        });
-      });
-  };
+    }
+  }
 
   handleInput = e => {
     this.setState({
       [e.target.id]: e.target.value
-    });
-    console.log(this.state);
-  };
+    })
+  }
 
   logout = () => {
-    localStorage.removeItem("token");
-  };
+    localStorage.removeItem("token")
+  }
 
   render() {
     return (
       <>
         <form>
-          <label>Username</label>
+          <label>Email</label>
           <input
             type="text"
-            name="username"
-            id="username"
+            name="email"
+            id="email"
             onChange={this.handleInput}
           />
           <label>Password</label>
@@ -60,8 +52,8 @@ class Login extends Component {
         <button onClick={this.logout}>Logout</button>
         {this.state.errorMessage && <h1>{this.state.errorMessage}</h1>}
       </>
-    );
+    )
   }
 }
 
-export default Login;
+export default Login
