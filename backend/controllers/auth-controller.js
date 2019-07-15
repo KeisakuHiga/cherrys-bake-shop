@@ -1,14 +1,32 @@
 const User = require('../models/User')
+const Joi = require('@hapi/joi')
 const { checkPassword, generateUser, generateAccessToken } = require('../utils/auth-utils.js')
 
+const validationSchema = Joi.object().keys({
+  firstName: Joi.string()
+    .alphanum()
+    .required(),
+  lastName: Joi.string()
+    .alphanum()
+    .required(),
+  email: Joi.string()
+    .email({ minDomainSegments: 2 })
+    .required(),
+  phoneNumber: Joi.string()
+    .min(10)
+    .max(12)
+    .required(),
+  password: Joi.string()
+    .min(8)
+    .required()
+})
+
 const register = async (req, res) => {
-  const { userName, contact, password } = req.body
-  const { firstName, lastName } = userName
-  const { email, phoneNumber } = contact
+  const { firstName, lastName, email, phoneNumber, password } = req.body
   if ( firstName && lastName && email && phoneNumber && password) {
     try {
-      const query = await User.findOne({ 'contact.email': email})
-      console.log(query)
+      await validationSchema.validate(req.body, {abortEarly: false})
+      const query = await User.findOne({ 'contact.email': email })
       if (query === null) {
         const user = await generateUser(firstName, lastName, email, phoneNumber, password)
         const token = await generateAccessToken(user)
@@ -16,9 +34,9 @@ const register = async (req, res) => {
       } else {
         return res.status(403).send('user already exists')
       }
-    } catch(err) {
-      // console.log(err)
-      return res.status(404).send('an error occurred')
+    } catch(validationError){
+      const errorMessage = validationError.details.map(d => d.message)
+      res.status(400).send(`Validation Error(s) => ${errorMessage}`)
     }
   } else {
     return res.status(403).send('incorrect credentials')
@@ -26,11 +44,10 @@ const register = async (req, res) => {
 }
 
 const login = async (req, res) => {
-  console.log(req.body)
   const { email, password } = req.body
   if (email && password) {
     try {
-      const query = await User.findOne({ email: email })
+      const query = await User.findOne({ 'contact.email': email })
       if (query !== null) {
         const result = await checkPassword(password, query.password)
         if (!result) {
