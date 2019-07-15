@@ -4,6 +4,7 @@ const Schema = mongoose.Schema
 const quoteSchema = new Schema({
   typeOfProduct: String,
   dateOfEvent: Date,
+  pickUpDate: Date,
   typeOfOccasion: String,
   numberOfGuests: Number,
   cakeFlavour: String,
@@ -16,4 +17,4 @@ const quoteSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: 'User' }
 })
 
-module.exports =  mongoose.model('Quote', quoteSchema)
+module.exports = mongoose.model('Quote', quoteSchema)

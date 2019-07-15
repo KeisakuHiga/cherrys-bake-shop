@@ -1,12 +1,9 @@
-// private routes go here
-const express = require('express');
-const { getAllQuotes, getOneQuote, createNewQuote } = require('../controllers/quotesController')
+const express = require('express')
 const router = express.Router()
-
-router.use(express.json())
+const { getAllQuotes, getOneQuote, createNewQuote } = require('../controllers/quotesController')
 
 router.get('/getAllQuotes', getAllQuotes)
-// router.get('/quotes/:id', getOneQuote)
+router.get('/:id', getOneQuote)
 router.post('/newQuote', createNewQuote)
 
-module.exports = router;
+module.exports = router
