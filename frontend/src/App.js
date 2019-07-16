@@ -74,15 +74,21 @@ class App extends React.Component {
       });
     }
   };
+  logout = () => {
+    localStorage.removeItem("token")
+    this.setState({
+      authentication: false
+    })
+  }
 
-  dateFormat = date => {
-    date = new Date(date);
-    const month = date.toLocaleString("en-us", { month: "short" });
-    const day = date.getDate();
-    const year = date.getFullYear();
-    const newDate = month + ". " + day + ", " + year;
-    return newDate;
-  };
+  dateFormat = (date) => {
+    date = new Date(date)
+    const month = date.toLocaleString("en-us", { month: "short" })
+    const day = date.getDate()
+    const year = date.getFullYear()
+    const newDate = month+'. '+day+', ' + year
+    return newDate
+  }
 
   render() {
     const { allQuotes, authentication } = this.state;
@@ -91,7 +97,10 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <Navbar />
+          <Navbar 
+            authentication={authentication} 
+            logout={this.logout} 
+          />
           <Social />
           <Routes 
             allQuotes={allQuotes} 

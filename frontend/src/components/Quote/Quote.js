@@ -6,7 +6,7 @@ class Quote extends Component {
     return (
       <h1>Hello from Quote.js component</h1>
 
-    );
+    )
   }
 }
 
