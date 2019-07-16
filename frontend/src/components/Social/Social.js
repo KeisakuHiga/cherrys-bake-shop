@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import style from '../Social/Social.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
-import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 
 
@@ -11,9 +11,29 @@ class Social extends Component {
   render() { 
     return (
       <>
-        <FontAwesomeIcon icon={faPhone} size="2x" className={style.phone} />
-        <FontAwesomeIcon icon={faFacebook} size="2x" className={style.phone} />
-        <FontAwesomeIcon icon={faTwitter} size="2x" className={style.phone} />
+        <nav className={style.social}>
+          <ul>
+            <li className={style.phone}>
+              <a href="#">
+                <FontAwesomeIcon icon={faPhone} className={style.icon} />
+              Phone</a>
+            </li>
+          </ul>
+          <ul>
+            <li className={style.facebook}>
+              <a href="">
+                <FontAwesomeIcon icon={faFacebook} className={style.icon} />
+              Facebook</a>
+            </li>
+          </ul>
+          <ul>
+            <li className={style.instagram}>
+              <a href="">
+                <FontAwesomeIcon icon={faInstagram} className={style.iconinsta} />
+              Instagram</a>
+            </li>
+          </ul>
+        </nav>
       </>
     );
   }
