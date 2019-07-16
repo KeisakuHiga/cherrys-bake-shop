@@ -73,6 +73,13 @@ class App extends React.Component {
     }
   }
 
+  logout = () => {
+    localStorage.removeItem("token")
+    this.setState({
+      authentication: false
+    })
+  }
+
   dateFormat = (date) => {
     date = new Date(date)
     const month = date.toLocaleString("en-us", { month: "short" })
@@ -89,7 +96,10 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <Navbar />
+          <Navbar 
+            authentication={authentication} 
+            logout={this.logout} 
+          />
           <Social />
           <Routes 
             allQuotes={allQuotes} 
