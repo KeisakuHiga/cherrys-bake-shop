@@ -4,6 +4,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import Social from "./components/Social/Social"
+
 const axios = require('axios')
 
 class App extends React.Component {
@@ -94,10 +96,15 @@ class App extends React.Component {
     } else {
       return (
         <div>
+<<<<<<< HEAD
           <Navbar 
             authentication={authentication} 
             logout={this.logout} 
           />
+=======
+          <Navbar />
+          <Social />
+>>>>>>> master
           <Routes 
             allQuotes={allQuotes} 
             authentication={authentication} 
