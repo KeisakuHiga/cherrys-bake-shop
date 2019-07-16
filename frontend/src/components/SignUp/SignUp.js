@@ -15,10 +15,6 @@ class SignUp extends Component {
     this.props.register(this.state)
   }
 
-  logout = () => {
-    localStorage.removeItem("token")
-  }
-
   render() {
     if (this.props.authentication) {
       return <Redirect to="/" />
@@ -63,7 +59,6 @@ class SignUp extends Component {
             />
             <input type="submit" value="Sign Up" onClick={this.handleSignUp} />
           </form>
-          <button onClick={this.logout}>Logout</button>
           {this.state.errorMessage && <h1>{this.state.errorMessage}</h1>}
         </>
       )
