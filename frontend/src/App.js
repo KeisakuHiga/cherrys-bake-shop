@@ -4,6 +4,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import Social from "./components/Social/Social"
+
 const axios = require('axios')
 
 class App extends React.Component {
@@ -98,6 +100,7 @@ class App extends React.Component {
             authentication={authentication} 
             logout={this.logout} 
           />
+          <Social />
           <Routes 
             allQuotes={allQuotes} 
             authentication={authentication} 
