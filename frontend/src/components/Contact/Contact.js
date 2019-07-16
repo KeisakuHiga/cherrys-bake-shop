@@ -12,6 +12,20 @@ class Contact extends Component {
               title="Cherry's Bakeshop and Cafe Google Map"
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12615.399763966592!2d144.7718444!3d-37.7701166!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa2502533f29066!2sCherry&#39;s+Bake+Shop+%26+Cafe!5e0!3m2!1sen!2sau!4v1563250557464!5m2!1sen!2sau"
             />
+            <p>
+              Telephone:
+              <pre />
+              Address: 831B Ballarat Rd, Deer Park VIC 3023.
+              <pre />
+              Email:
+              <pre />
+              OPEN HOURS
+              <pre />
+              Tuesday - Friday 10:00 am – 6:00 pm Saturday - Sunday 11:00 am –
+              5:00 pm
+              <pre />
+              Monday Closed
+            </p>
           </div>
         </div>
       </>
