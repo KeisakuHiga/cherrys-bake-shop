@@ -4,7 +4,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-const axios = require("axios");
+import Social from "./components/Social/Social"
+const axios = require('axios')
 
 class App extends React.Component {
   state = {
@@ -91,12 +92,13 @@ class App extends React.Component {
       return (
         <div>
           <Navbar />
-          <Routes
-            allQuotes={allQuotes}
-            authentication={authentication}
-            dateFormat={this.dateFormat}
-            register={this.register}
-            login={this.login}
+          <Social />
+          <Routes 
+            allQuotes={allQuotes} 
+            authentication={authentication} 
+            dateFormat={this.dateFormat} 
+            register={this.register} 
+            login={this.login} 
           />
           <Footer />
         </div>
