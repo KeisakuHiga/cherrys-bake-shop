@@ -1,18 +1,12 @@
 .googleMapContainer {
   display: flex;
-  background-size: cover;
-  /* height: 500px;
-  width: 1440px; */
-  justify-content: center;
-  align-items: center;
+  height: 450px;
+  padding-block-end: 10px;
+  padding-inline-start: 10px;
+  padding-block-start: 10px;
   background-color: grey;
 }
 
 .googleMapInfo {
-  /* height: 500px;
-  width: 800px; */
-  margin-left: 10rem;
-  justify-content: center;
-  align-items: center;
-  background-color: pink;
+  display: flex;
 }
