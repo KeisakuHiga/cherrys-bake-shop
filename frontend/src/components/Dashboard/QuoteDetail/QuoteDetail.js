@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import Moment from 'react-moment'
 const axios = require('axios')
 
 class QuoteDetail extends Component {
@@ -21,15 +21,15 @@ class QuoteDetail extends Component {
   
   render() { 
     const { oneQuote } = this.state
-    const { dateFormat } =this.props
     if(!oneQuote) {
       return null
     } else {
       return (
         <div className="QuoteDetail-container">
           <h1>Quote Detail</h1>
-          <h3>Quote request date: {dateFormat(oneQuote.createdAt)}</h3>
-          <h3>Date of event: {dateFormat(oneQuote.dateOfEvent)}</h3>
+          <h3>Quote request date: <Moment local format="MMM DD, YYYY">{oneQuote.createdAt}</Moment></h3>
+          <h3>Date of event:<Moment local format="MMM DD, YYYY">{oneQuote.dateOfEvent}</Moment></h3>
+          <h3>Estimated pick up date: <Moment local format="MMM DD, YYYY">{oneQuote.pickUp.date}</Moment> / <Moment local format="LT">{oneQuote.pickUp.time}</Moment></h3>
           <h3>Type of product: {oneQuote.typeOfProduct}</h3>
           <h3>Type of occasion: {oneQuote.typeOfOccasion}</h3>
           <h3>Number of guests: {oneQuote.numberOfGuests}</h3>

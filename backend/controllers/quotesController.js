@@ -13,16 +13,17 @@ const validationSchema = Joi.object().keys({
   email: Joi.string()
     .email({ minDomainSegments: 2 })
     .required(),
-  phoneNumber: Joi.number()
+  phoneNumber: Joi.string()
     .min(10)
     .max(12)
     .required(),
-  typeOfProduct: Joi.string()
+  typeOfProduct:Joi.array()
+    .items(Joi.string())
     .required(),
   dateOfEvent: Joi.date().greater('now')
     .required(),
-  // pickUpDate: Joi.date().greater('now')
-  //   .required(),
+  pickUpDate: Joi.date().greater('now'),
+  pickUpTime: Joi.date().greater('now'),
   typeOfOccasion: Joi.string()
     .required(),
   numberOfGuests: Joi.number()
@@ -58,7 +59,7 @@ const getOneQuote = async (req, res) => {
 
 const createNewQuote = async (req, res) => {
   try {
-    await validationSchema.validate(req.body, {abortEarly: false})
+    await validationSchema.validate(req.body, { abortEarly: false })
     const {
       firstName,
       lastName,
@@ -67,6 +68,8 @@ const createNewQuote = async (req, res) => {
       typeOfProduct,
       dateOfEvent,
       typeOfOccasion,
+      pickUpDate,
+      pickUpTime,
       numberOfGuests,
       cakeFlavour,
       fillingFlavour,
@@ -85,19 +88,27 @@ const createNewQuote = async (req, res) => {
     })
 
     const savedUser = await newUser.save()
-
+    console.log(savedUser)
     const newQuote = await new Quote({
       typeOfProduct,
       dateOfEvent,
+      pickUp: {
+        date: pickUpDate,
+        time: pickUpTime
+      },
       typeOfOccasion,
       numberOfGuests,
-      cakeFlavour,
-      fillingFlavour,
+      flavour: {
+        cakeFlavour,
+        fillingFlavour
+      },
       message,
       user: savedUser._id
     })
-    await newQuote.save()
-    res.send(newQuote)
+    const savedQuote = await newQuote.save()
+    console.log(savedQuote)
+
+    res.send(savedQuote)
   } catch(validationError){
     const errorMessage = validationError.details.map(d => d.message)
     res.status(400).send(`Validation Error(s) => ${errorMessage}`)

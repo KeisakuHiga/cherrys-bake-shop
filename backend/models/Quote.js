@@ -2,13 +2,18 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const quoteSchema = new Schema({
-  typeOfProduct: String,
+  typeOfProduct: [String],
   dateOfEvent: Date,
-  pickUpDate: Date,
+  pickUp: {
+    date: Date,
+    time: Date
+  },
   typeOfOccasion: String,
   numberOfGuests: Number,
-  cakeFlavour: String,
-  fillingFlavour: String,
+  flavour: {
+    cakeFlavour: String,
+    fillingFlavour: String
+  },
   message: String,
   createdAt: {
     type: Date,

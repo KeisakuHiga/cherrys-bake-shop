@@ -4,7 +4,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-const axios = require("axios");
+import Social from "./components/Social/Social"
+const axios = require('axios')
 
 class App extends React.Component {
   state = {
@@ -73,15 +74,21 @@ class App extends React.Component {
       });
     }
   };
+  logout = () => {
+    localStorage.removeItem("token")
+    this.setState({
+      authentication: false
+    })
+  }
 
-  dateFormat = date => {
-    date = new Date(date);
-    const month = date.toLocaleString("en-us", { month: "short" });
-    const day = date.getDate();
-    const year = date.getFullYear();
-    const newDate = month + ". " + day + ", " + year;
-    return newDate;
-  };
+  dateFormat = (date) => {
+    date = new Date(date)
+    const month = date.toLocaleString("en-us", { month: "short" })
+    const day = date.getDate()
+    const year = date.getFullYear()
+    const newDate = month+'. '+day+', ' + year
+    return newDate
+  }
 
   render() {
     const { allQuotes, authentication } = this.state;
@@ -90,13 +97,17 @@ class App extends React.Component {
     } else {
       return (
         <div>
-          <Navbar />
-          <Routes
-            allQuotes={allQuotes}
-            authentication={authentication}
-            dateFormat={this.dateFormat}
-            register={this.register}
-            login={this.login}
+          <Navbar 
+            authentication={authentication} 
+            logout={this.logout} 
+          />
+          <Social />
+          <Routes 
+            allQuotes={allQuotes} 
+            authentication={authentication} 
+            dateFormat={this.dateFormat} 
+            register={this.register} 
+            login={this.login} 
           />
           <Footer />
         </div>

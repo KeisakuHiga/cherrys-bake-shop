@@ -13,10 +13,7 @@ class Login extends Component {
   handleLogin = e => {
     e.preventDefault()
     this.props.login(this.state)
-  }
 
-  logout = () => {
-    localStorage.removeItem("token")
   }
 
   render() {
@@ -42,7 +39,6 @@ class Login extends Component {
             />
             <input type="submit" value="Submit" onClick={this.handleLogin} />
           </form>
-          <button onClick={this.logout}>Logout</button>
           {this.state.errorMessage && <h1>{this.state.errorMessage}</h1>}
         </>
       )
