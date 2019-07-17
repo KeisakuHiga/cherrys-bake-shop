@@ -1,6 +1,6 @@
 /* desktop design */
-h1 {
-  font-size: 12vw;
+.dashtitle {
+  font-size: 6vw;
   margin-left: 8vw;
   width: 84vw;
   border-bottom: 2px solid rgba(0,0,0,0.10);
@@ -8,4 +8,8 @@ h1 {
 
 .dashboardcontainer{
   margin: 4% 8% 8% 8% ;
+}
+
+.tablerow {
+  cursor: pointer;
 }

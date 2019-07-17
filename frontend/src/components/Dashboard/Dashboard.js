@@ -13,7 +13,7 @@ class Admin extends Component {
     } else {
       return (
         <>
-          <h1>All Quotes</h1>
+          <h1 className={style.dashtitle}>All Quotes</h1>
           <div className={style.dashboardcontainer}>
             <table className="table table-hover">
               <thead>
@@ -28,7 +28,7 @@ class Admin extends Component {
               </thead>
               <tbody>
                 {allQuotes.map((quote, index) => (
-                  <tr key={index} onClick={() => window.location =`/QuoteDetail/${quote._id}`}>
+                  <tr key={index} onClick={() => window.location =`/QuoteDetail/${quote._id}`} className={style.tablerow}>
                     <th key={quote._id} scope="row">{index + 1}</th>
                     <td key={quote.user.userName.firstName}>{quote.user.userName.firstName}</td>
                     <td key={quote.user.userName.lastName}>{quote.user.userName.lastName}</td>

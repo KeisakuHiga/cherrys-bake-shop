@@ -28,7 +28,7 @@ class QuoteDetail extends Component {
     } else {
       return (
         <>
-          <h1>Quote Details</h1>
+          <h1 className={style.quotetitle}>Quote Details</h1>
           <div className={style.quotedetailcontainer}>
             <div className={style.userinfocontainer}>
               <h3>User Info</h3>
