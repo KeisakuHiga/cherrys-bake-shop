@@ -81,15 +81,6 @@ class App extends React.Component {
     })
   }
 
-  dateFormat = (date) => {
-    date = new Date(date)
-    const month = date.toLocaleString("en-us", { month: "short" })
-    const day = date.getDate()
-    const year = date.getFullYear()
-    const newDate = month+'. '+day+', ' + year
-    return newDate
-  }
-
   render() {
     const { allQuotes, authentication } = this.state;
     if (!allQuotes) {

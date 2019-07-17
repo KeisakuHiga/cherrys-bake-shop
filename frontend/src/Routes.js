@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
@@ -14,6 +14,23 @@ import QuoteDetail from './components/Dashboard/QuoteDetail/QuoteDetail'
 
 class Routes extends React.Component {
   state = {}
+  
+    handleSignUp = () => {
+      if (this.props.authentication) {
+        return <Redirect to="/" />
+      } else {
+        return <SignUp register={this.props.register} authentication={this.props.authentication} />
+      }
+    }
+  
+  handleLogin = () => {
+    if (this.props.authentication) {
+      return <Redirect to="/" />
+    } else {
+      return <Login login={this.props.login} authentication={this.props.authentication} />
+    }
+  }
+
   render() {
     const { authentication } = this.props
     return (
@@ -22,17 +39,13 @@ class Routes extends React.Component {
         <Route path="/Contact" component={Contact} />
         <Route path="/Faq" component={Faq} />
         <Route path="/Quote" component={Quote} />
-        {authentication ? null : <Route path="/Login" render={() => {
-          return <Login login={this.props.login} authentication={authentication} />
-        }} /> }
-        {authentication ? null : <Route path="/SignUp" render={() => {
-          return <SignUp register={this.props.register} authentication={authentication} />
-        }} /> }
-        {authentication ? <Route path="/DashBoard" render={(props) => {
-          return <DashBoard {...props} allQuotes={this.props.allQuotes} dateFormat={this.props.dateFormat} />
+        <Route path="/Login" render={this.handleLogin} />
+        <Route path="/SignUp" render={this.handleSignUp} />
+        { authentication ? <Route path="/DashBoard" render={(props) => {
+          return <DashBoard {...props} allQuotes={this.props.allQuotes} />
         }} /> : null }
-        {authentication ? <Route path="/QuoteDetail/:id" render={(props) => {
-          return <QuoteDetail {...props} dateFormat={this.props.dateFormat} />
+        { authentication ? <Route path="/QuoteDetail/:id" render={(props) => {
+          return <QuoteDetail {...props} />
         }} /> : null }
         <Route path="/" exact component={Home} />
         <Route component={NoMatch} />
