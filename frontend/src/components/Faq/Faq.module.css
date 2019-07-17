@@ -1,15 +1,26 @@
 .faqcontainer {
-  height: 700px;
+  height: 800px;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: yellow;
+  /* background-color: bisque; */
 }
 
 .faqinnerbox {
-  text-align: center;
-  height: 600px;
+  text-align: left;
+  height: 700px;
   width: 1300px;
-  background-color: aqua;
+  background-color: bisque;
+  padding: 0px 20px;
+}
+
+.faqtitle {
+  padding: 15px;
+  text-align: center;
+  /* background-color: blue; */
+}
+
+.faqcontent h5{
+  margin: 20px 0px;
 }

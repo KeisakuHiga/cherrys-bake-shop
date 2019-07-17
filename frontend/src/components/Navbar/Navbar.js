@@ -40,14 +40,13 @@ class Navbar extends Component {
               </li> : null }
               {authentication ? null : <li className={style.navitem}>
                 <Link className={style.navlink} to="/Login">Login</Link>
-              </li> }
-              <button onClick={this.handleLogout}>Logout</button>
+              </li> } 
+              {authentication ? <li className={style.navitem} onClick={this.handleLogout}>
+                <Link className={style.navlink} to="/">Logout</Link>
+              </li> : null }
             </ul>
         </nav>
-<<<<<<< HEAD
-=======
-        {authentication ? <button onClick={this.handleLogout}><Link to="/">Logout</Link></button> : null }
->>>>>>> master
+       
       </>
     )
   }
