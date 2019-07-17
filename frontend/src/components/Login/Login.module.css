@@ -1,12 +1,63 @@
 .logincontainer {
-  height: 400px;
+  height: 600px;
   width: 100vw;
-  /* background-color: aqua; */
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
-.loginform {
+/* .loginform {
   width: 100%;
+} */
+.logininner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 700px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: grey;
+}
+
+.formcon {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input {
+  width: 350px;
+  margin-top: 20px;
+  /* border-radius: 10px; */
+}
+
+/* .input:focus {
+  border: 3px solid #555;
+} */
+
+.subinput {
+  width: 125px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+/* .subinput:hover {
+  background-color: black;
+  color: white;
+} */
+
+.submitcon {
+  margin-top: 20px;
+}
+
+.error {
+  margin-top: 250px;
+  position: absolute;
+  width: 400px;
 }

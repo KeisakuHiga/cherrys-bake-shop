@@ -70,7 +70,7 @@ class App extends React.Component {
     } catch (err) {
       this.setState({
         authentication: false,
-        errorMessage: `Wrong credential ${err.message}`
+        errorMessage: 'Your credentials is invalid. Please try again.'
       });
     }
   };
@@ -82,7 +82,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { allQuotes, authentication } = this.state;
+    const { allQuotes, authentication, errorMessage } = this.state;
     if (!allQuotes) {
       return null;
     } else {
@@ -99,6 +99,7 @@ class App extends React.Component {
             dateFormat={this.dateFormat} 
             register={this.register} 
             login={this.login} 
+            errorMessage={errorMessage}
           />
           <Footer />
         </div>
