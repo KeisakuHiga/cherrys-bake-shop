@@ -27,7 +27,7 @@ class Routes extends React.Component {
     if (this.props.authentication) {
       return <Redirect to="/" />
     } else {
-      return <Login login={this.props.login} authentication={this.props.authentication} />
+      return <Login login={this.props.login} authentication={this.props.authentication} errorMessage={this.props.errorMessage} />
     }
   }
 
