@@ -17,18 +17,19 @@ class Contact extends Component {
           </div>
           <div className={style.cherrydetails}>
             <p>
-              Telephone:(03) 9449 5729
+              Telephone: (03) 9449 5729
               <pre />
-              Address: 831B Ballarat Rd, Deer Park VIC 3023.
+              Address: 831B Ballarat Rd, Deer Park VIC 3023
               <pre />
-              Email:
+              <a href="mailto:cherrysbakeshopandcafe@gmail.com">cherrysbakeshopandcafe@gmail.com</a>
               <pre />
-              OPEN HOURS
-              <pre />
-              Tuesday - Friday 10:00 am – 6:00 pm Saturday - Sunday 11:00 am –
-              5:00 pm
+              Opening Hours:
               <pre />
               Monday Closed
+              <pre />
+              Tuesday - Friday 10:00am – 6:00pm
+              <pre /> 
+              Saturday - Sunday 11:00am – 5:00pm
             </p>
           </div>
         </div>

@@ -14,21 +14,21 @@ class Social extends Component {
         <nav className={style.social}>
           <ul>
             <li className={style.phone}>
-              <a href="#">
+              <a href="tel:+03 94495729">
                 <FontAwesomeIcon icon={faPhone} className={style.icon} />
               Phone</a>
             </li>
           </ul>
           <ul>
             <li className={style.facebook}>
-              <a href="">
+              <a href="https://www.facebook.com/cherrysbakeshopandcafe/">
                 <FontAwesomeIcon icon={faFacebook} className={style.icon} />
               Facebook</a>
             </li>
           </ul>
           <ul>
             <li className={style.instagram}>
-              <a href="">
+              <a href="https://www.instagram.com/cherrysbakeshopandcafe">
                 <FontAwesomeIcon icon={faInstagram} className={style.iconinsta} />
               Instagram</a>
             </li>
