@@ -10,7 +10,7 @@ import SignUp from './components/SignUp/SignUp'
 import NoMatch from './components/NoMatch/NoMatch'
 import Quote from './components/Quote/Quote'
 import DashBoard from './components/Dashboard/Dashboard'
-import QuoteDetail from './components/Dashboard/QuoteDetail/QuoteDetail'
+import QuoteDetail from './components/QuoteDetail/QuoteDetail'
 
 class Routes extends React.Component {
   state = {}
@@ -19,7 +19,10 @@ class Routes extends React.Component {
     if (this.props.authentication) {
       return <Redirect to="/" />
     } else {
-      return <SignUp register={this.props.register} authentication={this.props.authentication} />
+      return <SignUp 
+                register={this.props.register}
+                authentication={this.props.authentication}
+              />
     }
   }
   
@@ -27,7 +30,11 @@ class Routes extends React.Component {
     if (this.props.authentication) {
       return <Redirect to="/" />
     } else {
-      return <Login login={this.props.login} authentication={this.props.authentication} errorMessage={this.props.errorMessage} />
+      return <Login
+                login={this.props.login}
+                authentication={this.props.authentication}
+                errorMessage={this.props.errorMessage}
+              />
     }
   }
 
