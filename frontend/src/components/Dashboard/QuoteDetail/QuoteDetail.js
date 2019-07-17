@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Moment from 'react-moment'
-import style from '../QuoteDetail/QuoteDetail.module.css'
+import style from './QuoteDetail.module.css'
 
 const axios = require('axios')
 
@@ -51,7 +51,7 @@ class QuoteDetail extends Component {
             </div>
             <div className={style.otherinfo}>
               <h3>Other Info</h3>
-              <p>Number of guests: {oneQuote.numberOfGuests}</p>
+              <p>Number of guests: {oneQuote.numberOfGuests} people</p>
               <p>Message: {oneQuote.message}</p>
             </div>
           </div>
