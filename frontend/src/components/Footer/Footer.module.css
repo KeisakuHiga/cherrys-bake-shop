@@ -1,6 +1,7 @@
 .footercontainer {
   display: flex;
-  height: 180px;
+  height: 300px;
   flex-flow: column;
+  justify-content: center;
   align-items: center;
 }
