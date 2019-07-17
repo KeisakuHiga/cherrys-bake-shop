@@ -10,9 +10,12 @@
 .faqinnerbox {
   border: solid black 1px;
   text-align: left;
+  overflow: scroll;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
   height: 720px;
   width: 1300px;
-  background-color: bisque;
+  background-color: #DCDCDC;
   padding: 0px 20px;
 }
 

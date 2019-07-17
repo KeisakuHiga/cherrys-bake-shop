@@ -32,7 +32,10 @@
   color: black;
   text-decoration: none;
   padding: 12px;
-  font-size: 20px;
+  font-size: 30px;
+  /* font-family: 'Pinyon Script', cursive; */
+  font-family: 'Playball', cursive;
+  /* font-family: 'Pacifico', cursive; */
 }
 
 .navlink:hover {

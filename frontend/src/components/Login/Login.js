@@ -24,7 +24,7 @@ class Login extends Component {
       return (
         <div className={style.logincontainer}>
           <div className={style.logininner}>
-            <h2>Login</h2>
+            <h1>Login</h1>
             <div className={style.formcon}>
               <form>  
                 <input className={style.input} placeholder="Email"
