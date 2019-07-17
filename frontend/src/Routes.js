@@ -15,13 +15,13 @@ import QuoteDetail from './components/Dashboard/QuoteDetail/QuoteDetail'
 class Routes extends React.Component {
   state = {}
   
-    handleSignUp = () => {
-      if (this.props.authentication) {
-        return <Redirect to="/" />
-      } else {
-        return <SignUp register={this.props.register} authentication={this.props.authentication} />
-      }
+  handleSignUp = () => {
+    if (this.props.authentication) {
+      return <Redirect to="/" />
+    } else {
+      return <SignUp register={this.props.register} authentication={this.props.authentication} />
     }
+  }
   
   handleLogin = () => {
     if (this.props.authentication) {
@@ -40,7 +40,8 @@ class Routes extends React.Component {
         <Route path="/Faq" component={Faq} />
         <Route path="/Quote" component={Quote} />
         <Route path="/Login" render={this.handleLogin} />
-        <Route path="/SignUp" render={this.handleSignUp} />
+        {/* /SignUp route must be deleted before handing over to our client */}
+        <Route path="/SignUp" render={this.handleSignUp} /> 
         { authentication ? <Route path="/DashBoard" render={(props) => {
           return <DashBoard {...props} allQuotes={this.props.allQuotes} />
         }} /> : null }
