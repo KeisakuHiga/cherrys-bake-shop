@@ -12,7 +12,7 @@
     "dotenv": "^8.0.0",
     "jquery": "^3.4.1",
     "moment-timezone": "^0.5.26",
-    "netlify-cli": "^2.11.23",
+    "netlify-cli": "^2.11.24",
     "popper.js": "^1.15.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.9",
