@@ -35,15 +35,15 @@ class Navbar extends Component {
               <li className={style.navitem}>
                 <Link className={style.navlink} to="/Contact">Contact</Link>
               </li>
-              {authentication ? <li className="nav-item">
-                <Link className="nav-link" to="/Dashboard">Dashboard</Link>
+              {authentication ? <li className={style.navitem}>
+                <Link className={style.navlink} to="/Dashboard">Dashboard</Link>
               </li> : null }
-              {authentication ? null : <li className="nav-item">
-                <Link className="nav-link" to="/Login">Login</Link>
+              {authentication ? null : <li className={style.navitem}>
+                <Link className={style.navlink} to="/Login">Login</Link>
               </li> }
+              <button onClick={this.handleLogout}>Logout</button>
             </ul>
         </nav>
-        <button onClick={this.handleLogout}>Logout</button>
       </>
     )
   }

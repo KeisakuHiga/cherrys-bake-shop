@@ -1,0 +1,15 @@
+.faqcontainer {
+  height: 700px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: yellow;
+}
+
+.faqinnerbox {
+  text-align: center;
+  height: 600px;
+  width: 1300px;
+  background-color: aqua;
+}
