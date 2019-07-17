@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Moment from 'react-moment'
+import style from '../QuoteDetail/QuoteDetail.module.css'
+
 const axios = require('axios')
 
 class QuoteDetail extends Component {
@@ -25,21 +27,35 @@ class QuoteDetail extends Component {
       return null
     } else {
       return (
-        <div className="QuoteDetail-container">
-          <h1>Quote Detail</h1>
-          <h3>Quote request date: <Moment local format="MMM DD, YYYY">{oneQuote.createdAt}</Moment></h3>
-          <h3>Date of event:<Moment local format="MMM DD, YYYY">{oneQuote.dateOfEvent}</Moment></h3>
-          <h3>Estimated pick up date: <Moment local format="MMM DD, YYYY">{oneQuote.pickUp.date}</Moment> / <Moment local format="LT">{oneQuote.pickUp.time}</Moment></h3>
-          <h3>Type of product: {oneQuote.typeOfProduct}</h3>
-          <h3>Type of occasion: {oneQuote.typeOfOccasion}</h3>
-          <h3>Number of guests: {oneQuote.numberOfGuests}</h3>
-          <h3>Cake flavour: {oneQuote.cakeFlavour}</h3>
-          <h3>Filling flavour: {oneQuote.fillingFlavour}</h3>
-          <h3>Message: {oneQuote.message}</h3>
-          <h3>User: {oneQuote.user.userName.firstName} {oneQuote.user.userName.lastName}</h3>
-          <h3>Phone Number: {oneQuote.user.contact.phoneNumber}</h3>
-          <h3>Email: {oneQuote.user.contact.email}</h3>
-        </div>
+        <>
+          <h1>Quote Details</h1>
+          <div className={style.quotedetailcontainer}>
+            <div className={style.userinfocontainer}>
+              <h3>User Info</h3>
+              <p>Name: {oneQuote.user.userName.firstName} {oneQuote.user.userName.lastName}</p>
+              <p>Phone Number: {oneQuote.user.contact.phoneNumber}</p>
+              <p>Email: {oneQuote.user.contact.email}</p>
+            </div>
+            <div className={style.dateinfo}>
+              <h3>Date Info</h3>
+              <p>Quote request date: <Moment local format="MMM DD, YYYY">{oneQuote.createdAt}</Moment></p>
+              <p>Date of event:<Moment local format="MMM DD, YYYY">{oneQuote.dateOfEvent}</Moment></p>
+              <p>Estimated pick up date: <Moment local format="MMM DD, YYYY">{oneQuote.pickUp.date}</Moment> / <Moment local format="LT">{oneQuote.pickUp.time}</Moment></p>
+            </div>
+            <div className={style.aboutproduct}>
+              <h3>Product Info</h3>
+              <p>Type of product: {oneQuote.typeOfProduct}</p>
+              <p>Type of occasion: {oneQuote.typeOfOccasion}</p>
+              <p>Cake flavour: {oneQuote.cakeFlavour}</p>
+              <p>Filling flavour: {oneQuote.fillingFlavour}</p>
+            </div>
+            <div className={style.otherinfo}>
+              <h3>Other Info</h3>
+              <p>Number of guests: {oneQuote.numberOfGuests}</p>
+              <p>Message: {oneQuote.message}</p>
+            </div>
+          </div>
+        </>
       )
     }
   }
