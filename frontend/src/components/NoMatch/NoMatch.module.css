@@ -1,0 +1,27 @@
+.nomatchcontainer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.nomatchimage {
+  display: inherit;
+  height: 600px;
+}
+
+.nomatchcontent {
+  text-align: center;
+  padding-block-start: 20px;
+}
+.navitem {
+  display: inline-block;
+  list-style-type: none;
+  margin: 10px;
+  padding: 10px;
+}
+
+.navlink {
+  color: rgb(39, 180, 236);
+  text-decoration: none;
+  padding: 12px;
+  font-size: 25px;
+}
