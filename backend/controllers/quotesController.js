@@ -38,11 +38,13 @@ const validationSchema = Joi.object().keys({
     .required()
 })
 
+// related to Dashboard.js (front-end / GET request)
 const getAllQuotes = async (req, res) => {
   const allQuotes = await Quote.find().populate('user') 
   res.status(200).send(allQuotes)
 }
 
+// related to quoteDetail.js (front-end / GET request)
 const getOneQuote = async (req, res) => {
   try {
     const params = req.params
@@ -57,6 +59,7 @@ const getOneQuote = async (req, res) => {
   }
 }
 
+// related to Quote.js (front-end / POST request)
 const createNewQuote = async (req, res) => {
   try {
     await validationSchema.validate(req.body, { abortEarly: false })
@@ -88,7 +91,7 @@ const createNewQuote = async (req, res) => {
     })
 
     const savedUser = await newUser.save()
-    console.log(savedUser)
+
     const newQuote = await new Quote({
       typeOfProduct,
       dateOfEvent,
@@ -106,7 +109,6 @@ const createNewQuote = async (req, res) => {
       user: savedUser._id
     })
     const savedQuote = await newQuote.save()
-    console.log(savedQuote)
 
     res.send(savedQuote)
   } catch(validationError){

@@ -11,6 +11,7 @@
     "bootstrap": "^4.3.1",
     "dotenv": "^8.0.0",
     "jquery": "^3.4.1",
+    "lodash": "^4.17.14",
     "moment-timezone": "^0.5.26",
     "netlify-cli": "^2.11.24",
     "popper.js": "^1.15.0",

@@ -50,7 +50,7 @@ class Routes extends React.Component {
         {/* /SignUp route must be deleted before handing over to our client */}
         <Route path="/SignUp" render={this.handleSignUp} /> 
         { authentication ? <Route path="/DashBoard" render={(props) => {
-          return <DashBoard {...props} allQuotes={this.props.allQuotes} />
+          return <DashBoard {...props} />
         }} /> : null }
         { authentication ? <Route path="/QuoteDetail/:id" render={(props) => {
           return <QuoteDetail {...props} />

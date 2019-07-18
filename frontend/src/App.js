@@ -15,7 +15,6 @@ class App extends React.Component {
 
   componentDidMount = async () => {
     try {
-      this.getAllQuotes();
       const token = localStorage.getItem("token");
       const authentication = await axios.get(
         `${process.env.REACT_APP_API_URL}/user/current-user`,
@@ -30,15 +29,6 @@ class App extends React.Component {
         authentication: false
       });
     }
-  };
-
-  getAllQuotes = async () => {
-    const url = `${process.env.REACT_APP_API_URL}/quote/getAllQuotes`;
-    const response = await axios.get(url);
-    const data = await response.data;
-    this.setState({
-      allQuotes: data
-    });
   };
 
   register = async userInfo => {
@@ -82,29 +72,23 @@ class App extends React.Component {
   }
 
   render() {
-    const { allQuotes, authentication, errorMessage } = this.state;
-    if (!allQuotes) {
-      return null;
-    } else {
-      return (
-        <div>
-          <Navbar 
-            authentication={authentication} 
-            logout={this.logout} 
-          />
-          <Social />
-          <Routes 
-            allQuotes={allQuotes} 
-            authentication={authentication} 
-            dateFormat={this.dateFormat} 
-            register={this.register} 
-            login={this.login} 
-            errorMessage={errorMessage}
-          />
-          <Footer />
-        </div>
-      );
-    }
+    const { authentication, errorMessage } = this.state;
+    return (
+      <div>
+        <Navbar 
+          authentication={authentication} 
+          logout={this.logout} 
+        />
+        <Social />
+        <Routes 
+          authentication={authentication} 
+          errorMessage={errorMessage}
+          register={this.register} 
+          login={this.login} 
+        />
+        <Footer />
+      </div>
+    );
   }
 }
 

@@ -32,7 +32,7 @@ const register = async (req, res) => {
         const token = await generateAccessToken(user)
         return res.send({ token })
       } else {
-        return res.status(403).send('user already exists')
+        return res.status(403).send('The email you want to register already exists')
       }
     } catch(validationError){
       const errorMessage = validationError.details.map(d => d.message)
