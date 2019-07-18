@@ -1,6 +1,6 @@
 const User = require('../models/User')
 const Joi = require('@hapi/joi')
-const { checkPassword, generateUser, generateAccessToken } = require('../utils/auth-utils.js')
+const { checkPassword, generateUser, generateAccessToken } = require('../utils/utils.js')
 
 const validationSchema = Joi.object().keys({
   firstName: Joi.string()

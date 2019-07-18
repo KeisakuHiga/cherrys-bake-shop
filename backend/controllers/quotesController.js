@@ -2,6 +2,8 @@ const User = require('../models/User')
 const Quote = require('../models/Quote')
 const ObjectId = require('mongoose').Types.ObjectId
 const Joi = require('@hapi/joi')
+const { createFakeData } = require('../utils/utils')
+
 
 const validationSchema = Joi.object().keys({
   firstName: Joi.string()
@@ -117,8 +119,52 @@ const createNewQuote = async (req, res) => {
   }
 }
 
+const seedFakeData = async (req, res) => {
+  try {
+    await Quote.deleteMany()
+    await User.deleteMany()
+    const newData = createFakeData(10)
+    let arrayOfNewData = []
+    newData.forEach( async (data) => {
+      const newUser = await new User({
+        userName: {
+          firstName: data.userData.firstName,
+          lastName: data.userData.lastName
+        },
+        contact: {
+          email: data.userData.email,
+          phoneNumber: data.userData.phoneNumber
+        }
+      })
+      const savedUser = await newUser.save()
+      const newQuote = await new Quote({
+        typeOfProduct: data.quoteData.typeOfProduct,
+        dateOfEvent: data.quoteData.dateOfEvent,
+        pickUp: {
+          date: data.quoteData.pickUpDate,
+          time: data.quoteData.pickUpTime
+        },
+        typeOfOccasion: data.quoteData.typeOfOccasion,
+        numberOfGuests: data.quoteData.numberOfGuests,
+        flavour: {
+          cakeFlavour: data.quoteData.cakeFlavour,
+          fillingFlavour: data.quoteData.fillingFlavour
+        },
+        message: data.quoteData.message,
+        user: savedUser._id
+      })
+      const savedQuote = await newQuote.save()
+      arrayOfNewData.push(savedQuote)
+    })
+  console.log(arrayOfNewData)
+  return res.status(201).send(arrayOfNewData)
+  } catch(err){
+    return res.status(400).send(err)
+  }
+}
 module.exports = {
   getAllQuotes,
   getOneQuote,
-  createNewQuote
+  createNewQuote,
+  seedFakeData
 }

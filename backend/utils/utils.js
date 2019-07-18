@@ -45,30 +45,36 @@ const checkAccessToken = (req, res, next) => {
   })
 }
 
-const createFakeQuotes = (numberOfQuotes) => {
+const createFakeData = (numberOfData) => {
   let productTypes = [ 'standard cake', 'custom cake', 'cokkies', 'chocolate']
-  let quotes = []
-  for(i = 0; i < numberOfQuotes; i++){
-    let randomNum = Math.floor(Math.random() * 4)
-    let newQuote = {
-      firstName: faker.random.words(),
-      lastName: productTypes[randomNum],
-      email: faker.name.findName(),
-      phoneNumber: faker.name.findName(),
-      typeOfProduct: faker.name.findName(),
-      dateOfEvent: faker.name.findName(),
-      typeOfOccasion: faker.name.findName(),
-      pickUpDate: faker.name.findName(),
-      pickUpTime: faker.name.findName(),
-      numberOfGuests: faker.name.findName(),
-      cakeFlavour: faker.name.findName(),
-      fillingFlavour: faker.name.findName(),
-      message: faker.name.findName(),
+  let occasionTypes = [ 'birthday', 'wedding', 'baby born', 'graduation', 'winning something']
+  let flavourTypes = [ 'chocolate', 'vanilla', 'ube', 'strawberry', 'maple']
 
+  let data = []
+  for(i = 0; i < numberOfData; i++){
+    let randomNum = Math.floor(Math.random() * 4)
+    let newData = {
+      userData: {
+        firstName: faker.name.firstName(),
+        lastName: faker.name.lastName(),
+        email: faker.internet.email(),
+        phoneNumber: faker.phone.phoneNumber()
+      },
+      quoteData: {
+        typeOfProduct: productTypes[randomNum],
+        dateOfEvent: faker.date.future(),
+        typeOfOccasion: occasionTypes[randomNum],
+        pickUpDate: faker.date.future(),
+        pickUpTime: faker.date.future(),
+        numberOfGuests: faker.random.number(),
+        cakeFlavour: flavourTypes[randomNum],
+        fillingFlavour: flavourTypes[randomNum],
+        message: faker.lorem.text()
+      }
     }
-    quotes.push(newQuote)
+    data.push(newData)
   }
-  return quotes
+  return data
 }
 
 module.exports = {
@@ -76,5 +82,5 @@ module.exports = {
   generateUser,
   generateAccessToken,
   checkAccessToken,
-  createFakeQuotes
+  createFakeData
 }

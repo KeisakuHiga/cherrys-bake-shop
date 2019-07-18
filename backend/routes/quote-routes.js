@@ -1,11 +1,12 @@
 const express = require('express')
 const router = express.Router()
-const { getAllQuotes, getOneQuote, createNewQuote } = require('../controllers/quotesController')
+const { getAllQuotes, getOneQuote, createNewQuote, seedFakeData } = require('../controllers/quotesController')
 
-const { checkAccessToken } = require('../utils/auth-utils.js')
+const { checkAccessToken } = require('../utils/utils.js')
 
 // non protected endpoints
 router.post('/newQuote', createNewQuote)
+router.post('/seedData', seedFakeData)
 
  // this middleware checks whether or not a user provides an access token
 router.use(checkAccessToken)
