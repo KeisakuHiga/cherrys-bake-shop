@@ -1,21 +1,11 @@
-/* body {
-  position: relative;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  font-size: 16px;  
+.open-dropdown-content .dropdownmenu{
+  display: block;
 }
-body:before {
-  position: absolute;
-  top: 0;
-  content: "";
-  width: 100%;
-  height: 100%;
-  opacity: .5;
-  background: url(http://m.rgbimg.com/cache1wmVD5/users/x/xy/xymonau/600/oy5PsrQ.jpg);
+.close-dropdown-content .dropdownmenu{
+  display: none;
 }
-h1 {
-  margin-bottom: 50px;
-}
+
+/*
 .col-sm-8 {
   background: #fff;
   border: 1px solid #8b7ecd;

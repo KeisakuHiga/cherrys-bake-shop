@@ -10,7 +10,7 @@ class Dashboard extends Component {
   state = {
     orderBy: "createdAt",
     order: "desc",  // or "desc",
-    dropDownActive: true
+    dropDownActive: false
 
   }
   
@@ -27,22 +27,22 @@ class Dashboard extends Component {
       allQuotes: data
     });
   };
-  // toggle = (e) => {
-  //   e.preventDefault();
-  //   let isActive = this.state.dropDownActive;
-  //   isActive = !isActive;
-  //   this.setState({dropDownActive: isActive});
-  // }
-  // doOrderBy = (e) => {
-  //   e.preventDefault();
-  //   const newOrderBy = e.target.getAttribute('data-value');
-  //   this.setState({orderBy : newOrderBy});
-  // }
-  // doOrder = (e) => {
-  //   e.preventDefault();
-  //   const newOrder = e.target.getAttribute('data-value');
-  //   this.setState({order : newOrder});
-  // }
+  toggle = (e) => {
+    e.preventDefault();
+    let isActive = this.state.dropDownActive;
+    isActive = !isActive;
+    this.setState({dropDownActive: isActive});
+  }
+  doOrderBy = (e) => {
+    e.preventDefault();
+    const newOrderBy = e.target.getAttribute('data-value');
+    this.setState({orderBy : newOrderBy});
+  }
+  doOrder = (e) => {
+    e.preventDefault();
+    const newOrder = e.target.getAttribute('data-value');
+    this.setState({order : newOrder});
+  }
   render() {
     // const orderBy = this.state.orderBy;
     // const order = this.state.order;
@@ -65,14 +65,14 @@ class Dashboard extends Component {
       return (
         <>
           <h1 className={style.dashtitle}>All Quotes</h1>
-          {/* <div className={style.sortbuttons}>
+          <div className={style.sortbutton}>
             <DropDown toggle={ this.toggle } 
                   dropDownActive={ this.state.dropDownActive } 
                   doOrderBy={ this.doOrderBy }
                   doOrder={ this.doOrder }
                   orderBy={ this.state.orderBy }
                   order={ this.state.order } />
-          </div> */}
+          </div>
           <div className={style.dashboardcontainer}>
             <table className="table table-hover">
               <thead>
