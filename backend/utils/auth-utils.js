@@ -1,5 +1,7 @@
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const faker = require('faker')
+
 const User = require('../models/User')
 
 const generateHash = async (password) => {
@@ -42,9 +44,37 @@ const checkAccessToken = (req, res, next) => {
     }
   })
 }
+
+const createFakeQuotes = (numberOfQuotes) => {
+  let productTypes = [ 'standard cake', 'custom cake', 'cokkies', 'chocolate']
+  let quotes = []
+  for(i = 0; i < numberOfQuotes; i++){
+    let randomNum = Math.floor(Math.random() * 4)
+    let newQuote = {
+      firstName: faker.random.words(),
+      lastName: productTypes[randomNum],
+      email: faker.name.findName(),
+      phoneNumber: faker.name.findName(),
+      typeOfProduct: faker.name.findName(),
+      dateOfEvent: faker.name.findName(),
+      typeOfOccasion: faker.name.findName(),
+      pickUpDate: faker.name.findName(),
+      pickUpTime: faker.name.findName(),
+      numberOfGuests: faker.name.findName(),
+      cakeFlavour: faker.name.findName(),
+      fillingFlavour: faker.name.findName(),
+      message: faker.name.findName(),
+
+    }
+    quotes.push(newQuote)
+  }
+  return quotes
+}
+
 module.exports = {
   checkPassword,
   generateUser,
   generateAccessToken,
-  checkAccessToken
+  checkAccessToken,
+  createFakeQuotes
 }
