@@ -1,5 +1,7 @@
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const faker = require('faker')
+
 const User = require('../models/User')
 
 const generateHash = async (password) => {
@@ -42,9 +44,43 @@ const checkAccessToken = (req, res, next) => {
     }
   })
 }
+
+const createFakeData = (numberOfData) => {
+  let productTypes = [ 'standard cake', 'custom cake', 'cokkies', 'chocolate']
+  let occasionTypes = [ 'birthday', 'wedding', 'baby born', 'graduation', 'winning something']
+  let flavourTypes = [ 'chocolate', 'vanilla', 'ube', 'strawberry', 'maple']
+
+  let data = []
+  for(i = 0; i < numberOfData; i++){
+    let randomNum = Math.floor(Math.random() * 4)
+    let newData = {
+      userData: {
+        firstName: faker.name.firstName(),
+        lastName: faker.name.lastName(),
+        email: faker.internet.email(),
+        phoneNumber: faker.phone.phoneNumber()
+      },
+      quoteData: {
+        typeOfProduct: productTypes[randomNum],
+        dateOfEvent: faker.date.future(),
+        typeOfOccasion: occasionTypes[randomNum],
+        pickUpDate: faker.date.future(),
+        pickUpTime: faker.date.future(),
+        numberOfGuests: faker.random.number(),
+        cakeFlavour: flavourTypes[randomNum],
+        fillingFlavour: flavourTypes[randomNum],
+        message: faker.lorem.text()
+      }
+    }
+    data.push(newData)
+  }
+  return data
+}
+
 module.exports = {
   checkPassword,
   generateUser,
   generateAccessToken,
-  checkAccessToken
+  checkAccessToken,
+  createFakeData
 }

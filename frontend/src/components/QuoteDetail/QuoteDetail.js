@@ -8,9 +8,10 @@ class QuoteDetail extends Component {
   state = {  }
 
   getOneQuote = async () => {
+    const token = localStorage.getItem('token')
     const id = this.props.match.params.id
     const url = `${process.env.REACT_APP_API_URL}/quote/${id}`
-    const response = await axios.get(url)
+    const response = await axios.get(url, {headers: { token } })
     const data = await response.data
     this.setState({
       oneQuote: data[0]
@@ -28,7 +29,7 @@ class QuoteDetail extends Component {
     } else {
       return (
         <>
-          <h1>Quote Details</h1>
+          <h1 className={style.quotetitle}>Quote Details</h1>
           <div className={style.quotedetailcontainer}>
             <div className={style.userinfocontainer}>
               <h3>User Info</h3>
