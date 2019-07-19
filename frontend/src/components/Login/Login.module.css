@@ -19,6 +19,10 @@
   background-color: #DCDCDC;
 }
 
+.logintitle {
+  padding-top: 40px;
+}
+
 .formcon {
   height: 300px;
   width: 300px;
@@ -51,7 +55,7 @@
 } */
 
 .submitcon {
-  margin-top: 20px;
+  margin: 20px 0px;
 }
 
 .error {

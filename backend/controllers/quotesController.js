@@ -25,8 +25,6 @@ const validationSchema = Joi.object().keys({
   dateOfEvent: Joi.date().greater('now')
     .required(),
   pickUpDateAndTime: Joi.date().greater('now'),
-  // pickUpDate: Joi.date().greater('now'),
-  // pickUpTime: Joi.date().greater('now'),
   typeOfOccasion: Joi.string()
     .required(),
   numberOfGuests: Joi.number()
@@ -61,13 +59,23 @@ const getOneQuote = async (req, res) => {
     res.send(`There is an err: ${err}`)
   }
 }
+const combineDateAndTime = (date, time) => {
+  const combined = new Date(date + ' ' + time);
+  return combined;
+};
 
 // related to Quote.js (front-end / POST request)
 const createNewQuote = async (req, res) => {
-  console.log(req.body)
+  // The below codes are to combine two data(pickUpDate & pickUpTime) into one data(pickUpDateAndTime)
+  let userInput = req.body
+  userInput.pickUpDateAndTime = combineDateAndTime(req.body.pickUpDate, req.body.pickUpTime)
+
+  // delete two keys(pickUpDate & pickUpTime)
+  delete userInput["pickUpDate"]
+  delete userInput["pickUpTime"]
+
   try {
-    // const pickUpDateAndTime = combine date and time funct
-    await validationSchema.validate(req.body, { abortEarly: false })
+    await validationSchema.validate(userInput, { abortEarly: false })
     const {
       firstName,
       lastName,
@@ -75,15 +83,13 @@ const createNewQuote = async (req, res) => {
       phoneNumber,
       typeOfProduct,
       dateOfEvent,
-      typeOfOccasion,
       pickUpDateAndTime,
-      // pickUpDate,
-      // pickUpTime,
+      typeOfOccasion,
       numberOfGuests,
       cakeFlavour,
       fillingFlavour,
       message
-    } = req.body
+    } = userInput
 
     const newUser = await new User({
       userName: {
@@ -102,10 +108,6 @@ const createNewQuote = async (req, res) => {
       typeOfProduct,
       dateOfEvent,
       pickUpDateAndTime,
-      // pickUp: {
-      //   date: pickUpDate,
-      //   time: pickUpTime
-      // },
       typeOfOccasion,
       numberOfGuests,
       flavour: {
@@ -145,10 +147,7 @@ const seedFakeData = async (req, res) => {
       const newQuote = await new Quote({
         typeOfProduct: data.quoteData.typeOfProduct,
         dateOfEvent: data.quoteData.dateOfEvent,
-        pickUp: {
-          date: data.quoteData.pickUpDate,
-          time: data.quoteData.pickUpTime
-        },
+        pickUpDateAndTime: data.quoteData.pickUpDateAndTime,
         typeOfOccasion: data.quoteData.typeOfOccasion,
         numberOfGuests: data.quoteData.numberOfGuests,
         flavour: {
