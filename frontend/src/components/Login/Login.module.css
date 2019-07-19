@@ -7,9 +7,6 @@
   text-align: center;
 }
 
-/* .loginform {
-  width: 100%;
-} */
 .logininner {
   display: flex;
   justify-content: center;
@@ -19,7 +16,7 @@
   height: 400px;
   border: 1px solid black;
   border-radius: 50px;
-  background-color: grey;
+  background-color: #DCDCDC;
 }
 
 .formcon {
@@ -32,9 +29,10 @@
 }
 
 .input {
+  border: solid 1px black;
   width: 350px;
   margin-top: 20px;
-  /* border-radius: 10px; */
+  border-radius: 2px;
 }
 
 /* .input:focus {
