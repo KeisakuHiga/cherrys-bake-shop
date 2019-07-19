@@ -53,7 +53,6 @@ class App extends React.Component {
     try {
       await axios.post(`${url}/quote/newQuote`, quoteInfo);
     } catch (err) {
-      console.log(err)
       this.setState({
         errorMessage: `Error => ${err.message}`
       });

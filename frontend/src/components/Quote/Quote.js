@@ -2,12 +2,22 @@ import React, { Component } from "react";
 import style from "../Quote/Quote.module.css";
 
 class Quote extends Component {
-  state = {}
+  state = {
+    typeOfProduct: []
+  }
 
   handleInput = e => {
-    this.setState({
-      [e.target.id]: e.target.value
-    })
+    let productArray = this.state.typeOfProduct
+    if(e.target.id === 'typeOfProduct') {
+      productArray.push(e.target.value)
+      this.setState({
+        typeOfProduct: productArray
+      })
+    } else {
+      this.setState({
+        [e.target.id]: e.target.value,
+      })
+    }
   }
 
   handleQuote = e => {
