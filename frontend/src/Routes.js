@@ -15,6 +15,22 @@ import QuoteDetail from './components/QuoteDetail/QuoteDetail'
 class Routes extends React.Component {
   state = {}
   
+<<<<<<< HEAD
+    handleSignUp = () => {
+      if (this.props.authentication) {
+        return <Redirect to="/" />
+      } else {
+        return <SignUp register={this.props.register} authentication={this.props.authentication} errorMessage={this.props.errorMessage} />
+      }
+    }
+
+  handleQuote = () => {
+    if (this.props.authentication) {
+      return <Redirect to="/" />
+    } else {
+      return <Quote createNewQuote={this.props.createNewQuote} errorMessage={this.props.errorMessage} />
+    }
+=======
   handleSignUp = () => {
     if (this.props.authentication) {
       return <Redirect to="/" />
@@ -24,6 +40,7 @@ class Routes extends React.Component {
                 authentication={this.props.authentication}
               />
     }
+>>>>>>> master
   }
   
   handleLogin = () => {
@@ -45,7 +62,8 @@ class Routes extends React.Component {
         <Route path="/About" component={About} />
         <Route path="/Contact" component={Contact} />
         <Route path="/Faq" component={Faq} />
-        <Route path="/Quote" component={Quote} />
+        <Route path="/Quote" render={(props) => {
+          return <Quote {...props} createNewQuote={this.props.createNewQuote} />}} />
         <Route path="/Login" render={this.handleLogin} />
         {/* /SignUp route must be deleted before handing over to our client */}
         <Route path="/SignUp" render={this.handleSignUp} /> 
