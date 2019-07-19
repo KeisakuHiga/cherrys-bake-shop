@@ -8,8 +8,9 @@ const axios = require('axios')
 
 class Dashboard extends Component {
   state = {
-    orderBy: "createdAt",
-    order: "desc",  // or "desc",
+    allQuotes: [],
+    orderBy: "firstName",
+    order: "asc",  // or "desc",
     dropDownActive: false
 
   }
@@ -44,20 +45,19 @@ class Dashboard extends Component {
     this.setState({order : newOrder});
   }
   render() {
-    // const orderBy = this.state.orderBy;
-    // const order = this.state.order;
-    let { allQuotes }  = this.state
+    let { orderBy, order, allQuotes }  = this.state
     // allQuotes  = _.orderBy(allQuotes, (item) => {
     //   return item[orderBy]
     // }, order)
+    allQuotes  = _.orderBy(allQuotes,[orderBy], order)
     
-    // const items = allQuotes.map((item, index)=>{
-    //   return <TableBody data={ item }
-    //                     key={ item._id }
-    //                     orderBy={ this.state.orderBy }
-    //                     id={item.index}
-    //                     />
-    // }); 
+    const items = allQuotes.map((item, index)=>{
+      return <TableBody data={ item }
+                        key={ item._id }
+                        orderBy={ this.state.orderBy }
+                        id={item.index}
+                        />
+    }); 
 
     if(!allQuotes) {
       return null
@@ -86,8 +86,8 @@ class Dashboard extends Component {
                 </tr>
               </thead>
               <tbody>
-                {/* { items } */}
-                {allQuotes.map((quote, index) => (
+                { items }
+                {/* {allQuotes.map((quote, index) => (
                   <tr key={index} onClick={() => window.location =`/QuoteDetail/${quote._id}`} className={style.tablerow}>
                     <th key={quote._id} scope="row">{index + 1}</th>
                     <td key={quote.user.userName.firstName}>{quote.user.userName.firstName}</td>
@@ -96,7 +96,7 @@ class Dashboard extends Component {
                     <td key={quote.pickUp.time}><Moment local format="MMM DD, YYYY LT">{quote.pickUp.time}</Moment></td>
                     <td key={quote.createdAt}><Moment local format="MMM DD, YYYY LT">{quote.createdAt}</Moment></td>
                     </tr>
-                ))}
+                ))} */}
               </tbody>
             </table>
           </div>

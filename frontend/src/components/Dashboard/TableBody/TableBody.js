@@ -19,7 +19,7 @@ class TableBody extends Component {
           <td key={data.user.contact.phoneNumber}>{data.user.contact.phoneNumber}</td>
           <td key={data.pickUp.time}><Moment local format="MMM DD, YYYY LT">{data.pickUp.time}</Moment></td>
           <td key={data.createdAt}><Moment local format="MMM DD, YYYY LT">{data.createdAt}</Moment></td>
-          </tr>
+        </tr>
       </>
     );
   }

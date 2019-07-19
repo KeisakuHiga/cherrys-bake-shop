@@ -1,7 +1,7 @@
-.open-dropdown-content .dropdownmenu{
+.opendropdowncontent .dropdownmenu{
   display: block;
 }
-.close-dropdown-content .dropdownmenu{
+.closedropdowncontent .dropdownmenu{
   display: none;
 }
 
