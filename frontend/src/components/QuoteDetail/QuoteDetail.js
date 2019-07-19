@@ -39,9 +39,9 @@ class QuoteDetail extends Component {
             </div>
             <div className={style.dateinfo}>
               <h3>Date Info</h3>
-              <p>Quote request date: <Moment local format="MMM DD, YYYY">{oneQuote.createdAt}</Moment></p>
+              <p>Quote request date: <Moment local format="MMM DD, YYYY LT">{oneQuote.createdAt}</Moment></p>
               <p>Date of event:<Moment local format="MMM DD, YYYY">{oneQuote.dateOfEvent}</Moment></p>
-              <p>Estimated pick up date: <Moment local format="MMM DD, YYYY">{oneQuote.pickUpDateAndTime}</Moment></p>
+              <p>Estimated pick up date: <Moment local format="MMM DD, YYYY LT">{oneQuote.pickUpDateAndTime}</Moment></p>
             </div>
             <div className={style.aboutproduct}>
               <h3>Product Info</h3>

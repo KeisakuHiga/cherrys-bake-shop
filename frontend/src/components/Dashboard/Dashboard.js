@@ -11,8 +11,7 @@ class Dashboard extends Component {
     allQuotes: [],
     orderBy: "firstName",
     order: "asc",  // or "desc",
-    dropDownActive: false
-
+    // dropDownActive: false
   }
   
   componentDidMount = () =>{
@@ -24,27 +23,24 @@ class Dashboard extends Component {
     const url = `${process.env.REACT_APP_API_URL}/quote/getAllQuotes`
     const response = await axios.get(url, {headers: { token } });
     const data = await response.data;
-    this.setState({
-      allQuotes: data
-    });
+    this.setState({ allQuotes: data });
   };
-  toggle = (e) => {
+  // toggle = e => {
+  //   e.preventDefault();
+  //   let isActive = this.state.dropDownActive;
+  //   isActive = !isActive;
+  //   this.setState({ dropDownActive: isActive });
+  // }
+  doOrderBy = e => {
     e.preventDefault();
-    let isActive = this.state.dropDownActive;
-    isActive = !isActive;
-    this.setState({dropDownActive: isActive});
+    this.setState({ orderBy : e.target.value });
   }
-  doOrderBy = (e) => {
+  doOrder = e => {
     e.preventDefault();
-    const newOrderBy = e.target.getAttribute('data-value');
-    this.setState({orderBy : newOrderBy});
-  }
-  doOrder = (e) => {
-    e.preventDefault();
-    const newOrder = e.target.getAttribute('data-value');
-    this.setState({order : newOrder});
+    this.setState({ order : e.target.value });
   }
   render() {
+    console.log(this.state)
     let { orderBy, order, allQuotes }  = this.state
     // allQuotes  = _.orderBy(allQuotes, (item) => {
     //   return item[orderBy]
@@ -58,20 +54,30 @@ class Dashboard extends Component {
                         id={item.index}
                         />
     }); 
-
     if(!allQuotes) {
-      return null
+      return <h1>Loading...</h1>
     } else {
       return (
         <>
           <h1 className={style.dashtitle}>All Quotes</h1>
           <div className={style.sortbutton}>
-            <DropDown toggle={ this.toggle } 
+          <select value={this.state.value} onChange={this.doOrderBy}>
+              <option value="firstName">First Name</option>
+              <option value="lastName">Last Name</option>
+              <option value="phoneNumber">Phone Number</option>
+              <option value="pickUpDateAndTime">Estimated Pick Up</option>
+              <option value="createdAt">Created At</option>
+            </select>
+            <select value={this.state.value} onChange={this.doOrder}>
+              <option value="asc">Ascending</option>
+              <option value="desc">Descending</option>
+            </select>
+            {/* <DropDown toggle={ this.toggle } 
                   dropDownActive={ this.state.dropDownActive } 
                   doOrderBy={ this.doOrderBy }
                   doOrder={ this.doOrder }
                   orderBy={ this.state.orderBy }
-                  order={ this.state.order } />
+                  order={ this.state.order } /> */}
           </div>
           <div className={style.dashboardcontainer}>
             <table className="table table-hover">
@@ -102,6 +108,7 @@ class Dashboard extends Component {
           </div>
         </>
       )
+
     }
   }
 }
