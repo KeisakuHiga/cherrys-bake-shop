@@ -29,127 +29,182 @@ class Quote extends Component {
       return (
         <>
         <div className={style.quotecontainer}>
-          <div className="quoteinner">
+          <div className={style.quoteinner}>
             <form>
+                <div>
+                  <label>What would you like to order?</label>
+                </div>
               <div className={style.checkbox}>
-                <label>What would you like to order?</label>
-                <label>
-                  <span>Custom Cakes</span>
-                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Custom Cakes" onChange={this.handleInput}/>
-                </label>
-                <label>
-                  <span>Standard Cakes</span>
-                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Standard Cakes" onChange={this.handleInput}/>
-                </label>
-                <label>
-                  <span>Wedding Cakes</span>
-                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Wedding Cakes" onChange={this.handleInput}/>
-                </label>
-                <label>
-                  <span>Ube Cakes</span>
-                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Ube Cakes" onChange={this.handleInput}/>
-                </label>
-                <label>
-                  <span>Filipino Cuisine</span>
-                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Filipino Cuisine" onChange={this.handleInput}/>
-                </label>
-                <label>
-                  <span>Cupcakes</span>
-                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Cupcakes" onChange={this.handleInput}/>
-                </label>
-                <label>
-                  <span>Macarons</span>
-                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Macarons" onChange={this.handleInput}/>
-                </label>
-                <label>
-                  <span>Pinoy Bread</span>
-                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Pinoy Bread" onChange={this.handleInput}/>
-                </label>
+                <div>
+                  <label>
+                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Custom Cakes" onChange={this.handleInput}/>
+                    <span>Custom Cakes</span>
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Standard Cakes" onChange={this.handleInput}/>
+                    <span>Standard Cakes</span>
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Wedding Cakes" onChange={this.handleInput}/>
+                    <span>Wedding Cakes</span>
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Ube Cakes" onChange={this.handleInput}/>
+                    <span>Ube Cakes</span>
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Filipino Cuisine" onChange={this.handleInput}/>
+                    <span>Filipino Cuisine</span>
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Cupcakes" onChange={this.handleInput}/>
+                    <span>Cupcakes</span>
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Macarons" onChange={this.handleInput}/>
+                    <span>Macarons</span>
+                  </label>
+                </div>
+                <div>
+                  <label>
+                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Pinoy Bread" onChange={this.handleInput}/>
+                    <span>Pinoy Bread</span>
+                  </label>
+                </div>
               </div>
-              <label>What is your occasion?</label>
-              <input
-                type="text"
-                name="typeOfOccasion"
-                id="typeOfOccasion"
-                onChange={this.handleInput}
-              />
-              <label>Email Address</label>
-              <input
-                type="text"
-                name="email"
-                id="email"
-                onChange={this.handleInput}
-              />
-              <label>First Name</label>
-              <input
-                type="text"
-                name="firstName"
-                id="firstName"
-                onChange={this.handleInput}
-              />
-              <label>Last Name</label>
-              <input
-                type="text"
-                name="lastName"
-                id="lastName"
-                onChange={this.handleInput}
-              />
-              <label>Message</label>
-              <textarea
-                name="message"
-                id="message"
-                onChange={this.handleInput}
-              />
-              <label>Date of your event</label>
-              <input 
-                type="date" 
-                name="dateOfEvent" 
-                id="dateOfEvent"
-                onChange={this.handleInput}
-              />
-              <label>Date and Time of Pick Up</label>
-              <input 
-                type="date" 
-                name="pickUpDate" 
-                id="pickUpDate"
-                onChange={this.handleInput}
-              />
-              <label>Time of Pick Up</label>
-              <input 
-                type="time" 
-                name="pickUpTime"
-                id="pickUpTime"
-                onChange={this.handleInput}
-              />  
-              <label>Phone Number</label>
-              <input
-                type="text"
-                name="phoneNumber"
-                id="phoneNumber"
-                onChange={this.handleInput}
-              />
-              <label>Cake Flavour</label>
-              <input
-                type="text"
-                name="cakeFlavour"
-                id="cakeFlavour"
-                onChange={this.handleInput}
-              />
-              <label>Filling Flavour</label>
-              <input
-                type="text"
-                name="fillingFLavour"
-                id="fillingFlavour"
-                onChange={this.handleInput}
-              />
-              <label>Number of Guests</label>
-              <input
-                type="number"
-                name="numberOfGuests"
-                id="numberOfGuests"
-                onChange={this.handleInput}
-              />
-              <input type="submit" value="Submit" onClick={this.handleQuote} />
+              <div className={style.occasion}>
+                <label>What is your occasion?</label>
+                <input
+                  type="text"
+                  name="typeOfOccasion"
+                  id="typeOfOccasion"
+                  onChange={this.handleInput}
+                />
+              </div>
+              <div className={style.email}>
+                <label>Email Address</label>
+                <input 
+                  className={style.emailinput}
+                  type="text"
+                  name="email"
+                  id="email"
+                  onChange={this.handleInput}
+                />
+              </div>
+              <div className={style.completename}>
+                <div className={style.first}>
+                  <label>First Name</label>
+                  <input
+                    className={style.firstinput}
+                    type="text"
+                    name="firstName"
+                    id="firstName"
+                    onChange={this.handleInput}
+                  />
+                </div>
+                <div className={style.last}>
+                  <label>Last Name</label>
+                  <input
+                    className={style.lastinput}
+                    type="text"
+                    name="lastName"
+                    id="lastName"
+                    onChange={this.handleInput}
+                  />
+                </div>
+              </div>
+              <div className={style.message}>
+                <label>Message</label>
+                <textarea
+                  className={style.messageinput}
+                  name="message"
+                  id="message"
+                  onChange={this.handleInput}
+                />
+              </div>
+              <div className={style.dateevent}>
+                <label>Date of your event</label>
+                <input 
+                  type="date" 
+                  name="dateOfEvent" 
+                  id="dateOfEvent"
+                  onChange={this.handleInput}
+                />
+              </div>
+              <div className={style.completepickup}>
+                <div className={style.pickupevent}>
+                  <label>Date of Pick Up</label>
+                  <input
+                    className={style.dateinput}
+                    type="date" 
+                    name="pickUpDate" 
+                    id="pickUpDate"
+                    onChange={this.handleInput}
+                  />
+                </div>
+                <div className={style.time}>
+                  <label>Time of Pick Up</label>
+                  <input 
+                    className={style.timeinput}
+                    type="time" 
+                    name="pickUpTime"
+                    id="pickUpTime"
+                    onChange={this.handleInput}
+                  />  
+                </div>
+              </div>
+              <div className={style.phone}>
+                <label>Phone Number</label>
+                <input
+                  type="text"
+                  name="phoneNumber"
+                  id="phoneNumber"
+                  onChange={this.handleInput}
+                />
+              </div>
+              <div className={style.flavour}>
+                <label>Cake Flavour</label>
+                <input
+                  type="text"
+                  name="cakeFlavour"
+                  id="cakeFlavour"
+                  onChange={this.handleInput}
+                />
+              </div>
+              <div className={style.filling}>
+                <label>Filling Flavour</label>
+                <input
+                  type="text"
+                  name="fillingFLavour"
+                  id="fillingFlavour"
+                  onChange={this.handleInput}
+                />
+              </div>
+              <div className={style.guests}>
+                <label>Number of Guests</label>
+                <input
+                  className={style.guestinput}
+                  type="number"
+                  name="numberOfGuests"
+                  id="numberOfGuests"
+                  onChange={this.handleInput}
+                />
+              </div>
+              <div className={style.quotesub}>
+                <input type="submit" value="Submit" onClick={this.handleQuote} />
+              </div>
             </form>
             {this.props.errorMessage && <h1>{this.props.errorMessage}</h1>}
 

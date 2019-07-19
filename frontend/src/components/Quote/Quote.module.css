@@ -1,19 +1,171 @@
 .quotecontainer {
-  height: 800px;
+  height: 1600px;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #DCDCDC;
+  /* background-color: #DCDCDC; */
 }
 
 .quoteinner {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 900px;
+  height: 1200px;
+  background-color: #DCDCDC;
+}
+
+.checkbox {
+  height: 200px;
+  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
-  width: 700px;
-  height: 400px;
+  flex-wrap: wrap;
+}
+
+.occasion {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.email {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.emailinput {
+  width: 394px;
+}
+
+.completename {
+  height: 100px;
+  width: 425px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.first {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.firstinput {
+  width: 180px;
+}
+
+.last {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.lastinput {
+  width: 180px;
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.messageinput {
+  width: 394px;
+  height: 90px;
+}
+
+.dateevent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.completepickup {
+  height: 100px;
+  width: 425px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.pickupevent {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.dateinput {
+  width: 176px;
+  height: 32px;
+}
+
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.timeinput {
+  width: 176px;
+  height: 32px;
+}
+
+.phone {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.flavour {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.filling {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.guests {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.guestinput {
+  width: 394px;
+}
+
+.quotesub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .radio {
@@ -21,4 +173,8 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.quotecontainer label {
+ margin-top: 10px;
 }
