@@ -51,7 +51,6 @@ class App extends React.Component {
   createNewQuote = async quoteInfo => {
     const url = process.env.REACT_APP_API_URL;
     try {
-      console.log('hello')
       await axios.post(`${url}/quote/newQuote`, quoteInfo);
     } catch (err) {
       console.log(err)
