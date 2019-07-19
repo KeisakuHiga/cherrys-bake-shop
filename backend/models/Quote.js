@@ -5,10 +5,6 @@ const quoteSchema = new Schema({
   typeOfProduct: [String],
   dateOfEvent: Date,
   pickUpDateAndTime: Date,
-  // pickUp: {
-  //   date: Date,
-  //   time: Date
-  // },
   typeOfOccasion: String,
   numberOfGuests: Number,
   flavour: {
