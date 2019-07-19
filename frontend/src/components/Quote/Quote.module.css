@@ -6,3 +6,19 @@
   align-items: center;
   background-color: #DCDCDC;
 }
+
+.quoteinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 700px;
+  height: 400px;
+}
+
+.radio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
