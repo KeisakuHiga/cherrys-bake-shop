@@ -59,7 +59,7 @@ class SignUp extends Component {
             />
             <input type="submit" value="Sign Up" onClick={this.handleSignUp} />
           </form>
-          {this.state.errorMessage && <h1>{this.state.errorMessage}</h1>}
+          {this.props.errorMessage && <h1>{this.props.errorMessage}</h1>}
         </>
       )
     }

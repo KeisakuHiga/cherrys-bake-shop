@@ -19,9 +19,17 @@ class Routes extends React.Component {
       if (this.props.authentication) {
         return <Redirect to="/" />
       } else {
-        return <SignUp register={this.props.register} authentication={this.props.authentication} />
+        return <SignUp register={this.props.register} authentication={this.props.authentication} errorMessage={this.props.errorMessage} />
       }
     }
+
+  handleQuote = () => {
+    if (this.props.authentication) {
+      return <Redirect to="/" />
+    } else {
+      return <Quote createNewQuote={this.props.createNewQuote} errorMessage={this.props.errorMessage} />
+    }
+  }
   
   handleLogin = () => {
     if (this.props.authentication) {
@@ -38,7 +46,8 @@ class Routes extends React.Component {
         <Route path="/About" component={About} />
         <Route path="/Contact" component={Contact} />
         <Route path="/Faq" component={Faq} />
-        <Route path="/Quote" component={Quote} />
+        <Route path="/Quote" render={(props) => {
+          return <Quote {...props} createNewQuote={this.props.createNewQuote} />}} />
         <Route path="/Login" render={this.handleLogin} />
         <Route path="/SignUp" render={this.handleSignUp} />
         { authentication ? <Route path="/DashBoard" render={(props) => {

@@ -58,6 +58,19 @@ class App extends React.Component {
     }
   };
 
+  createNewQuote = async quoteInfo => {
+    const url = process.env.REACT_APP_API_URL;
+    try {
+      console.log('hello')
+      await axios.post(`${url}/quote/newQuote`, quoteInfo);
+    } catch (err) {
+      console.log(err)
+      this.setState({
+        errorMessage: `Error => ${err.message}`
+      });
+    }
+  };
+
   login = async userCredentials => {
     const url = process.env.REACT_APP_API_URL;
     try {
@@ -100,6 +113,7 @@ class App extends React.Component {
             register={this.register} 
             login={this.login} 
             errorMessage={errorMessage}
+            createNewQuote={this.createNewQuote}
           />
           <Footer />
         </div>
