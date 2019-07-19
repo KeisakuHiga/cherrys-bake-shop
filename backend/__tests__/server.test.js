@@ -12,15 +12,15 @@ describe("api is working", () => {
 
 describe("testing seed data", () => {
   test("createFakeData() should return an array of 10 documents", () => {
-    const result = createFakeData(20);
-    expect(result.length).toBe(20);
+    const result = createFakeData(10);
+    expect(result.length).toBe(10);
   });
 });
 
-// Checks incorrect username and password token logic
+// Checks token logic on Login
 
-describe("testing authentication and token logic", () => {
-  test("testing if '/login' sends back no token when incorrect username and password", async () => {
+describe("Testing if login token fails with incorrect credentials", () => {
+  test("Checking if '/login' sends back no token when incorrect username and password", async () => {
     const response = await request(app)
       .post("/auth/login")
       .send({
@@ -28,5 +28,23 @@ describe("testing authentication and token logic", () => {
         password: "password"
       });
     expect(response.status).toBe(403);
+  });
+});
+
+// Check Register token logic
+
+describe("testing if Register generates a User", () => {
+  test("Checking if '/register' generates a User and sends back a 200", async () => {
+    const response = await request(app)
+      .post("/auth/register")
+      .send({
+        firstName: "Seep",
+        lastName: "Gulati",
+        email: "seep@gmail.com",
+        phoneNumber: "0423617890",
+        password: "password"
+      });
+      .set('Accept', 'application/json')
+    expect(response.status).toBe(200);
   });
 });
