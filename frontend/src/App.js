@@ -85,30 +85,24 @@ class App extends React.Component {
   }
 
   render() {
-    const { allQuotes, authentication, errorMessage } = this.state;
-    if (!allQuotes) {
-      return null;
-    } else {
-      return (
-        <div>
-          <Navbar 
-            authentication={authentication} 
-            logout={this.logout} 
-          />
-          <Social />
-          <Routes 
-            allQuotes={allQuotes} 
-            authentication={authentication} 
-            dateFormat={this.dateFormat} 
-            register={this.register} 
-            login={this.login} 
-            errorMessage={errorMessage}
-            createNewQuote={this.createNewQuote}
-          />
-          <Footer />
-        </div>
-      );
-    }
+    const { authentication, errorMessage } = this.state;
+    return (
+      <div>
+        <Navbar 
+          authentication={authentication} 
+          logout={this.logout} 
+        />
+        <Social />
+        <Routes 
+          authentication={authentication} 
+          register={this.register} 
+          login={this.login} 
+          errorMessage={errorMessage}
+          createNewQuote={this.createNewQuote}
+        />
+        <Footer />
+      </div>
+    )
   }
 }
 

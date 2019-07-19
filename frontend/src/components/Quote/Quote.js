@@ -2,18 +2,12 @@ import React, { Component } from "react";
 import style from "../Quote/Quote.module.css";
 
 class Quote extends Component {
-<<<<<<< HEAD
   state = {}
 
   handleInput = e => {
     this.setState({
       [e.target.id]: e.target.value
     })
-=======
-  state = {};
-  render() {
-    return <div className={style.quotecontainer} />;
->>>>>>> master
   }
 
   handleQuote = e => {
