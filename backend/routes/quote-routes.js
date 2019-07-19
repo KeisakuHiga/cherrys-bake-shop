@@ -10,6 +10,9 @@ const {
 const { checkAccessToken } = require("../utils/utils.js");
 
 // non protected endpoints
+router.get("/", (req, res) => {
+  res.send("api is working");
+});
 router.post("/newQuote", createNewQuote);
 router.post("/seedData", seedFakeData);
 
