@@ -1,0 +1,46 @@
+/* desktop design */
+.quotetitle {
+  font-size: 6vw;
+  margin-left: 8vw;
+  width: 84vw;
+  border-bottom: 2px solid rgba(0,0,0,0.10);
+}
+.quotedetailcontainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+  margin-top: 2vh;
+  /* margin-left: 2vw; */
+}
+.userinfocontainer {
+  padding: 3%;
+  width: 40%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+  margin: 2%;
+  background-color: rgb(241, 220, 220);
+}
+.dateinfo {
+  padding: 3%;
+  width: 40%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+  margin: 2%;
+  background-color: rgb(228, 220, 241);
+}
+.aboutproduct {
+  padding: 3%;
+  width: 40%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+  margin: 2%;
+  background-color: rgb(241, 240, 220);
+}
+.otherinfo {
+  padding: 3%;
+  width: 40%;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+  margin: 2%;
+  background-color: rgb(220, 241, 238);
+}
+
+

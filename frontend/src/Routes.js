@@ -10,11 +10,12 @@ import SignUp from './components/SignUp/SignUp'
 import NoMatch from './components/NoMatch/NoMatch'
 import Quote from './components/Quote/Quote'
 import DashBoard from './components/Dashboard/Dashboard'
-import QuoteDetail from './components/Dashboard/QuoteDetail/QuoteDetail'
+import QuoteDetail from './components/QuoteDetail/QuoteDetail'
 
 class Routes extends React.Component {
   state = {}
   
+<<<<<<< HEAD
     handleSignUp = () => {
       if (this.props.authentication) {
         return <Redirect to="/" />
@@ -29,13 +30,28 @@ class Routes extends React.Component {
     } else {
       return <Quote createNewQuote={this.props.createNewQuote} errorMessage={this.props.errorMessage} />
     }
+=======
+  handleSignUp = () => {
+    if (this.props.authentication) {
+      return <Redirect to="/" />
+    } else {
+      return <SignUp 
+                register={this.props.register}
+                authentication={this.props.authentication}
+              />
+    }
+>>>>>>> master
   }
   
   handleLogin = () => {
     if (this.props.authentication) {
       return <Redirect to="/" />
     } else {
-      return <Login login={this.props.login} authentication={this.props.authentication} errorMessage={this.props.errorMessage} />
+      return <Login
+                login={this.props.login}
+                authentication={this.props.authentication}
+                errorMessage={this.props.errorMessage}
+              />
     }
   }
 
@@ -49,9 +65,10 @@ class Routes extends React.Component {
         <Route path="/Quote" render={(props) => {
           return <Quote {...props} createNewQuote={this.props.createNewQuote} />}} />
         <Route path="/Login" render={this.handleLogin} />
-        <Route path="/SignUp" render={this.handleSignUp} />
+        {/* /SignUp route must be deleted before handing over to our client */}
+        <Route path="/SignUp" render={this.handleSignUp} /> 
         { authentication ? <Route path="/DashBoard" render={(props) => {
-          return <DashBoard {...props} allQuotes={this.props.allQuotes} />
+          return <DashBoard {...props} />
         }} /> : null }
         { authentication ? <Route path="/QuoteDetail/:id" render={(props) => {
           return <QuoteDetail {...props} />
