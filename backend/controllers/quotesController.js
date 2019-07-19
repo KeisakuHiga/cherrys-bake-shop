@@ -63,6 +63,7 @@ const getOneQuote = async (req, res) => {
 
 // related to Quote.js (front-end / POST request)
 const createNewQuote = async (req, res) => {
+  console.log(req.body)
   try {
     await validationSchema.validate(req.body, { abortEarly: false })
     const {
