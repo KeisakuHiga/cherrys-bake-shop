@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+  "jest": {
+    "testEnvironment": "node"
+  },
   "scripts": {
     "test": "jest --watchAll --coverage",
     "start": "nodemon server.js"
