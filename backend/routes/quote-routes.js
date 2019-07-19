@@ -1,3 +1,16 @@
+<<<<<<< HEAD
+const express = require("express");
+const router = express.Router();
+const {
+  getAllQuotes,
+  getOneQuote,
+  createNewQuote
+} = require("../controllers/quotesController");
+
+router.get("/getAllQuotes", getAllQuotes);
+router.get("/:id", getOneQuote);
+router.post("/newQuote", createNewQuote);
+=======
 const express = require('express')
 const router = express.Router()
 const { getAllQuotes, getOneQuote, createNewQuote, seedFakeData } = require('../controllers/quotesController')
@@ -14,5 +27,6 @@ router.use(checkAccessToken)
 // protected endpoints
 router.get('/getAllQuotes', getAllQuotes)
 router.get('/:id', getOneQuote)
+>>>>>>> master
 
-module.exports = router
+module.exports = router;
