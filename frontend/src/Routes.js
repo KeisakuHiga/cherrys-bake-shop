@@ -15,7 +15,6 @@ import QuoteDetail from './components/QuoteDetail/QuoteDetail'
 class Routes extends React.Component {
   state = {}
   
-<<<<<<< HEAD
     handleSignUp = () => {
       if (this.props.authentication) {
         return <Redirect to="/" />
@@ -30,17 +29,6 @@ class Routes extends React.Component {
     } else {
       return <Quote createNewQuote={this.props.createNewQuote} errorMessage={this.props.errorMessage} />
     }
-=======
-  handleSignUp = () => {
-    if (this.props.authentication) {
-      return <Redirect to="/" />
-    } else {
-      return <SignUp 
-                register={this.props.register}
-                authentication={this.props.authentication}
-              />
-    }
->>>>>>> master
   }
   
   handleLogin = () => {
