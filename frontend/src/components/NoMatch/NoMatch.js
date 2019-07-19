@@ -19,7 +19,7 @@ class NoMatch extends Component {
         </div>
         <ul className={style.nomatchcontent}>
           <h3>
-            Meanwhile, we are baking fresh cakes for you, you can look at below
+            Meanwhile, we are baking fresh cakes for you. You can look at below
             options.
           </h3>
           <li className={style.navitem}>
