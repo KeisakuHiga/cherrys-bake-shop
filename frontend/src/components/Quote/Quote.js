@@ -21,39 +21,39 @@ class Quote extends Component {
         <div className={style.quotecontainer}>
           <div className="quoteinner">
             <form>
-              <div className={style.radio}>
+              <div className={style.checkbox}>
                 <label>What would you like to order?</label>
                 <label>
                   <span>Custom Cakes</span>
-                  <input type="radio" name="typeOfProduct" id="typeOfProduct" value="Custom Cakes" onChange={this.handleInput}/>
+                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Custom Cakes" onChange={this.handleInput}/>
                 </label>
                 <label>
                   <span>Standard Cakes</span>
-                  <input type="radio" name="typeOfProduct" id="typeOfProduct" value="Standard Cakes" onChange={this.handleInput}/>
+                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Standard Cakes" onChange={this.handleInput}/>
                 </label>
                 <label>
                   <span>Wedding Cakes</span>
-                  <input type="radio" name="typeOfProduct" id="typeOfProduct" value="Wedding Cakes" onChange={this.handleInput}/>
+                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Wedding Cakes" onChange={this.handleInput}/>
                 </label>
                 <label>
                   <span>Ube Cakes</span>
-                  <input type="radio" name="typeOfProduct" id="typeOfProduct" value="Ube Cakes" onChange={this.handleInput}/>
+                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Ube Cakes" onChange={this.handleInput}/>
                 </label>
                 <label>
                   <span>Filipino Cuisine</span>
-                  <input type="radio" name="typeOfProduct" id="typeOfProduct" value="Filipino Cuisine" onChange={this.handleInput}/>
+                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Filipino Cuisine" onChange={this.handleInput}/>
                 </label>
                 <label>
                   <span>Cupcakes</span>
-                  <input type="radio" name="typeOfProduct" id="typeOfProduct" value="Cupcakes" onChange={this.handleInput}/>
+                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Cupcakes" onChange={this.handleInput}/>
                 </label>
                 <label>
                   <span>Macarons</span>
-                  <input type="radio" name="typeOfProduct" id="typeOfProduct" value="Macarons" onChange={this.handleInput}/>
+                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Macarons" onChange={this.handleInput}/>
                 </label>
                 <label>
                   <span>Pinoy Bread</span>
-                  <input type="radio" name="typeOfProduct" id="typeOfProduct" value="Pinoy Bread" onChange={this.handleInput}/>
+                  <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Pinoy Bread" onChange={this.handleInput}/>
                 </label>
               </div>
               <label>What is your occasion?</label>
