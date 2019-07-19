@@ -24,8 +24,9 @@ const validationSchema = Joi.object().keys({
     .required(),
   dateOfEvent: Joi.date().greater('now')
     .required(),
-  pickUpDate: Joi.date().greater('now'),
-  pickUpTime: Joi.date().greater('now'),
+  pickUpDateAndTime: Joi.date().greater('now'),
+  // pickUpDate: Joi.date().greater('now'),
+  // pickUpTime: Joi.date().greater('now'),
   typeOfOccasion: Joi.string()
     .required(),
   numberOfGuests: Joi.number()
@@ -64,6 +65,7 @@ const getOneQuote = async (req, res) => {
 // related to Quote.js (front-end / POST request)
 const createNewQuote = async (req, res) => {
   try {
+    // const pickUpDateAndTime = combine date and time funct
     await validationSchema.validate(req.body, { abortEarly: false })
     const {
       firstName,
@@ -73,8 +75,9 @@ const createNewQuote = async (req, res) => {
       typeOfProduct,
       dateOfEvent,
       typeOfOccasion,
-      pickUpDate,
-      pickUpTime,
+      pickUpDateAndTime,
+      // pickUpDate,
+      // pickUpTime,
       numberOfGuests,
       cakeFlavour,
       fillingFlavour,
@@ -97,10 +100,11 @@ const createNewQuote = async (req, res) => {
     const newQuote = await new Quote({
       typeOfProduct,
       dateOfEvent,
-      pickUp: {
-        date: pickUpDate,
-        time: pickUpTime
-      },
+      pickUpDateAndTime,
+      // pickUp: {
+      //   date: pickUpDate,
+      //   time: pickUpTime
+      // },
       typeOfOccasion,
       numberOfGuests,
       flavour: {
