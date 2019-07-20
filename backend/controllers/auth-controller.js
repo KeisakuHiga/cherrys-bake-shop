@@ -30,6 +30,7 @@ const register = async (req, res) => {
   if (firstName && lastName && email && phoneNumber && password) {
     try {
       await validationSchema.validate(req.body, { abortEarly: false });
+      console.log(email);
       const query = await User.findOne({ "contact.email": email });
       if (query === null) {
         const user = await generateUser(

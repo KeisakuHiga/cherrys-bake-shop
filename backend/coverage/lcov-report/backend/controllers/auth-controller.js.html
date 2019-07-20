@@ -20,14 +20,14 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">44.12% </span>
+        <span class="strong">82.86% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>15/34</span>
+        <span class='fraction'>29/35</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">47.06% </span>
+        <span class="strong">88.24% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>8/17</span>
+        <span class='fraction'>15/17</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">66.67% </span>
@@ -35,16 +35,16 @@
         <span class='fraction'>2/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">45.45% </span>
+        <span class="strong">85.29% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>15/33</span>
+        <span class='fraction'>29/34</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -131,7 +131,8 @@
 <a name='L83'></a><a href='#L83'>83</a>
 <a name='L84'></a><a href='#L84'>84</a>
 <a name='L85'></a><a href='#L85'>85</a>
-<a name='L86'></a><a href='#L86'>86</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -164,16 +165,17 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -189,20 +191,20 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -248,17 +250,18 @@ const register = async (req, res) =&gt; {
   <span class="missing-if-branch" title="else path not taken" >E</span>if (firstName &amp;&amp; lastName &amp;&amp; email &amp;&amp; phoneNumber &amp;&amp; password) {
     try {
       await validationSchema.validate(req.body, { abortEarly: false });
+      console.log(email);
       const query = await User.findOne({ "contact.email": email });
-<span class="cstat-no" title="statement not covered" >      if (query === null) {</span>
-        const user = <span class="cstat-no" title="statement not covered" >await generateUser(</span>
+      <span class="missing-if-branch" title="else path not taken" >E</span>if (query === null) {
+        const user = await generateUser(
           firstName,
           lastName,
           email,
           phoneNumber,
           password
         );
-        const token = <span class="cstat-no" title="statement not covered" >await generateAccessToken(user);</span>
-<span class="cstat-no" title="statement not covered" >        return res.send({ token });</span>
+        const token = await generateAccessToken(user);
+        return res.send({ token });
       } else {
 <span class="cstat-no" title="statement not covered" >        return res</span>
           .status(403)
@@ -275,19 +278,19 @@ const register = async (req, res) =&gt; {
 &nbsp;
 const login = async (req, res) =&gt; {
   const { email, password } = req.body;
-  <span class="missing-if-branch" title="if path not taken" >I</span>if (email &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >password)</span> {
-<span class="cstat-no" title="statement not covered" >    try {</span>
-      const query = <span class="cstat-no" title="statement not covered" >await User.findOne({ "contact.email": email });</span>
-<span class="cstat-no" title="statement not covered" >      if (query !== null) {</span>
-        const result = <span class="cstat-no" title="statement not covered" >await checkPassword(password, query.password);</span>
-<span class="cstat-no" title="statement not covered" >        if (!result) {</span>
-<span class="cstat-no" title="statement not covered" >          return res.status(403).send("incorrect credentials");</span>
+  if (email &amp;&amp; password) {
+    try {
+      const query = await User.findOne({ "contact.email": email });
+      if (query !== null) {
+        const result = await checkPassword(password, query.password);
+        if (!result) {
+          return res.status(403).send("incorrect credentials");
         } else {
-          const token = <span class="cstat-no" title="statement not covered" >await generateAccessToken(query);</span>
-<span class="cstat-no" title="statement not covered" >          return res.send({ token });</span>
+          const token = await generateAccessToken(query);
+          return res.send({ token });
         }
       } else {
-<span class="cstat-no" title="statement not covered" >        return res.status(403).send("incorrect credentials");</span>
+        return res.status(403).send("incorrect credentials");
       }
     } catch (err) {
 <span class="cstat-no" title="statement not covered" >      return res.status(404).send("an error occurred" + err);</span>
@@ -307,7 +310,7 @@ module.exports = {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Jul 19 2019 17:47:29 GMT+1000 (Australian Eastern Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Sat Jul 20 2019 19:16:43 GMT+1000 (Australian Eastern Standard Time)
 </div>
 </div>
 <script src="../../prettify.js"></script>
