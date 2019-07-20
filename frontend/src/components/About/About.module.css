@@ -1,9 +1,45 @@
+.aboutcontainer {
+  height: 600px;
+  width: 100vw;
+  /* background-color: aqua; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .photocontainer {
+  /* background-color: black; */
+  width: 600px;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .cherryphotograph {
+  border: solid black 3px;
   width: 500px;
-  height: 350px;
+  height: 400px;
 }
+
+.aboutcontent {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* flex-direction: column; */
+  /* background-color: grey; */
+  height: 400px;
+  width: 500px;
+  overflow: scroll;
+}
+
+/* .abouttitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutpara {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
