@@ -1,6 +1,10 @@
 /* desktop design */
+
 .quotetitle {
-  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
   margin-left: 8vw;
   width: 84vw;
   border-bottom: 2px solid rgba(0,0,0,0.10);

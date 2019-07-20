@@ -30,6 +30,8 @@
   height: 400px;
   width: 500px;
   overflow: scroll;
+  font-family: 'Playball', cursive;
+  font-size: 18px;
 }
 
 /* .abouttitle {

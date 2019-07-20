@@ -64,41 +64,47 @@ class Dashboard extends Component {
     } else {
       return (
         <>
-          <h1 className={style.dashtitle}>All Quotes</h1>
-          <div className={style.sortbutton}>
-            <DropDown toggle={ this.toggle } 
-                  dropDownActive={ this.state.dropDownActive } 
-                  doOrderBy={ this.doOrderBy }
-                  doOrder={ this.doOrder }
-                  orderBy={ this.state.orderBy }
-                  order={ this.state.order } />
-          </div>
-          <div className={style.dashboardcontainer}>
-            <table className="table table-hover">
-              <thead>
-                <tr>
-                  <th scope="col" >Number</th>
-                  <th scope="col" >First Name</th>
-                  <th scope="col" >Last Name</th>
-                  <th scope="col" >Phone Number</th>
-                  <th scope="col" >Estimated Pick Up</th>
-                  <th scope="col" >Created At</th>
-                </tr>
-              </thead>
-              <tbody>
-                { items }
-                {/* {allQuotes.map((quote, index) => (
-                  <tr key={index} onClick={() => window.location =`/QuoteDetail/${quote._id}`} className={style.tablerow}>
-                    <th key={quote._id} scope="row">{index + 1}</th>
-                    <td key={quote.user.userName.firstName}>{quote.user.userName.firstName}</td>
-                    <td key={quote.user.userName.lastName}>{quote.user.userName.lastName}</td>
-                    <td key={quote.user.contact.phoneNumber}>{quote.user.contact.phoneNumber}</td>
-                    <td key={quote.pickUp.time}><Moment local format="MMM DD, YYYY LT">{quote.pickUp.time}</Moment></td>
-                    <td key={quote.createdAt}><Moment local format="MMM DD, YYYY LT">{quote.createdAt}</Moment></td>
-                    </tr>
-                ))} */}
-              </tbody>
-            </table>
+          <div className={style.dashboardouter}>
+            <div className={style.dashtitleouter}>
+              <h1 className={style.dashtitle}>All Quotes</h1>
+            </div>
+            <div className={style.sortcont}>
+              <div className={style.sortbutton}>
+                <DropDown toggle={ this.toggle } 
+                      dropDownActive={ this.state.dropDownActive } 
+                      doOrderBy={ this.doOrderBy }
+                      doOrder={ this.doOrder }
+                      orderBy={ this.state.orderBy }
+                      order={ this.state.order } />
+              </div>
+            </div>
+            <div className={style.dashboardcontainer}>
+              <table className="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col" >Number</th>
+                    <th scope="col" >First Name</th>
+                    <th scope="col" >Last Name</th>
+                    <th scope="col" >Phone Number</th>
+                    <th scope="col" >Estimated Pick Up</th>
+                    <th scope="col" >Created At</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  { items }
+                  {/* {allQuotes.map((quote, index) => (
+                    <tr key={index} onClick={() => window.location =`/QuoteDetail/${quote._id}`} className={style.tablerow}>
+                      <th key={quote._id} scope="row">{index + 1}</th>
+                      <td key={quote.user.userName.firstName}>{quote.user.userName.firstName}</td>
+                      <td key={quote.user.userName.lastName}>{quote.user.userName.lastName}</td>
+                      <td key={quote.user.contact.phoneNumber}>{quote.user.contact.phoneNumber}</td>
+                      <td key={quote.pickUp.time}><Moment local format="MMM DD, YYYY LT">{quote.pickUp.time}</Moment></td>
+                      <td key={quote.createdAt}><Moment local format="MMM DD, YYYY LT">{quote.createdAt}</Moment></td>
+                      </tr>
+                  ))} */}
+                </tbody>
+              </table>
+            </div>
           </div>
         </>
       )
