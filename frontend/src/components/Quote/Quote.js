@@ -31,56 +31,64 @@ class Quote extends Component {
         <div className={style.quotecontainer}>
           <div className={style.quoteinner}>
             <form>
+              <div className={style.quotecontent}>
                 <div>
-                  <label>What would you like to order?</label>
+                  <p>We are based in Deer Park.</p>
+                  <p>If you are after a quote for a custom made cake or filipino order, please fill out the form below and I will get back to you as soon as possible.</p>
+                  <p>You can also email us directly at: <a href="mailto:cherrysbakeshopandcafe@gmail.com">cherrysbakeshopandcafe@gmail.com</a></p>
+                  <p>Download my filipino food list and cake flavour list</p>
                 </div>
+              </div>
+              <div>
+                <label>What would you like to order?</label>
+              </div>
               <div className={style.checkbox}>
                 <div>
                   <label>
                     <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Custom Cakes" onChange={this.handleInput}/>
-                    <span>Custom Cakes</span>
+                    <span> Custom Cakes</span>
                   </label>
                 </div>
                 <div>
                   <label>
                     <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Standard Cakes" onChange={this.handleInput}/>
-                    <span>Standard Cakes</span>
+                    <span> Standard Cakes</span>
                   </label>
                 </div>
                 <div>
                   <label>
                     <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Wedding Cakes" onChange={this.handleInput}/>
-                    <span>Wedding Cakes</span>
+                    <span> Wedding Cakes</span>
                   </label>
                 </div>
                 <div>
                   <label>
                     <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Ube Cakes" onChange={this.handleInput}/>
-                    <span>Ube Cakes</span>
+                    <span> Ube Cakes</span>
                   </label>
                 </div>
                 <div>
                   <label>
                     <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Filipino Cuisine" onChange={this.handleInput}/>
-                    <span>Filipino Cuisine</span>
+                    <span> Filipino Cuisine/Dessert</span>
                   </label>
                 </div>
                 <div>
                   <label>
                     <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Cupcakes" onChange={this.handleInput}/>
-                    <span>Cupcakes</span>
+                    <span> Cupcakes</span>
                   </label>
                 </div>
                 <div>
                   <label>
                     <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Macarons" onChange={this.handleInput}/>
-                    <span>Macarons</span>
+                    <span> Macarons</span>
                   </label>
                 </div>
                 <div>
                   <label>
                     <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Pinoy Bread" onChange={this.handleInput}/>
-                    <span>Pinoy Bread</span>
+                    <span> Pinoy Bread</span>
                   </label>
                 </div>
               </div>
@@ -136,7 +144,8 @@ class Quote extends Component {
               </div>
               <div className={style.dateevent}>
                 <label>Date of your event</label>
-                <input 
+                <input
+                  className={style.dateinput} 
                   type="date" 
                   name="dateOfEvent" 
                   id="dateOfEvent"
@@ -207,7 +216,6 @@ class Quote extends Component {
               </div>
             </form>
             {this.props.errorMessage && <h1>{this.props.errorMessage}</h1>}
-
           </div>
         </div>
         </>
