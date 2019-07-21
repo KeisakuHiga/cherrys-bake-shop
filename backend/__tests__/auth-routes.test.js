@@ -1,17 +1,17 @@
 //dependencies for test
 const request = require("supertest");
 const app = require("../api");
+const shortid = require("shortid");
+const mongoose = require("mongoose");
+const User = require("../models/User");
+require("dotenv").config();
+
 //functions for testing
 const {
   createFakeData,
   generateUser,
   generateAccessToken
 } = require("../utils/utils");
-
-const shortid = require("shortid");
-const mongoose = require("mongoose");
-const User = require("../models/User");
-require("dotenv").config();
 
 //fake user login
 let userForValidLogin = {
@@ -22,7 +22,7 @@ let userForValidLogin = {
   password: "pass123"
 };
 
-//before starting test this is for set-up
+//before starting tests this is required for set-up
 beforeAll(async () => {
   mongoose.connect(process.env.DB_URL, { useNewUrlParser: true }, err => {
     if (err) {
@@ -43,16 +43,6 @@ beforeAll(async () => {
 });
 
 describe("api integration tests", () => {
-  // Checks if API is working
-  test('api sends 200 for "localhost:5000/quote/" endpoint', async () => {
-    const response = await request(app).get("/quote/");
-    expect(response.status).toBe(200);
-  });
-  //checking seed data
-  test("createFakeData() should return an array of 10 documents", () => {
-    const result = createFakeData(10);
-    expect(result.length).toBe(10);
-  });
   // Checks token logic on Login
   test("Checking if '/login' sends back no token when incorrect data is passed", async () => {
     const response = await request(app)
@@ -63,6 +53,8 @@ describe("api integration tests", () => {
       });
     expect(response.status).toBe(403);
   });
+
+  // Checks Login sends no token in case of incorrect password
   test("Checking if '/login' sends back no token when correct username but incorrect password is passed", async () => {
     const response = await request(app)
       .post("/auth/login")
@@ -72,7 +64,9 @@ describe("api integration tests", () => {
       });
     expect(response.status).toBe(403);
   });
-  test("Checking if '/login' sends back no token when incorrect username and password is passed", async () => {
+
+  //Checks if Login sends token with incorrect email and password
+  test("Checking if '/login' sends back no token when incorrect email and password is passed", async () => {
     const response = await request(app)
       .post("/auth/login")
       .send({
@@ -81,7 +75,9 @@ describe("api integration tests", () => {
       });
     expect(response.status).toBe(403);
   });
-  test("Checking if '/login' sends correct token for a valid username and password", async () => {
+
+  //Checks Login sends correct token with correct credentials
+  test("Checking if '/login' sends correct token for a valid email and password", async () => {
     const response = await request(app)
       .post("/auth/login")
       .send({
@@ -95,7 +91,8 @@ describe("api integration tests", () => {
     expect(response.body).not.toBeNull();
     expect(response.body.token).toBe(expectedToken);
   });
-  // Integration test to check /Register logic
+
+  // Checks Register logic whether it generates a user and sends back 200
   test("Checking if '/register' generates a user and sends back a 200", async () => {
     const randomEmailId = `${shortid.generate()}@gmail.com`;
     const response = await request(app)
@@ -112,6 +109,45 @@ describe("api integration tests", () => {
     if (query) {
       await User.findByIdAndDelete(query._id); //Deleting the user created in test
     }
+  });
+  //Checks if Register sends back 403 for exiting user
+  test("Checking if /register for an existing user should return 403", async () => {
+    const response = await request(app)
+      .post("/auth/register")
+      .send({
+        firstName: "Seep",
+        lastName: "Gulati",
+        email: userForValidLogin.email,
+        phoneNumber: "0423617890",
+        password: "password"
+      });
+    expect(response.status).toBe(403);
+  });
+
+  //Checks if Register sends 400 for invalid data
+  test("Checking if /register for an invalid data should return 400", async () => {
+    const response = await request(app)
+      .post("/auth/register")
+      .send({
+        firstName: "Seep",
+        lastName: "Gulati",
+        email: userForValidLogin.email,
+        phoneNumber: "04236178905545454554545454",
+        password: "password"
+      });
+    expect(response.status).toBe(400);
+  });
+  //
+  test("Checking if /register for an empty data should return 403", async () => {
+    const response = await request(app)
+      .post("/auth/register")
+      .send({
+        lastName: "Gulati",
+        email: userForValidLogin.email,
+        phoneNumber: "04236178905545454554545454",
+        password: "password"
+      });
+    expect(response.status).toBe(403);
   });
 });
 
