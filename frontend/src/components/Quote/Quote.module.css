@@ -8,17 +8,28 @@
 }
 
 .quoteinner {
+  border: solid black 1px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 900px;
-  height: 1200px;
-  background-color: #DCDCDC;
+  height: 1500px;
+  background-color: bisque;
+}
+
+.quotecontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  width: 450px;
+  text-align: center;
+  /* background-color: aqua */
 }
 
 .checkbox {
-  height: 200px;
-  width: 320px;
+  height: 190px;
+  width: 450px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -177,4 +188,8 @@
 
 .quotecontainer label {
  margin-top: 10px;
+}
+
+.quotecontainer span {
+  margin-right: 10px;
 }

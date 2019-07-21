@@ -1,6 +1,10 @@
 /* desktop design */
+
 .dashtitle {
-  font-size: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
   margin-left: 8vw;
   width: 84vw;
   border-bottom: 2px solid rgba(0,0,0,0.10);
@@ -12,6 +16,17 @@
 
 .tablerow {
   cursor: pointer;
+}
+
+.sortcont {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sortbutton {
+  display: block;
 }
 
 /*  */
