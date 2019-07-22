@@ -38,7 +38,8 @@ const validationSchema = Joi.object().keys({
 // related to Dashboard.js (front-end / GET request)
 const getAllQuotes = async (req, res) => {
   const allQuotes = await Quote.find().populate("user");
-  res.status(200).send({ token: req.token });
+  res.status(200).send(allQuotes);
+  //   res.status(200).send({ token: req.token });
 };
 
 // related to quoteDetail.js (front-end / GET request)
