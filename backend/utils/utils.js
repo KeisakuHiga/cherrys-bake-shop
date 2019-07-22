@@ -1,58 +1,72 @@
-const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
-const faker = require('faker')
+const bcrypt = require("bcrypt");
+const jwt = require("jsonwebtoken");
+const faker = require("faker");
 
-const User = require('../models/User')
+const User = require("../models/User");
 
-const generateHash = async (password) => {
-  const saltRounds = 10
-  return await bcrypt.hash(password, saltRounds)
-}
+const generateHash = async password => {
+  const saltRounds = 10;
+  return await bcrypt.hash(password, saltRounds);
+};
 
 const checkPassword = async (password, hash) => {
-  return await bcrypt.compare(password, hash)
-}
+  return await bcrypt.compare(password, hash);
+};
 
-const generateUser = async (firstName, lastName, email, phoneNumber, password) => {
-  const hash = await generateHash(password)
+const generateUser = async (
+  firstName,
+  lastName,
+  email,
+  phoneNumber,
+  password
+) => {
+  const hash = await generateHash(password);
   const newUser = new User({
     userName: {
       firstName: firstName,
-      lastName: lastName,
+      lastName: lastName
     },
     contact: {
       email: email,
       phoneNumber: phoneNumber
     },
     password: hash
-  })
-  return await newUser.save()
-}
+  });
+  return await newUser.save();
+};
 
 const generateAccessToken = ({ contact: { email } }) => {
-  return jwt.sign({ contact: { email } }, process.env.JWT_SECRET, {expiresIn: '7d'})
-} 
+  return jwt.sign({ contact: { email } }, process.env.JWT_SECRET, {
+    expiresIn: "7d"
+  });
+};
 
 const checkAccessToken = (req, res, next) => {
-  const { token } = req.headers
+  const { token } = req.headers;
   jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) {
-      return res.status(403).send('incorrect token')
+      return res.status(403).send("incorrect token");
     } else {
-      req.user = decoded
-      next()
+      req.user = decoded;
+      next();
     }
-  })
-}
+  });
+};
 
-const createFakeData = (numberOfData) => {
-  let productTypes = [ 'standard cake', 'custom cake', 'cokkies', 'chocolate']
-  let occasionTypes = [ 'birthday', 'wedding', 'baby born', 'graduation', 'winning something']
-  let flavourTypes = [ 'chocolate', 'vanilla', 'ube', 'strawberry', 'maple']
+const createFakeData = numberOfData => {
+  let productTypes = ["standard cake", "custom cake", "cokkies", "chocolate"];
+  let occasionTypes = [
+    "birthday",
+    "wedding",
+    "baby born",
+    "graduation",
+    "winning something"
+  ];
+  let flavourTypes = ["chocolate", "vanilla", "ube", "strawberry", "maple"];
 
-  let data = []
-  for(i = 0; i < numberOfData; i++){
-    let randomNum = Math.floor(Math.random() * 4)
+  let data = [];
+  for (i = 0; i < numberOfData; i++) {
+    let randomNum = Math.floor(Math.random() * 4);
     let newData = {
       userData: {
         firstName: faker.name.firstName(),
@@ -70,11 +84,11 @@ const createFakeData = (numberOfData) => {
         fillingFlavour: flavourTypes[randomNum],
         message: faker.lorem.text()
       }
-    }
-    data.push(newData)
+    };
+    data.push(newData);
   }
-  return data
-}
+  return data;
+};
 
 module.exports = {
   checkPassword,
@@ -82,4 +96,4 @@ module.exports = {
   generateAccessToken,
   checkAccessToken,
   createFakeData
-}
+};

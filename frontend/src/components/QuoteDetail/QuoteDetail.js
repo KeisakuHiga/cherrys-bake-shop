@@ -45,7 +45,7 @@ class QuoteDetail extends Component {
               <h3>Date Info</h3>
               <p>Quote created at: <Moment local format="MMM DD, YYYY">{oneQuote.createdAt}</Moment></p>
               <p>Date of event: <Moment local format="MMM DD, YYYY">{oneQuote.dateOfEvent}</Moment></p>
-              <p>Estimated pick up date: <Moment local format="MMM DD, YYYY">{oneQuote.pickUpDateAndTime}</Moment></p>
+              <p>Estimated pick up date: <Moment local format="MMM DD, YYYY TL">{oneQuote.pickUpDateAndTime}</Moment></p>
             </div>
             <div className={style.aboutproduct}>
               <h3>Product Info</h3>
