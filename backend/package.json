@@ -23,7 +23,8 @@
     "jsonwebtoken": "^8.5.1",
     "moment-timezone": "^0.5.26",
     "mongoose": "^5.6.3",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "shortid": "^2.2.14"
   },
   "devDependencies": {
     "jest": "^24.8.0",
