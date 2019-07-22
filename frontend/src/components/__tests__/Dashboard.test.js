@@ -15,13 +15,13 @@ Enzyme.configure({ adapter: new Adapter() });
 // import sinonChai from "sinon-chai";
 // chai.use(sinonChai)
 
-import Home from "../Home/Home";
+import Dashboard from "../Dashboard/Dashboard";
 
-describe("<Home />", () => {
+describe("<Dashboard />", () => {
 
   it('test', () => {
     const wrapper = render(
-      <Home />
+      <Dashboard />
     )
     expect(wrapper).toMatchSnapshot()
   })
