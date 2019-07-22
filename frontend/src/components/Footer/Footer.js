@@ -7,7 +7,7 @@ class Footer extends Component {
       <>
         <div className={style.footercontainer}>
           <h1 className="footer-text ml-3 text-dark">
-            Cherry's Bakeshop and Cafe
+            Cherry's Bake Shop & Cafe
           </h1>
 
           <h4 className="footer-text ml-3 text-dark">
