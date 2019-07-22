@@ -7,11 +7,7 @@ const User = require("../models/User");
 require("dotenv").config();
 
 //functions for testing
-const {
-  createFakeData,
-  generateUser,
-  generateAccessToken
-} = require("../utils/utils");
+const { generateUser, generateAccessToken } = require("../utils/utils");
 
 //fake user login
 let userForValidLogin = {

@@ -48,6 +48,7 @@ const checkAccessToken = (req, res, next) => {
       return res.status(403).send("incorrect token");
     } else {
       req.user = decoded;
+      req.token = token;
       next();
     }
   });
