@@ -1,17 +1,14 @@
 import React, { Component } from 'react'
-import Moment from 'react-moment'
 import style from './Dashboard.module.css'
 import _ from 'lodash';
 import TableBody from './TableBody/TableBody';
-import DropDown from './DropDown/DropDown';
 const axios = require('axios')
 
 class Dashboard extends Component {
   state = {
     allQuotes: [],
-    orderBy: "firstName",
-    order: "asc",  // or "desc",
-    // dropDownActive: false
+    orderBy: "",
+    order: "",  // "asc" or "desc",
   }
   
   componentDidMount = () =>{
@@ -25,12 +22,7 @@ class Dashboard extends Component {
     const data = await response.data;
     this.setState({ allQuotes: data });
   };
-  // toggle = e => {
-  //   e.preventDefault();
-  //   let isActive = this.state.dropDownActive;
-  //   isActive = !isActive;
-  //   this.setState({ dropDownActive: isActive });
-  // }
+
   doOrderBy = e => {
     e.preventDefault();
     this.setState({ orderBy : e.target.value });
@@ -40,20 +32,17 @@ class Dashboard extends Component {
     this.setState({ order : e.target.value });
   }
   render() {
-    console.log(this.state)
     let { orderBy, order, allQuotes }  = this.state
-    // allQuotes  = _.orderBy(allQuotes, (item) => {
-    //   return item[orderBy]
-    // }, order)
-    allQuotes  = _.orderBy(allQuotes,[orderBy], order)
-    
-    const items = allQuotes.map((item, index)=>{
+    allQuotes  = _.orderBy(allQuotes, orderBy, order)
+
+    const items = allQuotes.map((item, index) =>{
       return <TableBody data={ item }
                         key={ item._id }
                         orderBy={ this.state.orderBy }
-                        id={item.index}
+                        id={index}
                         />
     }); 
+
     if(!allQuotes) {
       return <h1>Loading...</h1>
     } else {
@@ -61,23 +50,20 @@ class Dashboard extends Component {
         <>
           <h1 className={style.dashtitle}>All Quotes</h1>
           <div className={style.sortbutton}>
-          <select value={this.state.value} onChange={this.doOrderBy}>
-              <option value="firstName">First Name</option>
-              <option value="lastName">Last Name</option>
-              <option value="phoneNumber">Phone Number</option>
+            <h4>Order Buttons</h4>
+            <select value={this.state.value} onChange={this.doOrderBy}>
+              <option value="">#</option>
+              <option value="user.userName.firstName">First Name</option>
+              <option value="user.userName.lastName">Last Name</option>
+              <option value="user.contact.phoneNumber">Phone Number</option>
               <option value="pickUpDateAndTime">Estimated Pick Up</option>
               <option value="createdAt">Created At</option>
             </select>
             <select value={this.state.value} onChange={this.doOrder}>
+              <option value="">#</option>
               <option value="asc">Ascending</option>
               <option value="desc">Descending</option>
             </select>
-            {/* <DropDown toggle={ this.toggle } 
-                  dropDownActive={ this.state.dropDownActive } 
-                  doOrderBy={ this.doOrderBy }
-                  doOrder={ this.doOrder }
-                  orderBy={ this.state.orderBy }
-                  order={ this.state.order } /> */}
           </div>
           <div className={style.dashboardcontainer}>
             <table className="table table-hover">
@@ -93,16 +79,6 @@ class Dashboard extends Component {
               </thead>
               <tbody>
                 { items }
-                {/* {allQuotes.map((quote, index) => (
-                  <tr key={index} onClick={() => window.location =`/QuoteDetail/${quote._id}`} className={style.tablerow}>
-                    <th key={quote._id} scope="row">{index + 1}</th>
-                    <td key={quote.user.userName.firstName}>{quote.user.userName.firstName}</td>
-                    <td key={quote.user.userName.lastName}>{quote.user.userName.lastName}</td>
-                    <td key={quote.user.contact.phoneNumber}>{quote.user.contact.phoneNumber}</td>
-                    <td key={quote.pickUp.time}><Moment local format="MMM DD, YYYY LT">{quote.pickUp.time}</Moment></td>
-                    <td key={quote.createdAt}><Moment local format="MMM DD, YYYY LT">{quote.createdAt}</Moment></td>
-                    </tr>
-                ))} */}
               </tbody>
             </table>
           </div>
