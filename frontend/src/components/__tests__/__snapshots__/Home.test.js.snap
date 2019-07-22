@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> test 1`] = `
+<div
+  class="homecontainer"
+>
+  <div
+    class="gallerycontainer"
+  >
+    <div
+      class="galleryone"
+    />
+    <div
+      class="gallerytwo"
+    />
+    <div
+      class="gallerythree"
+    />
+    <div
+      class="galleryfour"
+    />
+    <div
+      class="galleryfive"
+    />
+    <div
+      class="gallerysix"
+    />
+    <div
+      class="galleryseven"
+    />
+    <div
+      class="galleryeight"
+    />
+    <div
+      class="gallerynine"
+    />
+  </div>
+</div>
+`;

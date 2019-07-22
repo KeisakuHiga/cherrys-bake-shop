@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dashboard /> test 1`] = `
+Array [
+  <h1
+    class="dashtitle"
+  >
+    All Quotes
+  </h1>,
+  <div
+    class="sortbutton"
+  >
+    <h4>
+      Sorting Buttons
+    </h4>
+    <select>
+      <option
+        value=""
+      >
+        #
+      </option>
+      <option
+        value="user.userName.firstName"
+      >
+        First Name
+      </option>
+      <option
+        value="user.userName.lastName"
+      >
+        Last Name
+      </option>
+      <option
+        value="user.contact.phoneNumber"
+      >
+        Phone Number
+      </option>
+      <option
+        value="pickUpDateAndTime"
+      >
+        Estimated Pick Up
+      </option>
+      <option
+        value="createdAt"
+      >
+        Created At
+      </option>
+    </select>
+    <select>
+      <option
+        value=""
+      >
+        #
+      </option>
+      <option
+        value="asc"
+      >
+        Ascending
+      </option>
+      <option
+        value="desc"
+      >
+        Descending
+      </option>
+    </select>
+  </div>,
+  <div
+    class="dashboardcontainer"
+  >
+    <table
+      class="table table-hover"
+    >
+      <thead>
+        <tr>
+          <th
+            scope="col"
+          >
+            Number
+          </th>
+          <th
+            scope="col"
+          >
+            First Name
+          </th>
+          <th
+            scope="col"
+          >
+            Last Name
+          </th>
+          <th
+            scope="col"
+          >
+            Phone Number
+          </th>
+          <th
+            scope="col"
+          >
+            Estimated Pick Up
+          </th>
+          <th
+            scope="col"
+          >
+            Created At
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>,
+]
+`;
