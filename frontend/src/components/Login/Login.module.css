@@ -5,6 +5,8 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #c8bad9;
+  font-family: 'Pacifico', cursive;
 }
 
 .logininner {
@@ -16,7 +18,7 @@
   height: 400px;
   border: 1px solid black;
   border-radius: 50px;
-  background-color: bisque;
+  background-color: white;
 }
 
 .logintitle {

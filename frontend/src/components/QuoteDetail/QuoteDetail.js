@@ -29,6 +29,7 @@ class QuoteDetail extends Component {
     } else {
       return (
         <>
+        <div className={style.quotedetailouter}>
           <div className={style.titleouter}>
             <div>
               <h1 className={style.quotetitle}>Quote Details</h1>
@@ -60,6 +61,7 @@ class QuoteDetail extends Component {
               <p>Message: {oneQuote.message}</p>
             </div>
           </div>
+        </div>
         </>
       )
     }

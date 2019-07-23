@@ -1,7 +1,7 @@
 .aboutcontainer {
   height: 600px;
   width: 100vw;
-  /* background-color: aqua; */
+  background-color: #c8bad9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,9 +29,9 @@
   /* background-color: grey; */
   height: 400px;
   width: 500px;
-  overflow: scroll;
+  /* overflow: auto; */
   font-family: 'Playball', cursive;
-  font-size: 18px;
+  font-size: 19px;
 }
 
 /* .abouttitle {

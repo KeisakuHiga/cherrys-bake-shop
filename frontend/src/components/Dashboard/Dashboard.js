@@ -48,11 +48,11 @@ class Dashboard extends Component {
     } else {
       return (
         <>
+        <div className={style.dashcont}>
           <h1 className={style.dashtitle}>All Quotes</h1>
           <div className={style.sortbutton}>
-            <h4>Sorting Buttons</h4>
             <select value={this.state.value} onChange={this.doOrderBy}>
-              <option value="">#</option>
+              <option value="">Sort By Category</option>
               <option value="user.userName.firstName">First Name</option>
               <option value="user.userName.lastName">Last Name</option>
               <option value="user.contact.phoneNumber">Phone Number</option>
@@ -60,7 +60,7 @@ class Dashboard extends Component {
               <option value="createdAt">Created At</option>
             </select>
             <select value={this.state.value} onChange={this.doOrder}>
-              <option value="">#</option>
+              <option value="">Sort Order</option>
               <option value="asc">Ascending</option>
               <option value="desc">Descending</option>
             </select>
@@ -82,6 +82,7 @@ class Dashboard extends Component {
               </tbody>
             </table>
           </div>
+        </div>
         </>
       )
 

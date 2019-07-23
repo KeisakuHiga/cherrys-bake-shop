@@ -5,4 +5,18 @@
   justify-content: center;
   align-items: center;
   font-family: 'Playball', cursive;
+  background-color: #c8bad9;
 }
+
+.footertext {
+  color: white;
+  text-align: center;
+}
+
+.footercontainer h1 {
+font-size: 50px;
+}
+
+.footercontainer h4 {
+  font-size: 30px;
+  }

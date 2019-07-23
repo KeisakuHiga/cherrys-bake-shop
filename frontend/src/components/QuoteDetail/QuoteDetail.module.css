@@ -1,13 +1,24 @@
 /* desktop design */
 
+.quotedetailouter {
+  background-color: #c8bad9;
+  font-family: 'Playball', cursive;
+}
+
+.titleouter {
+  background-color: #c8bad9;
+}
+
 .quotetitle {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 35px;
+  font-size: 40px;
+  padding-top: 3vw;
   margin-left: 8vw;
   width: 84vw;
   border-bottom: 2px solid rgba(0,0,0,0.10);
+  background-color: #c8bad9;
 }
 .quotedetailcontainer {
   display: flex;
@@ -15,7 +26,7 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100vw;
-  margin-top: 2vh;
+  background-color: #c8bad9;
   /* margin-left: 2vw; */
 }
 .userinfocontainer {
