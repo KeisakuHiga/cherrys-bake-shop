@@ -3,8 +3,8 @@ Cherry's Bakeshop and Cafe's (CBC) application allows users to view cake and fil
 
 ## Deployment
 
-    * Client: https://cherrysbakeshopandcafe.netlify.com
-    * Server: https://cherrysbakeshopandcafe.khiga2943.now.sh
+    Client: https://cherrysbakeshopandcafe.netlify.com
+    Server: https://cherrysbakeshopandcafe.khiga2943.now.sh
 
 ## Github Repository
 
@@ -81,7 +81,7 @@ Installation
 
 ## Design documentation including,
 
-    * Design process
+- Design process
 
 ## User stories
 
@@ -112,8 +112,13 @@ Admin Story 3: As Admin, I should be able to get customer contact details. So th
 ![](./docs/workflowuser.jpg)
 ![](./docs/workflowadmin.jpg)
 
-_ Wireframes
-_ Database Entity Relationship Diagrams
+Wireframes
+
+![](./docs/wireframes.png)
+
+- Menu Design
+
+\_ Database Entity Relationship Diagrams
 \_ Data Flow Diagram \* OO design documentation
 
 ## Details of Project Management & Planning process including,
