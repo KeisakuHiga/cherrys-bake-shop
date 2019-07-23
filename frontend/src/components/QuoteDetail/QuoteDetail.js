@@ -49,7 +49,7 @@ class QuoteDetail extends Component {
             </div>
             <div className={style.aboutproduct}>
               <h3>Product Info</h3>
-              <p>Type of product: {oneQuote.typeOfProduct}</p>
+              <p>Type of product: {oneQuote.typeOfProduct.map(product => <span>{product}, </span>)}</p>
               <p>Type of occasion: {oneQuote.typeOfOccasion}</p>
               <p>Cake flavour: {oneQuote.flavour.cakeFlavour}</p>
               <p>Filling flavour: {oneQuote.flavour.fillingFlavour}</p>
