@@ -23,6 +23,7 @@ class Quote extends Component {
   handleQuote = e => {
     e.preventDefault();
     this.props.createNewQuote(this.state);
+    window.location = "/";
   };
 
   render() {

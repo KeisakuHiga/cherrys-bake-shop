@@ -1,7 +1,7 @@
 #About
-Cherry's Bakeshop and Cafe's application for users to see cake and filipino food options and send quotes/customizations to our client to process. This is a MERN stack group project utilizing M- MongoDb, ExpressJS, ReactJS and NodeJS.
+Cherry's Bakeshop and Cafe's (CBC) application allows users to view cake and filipino food options and send their customized requirements by filling a quote form. This is a MERN stack group project utilizing: MongoDb, ExpressJS, ReactJS and NodeJS.
 
-## Deployed
+## Deployment
 
     * Client: https://cherrysbakeshopandcafe.netlify.com
     * Server: https://cherrysbakeshopandcafe.khiga2943.now.sh
@@ -16,11 +16,22 @@ Cherry's Bakeshop and Cafe's application for users to see cake and filipino food
 [SeepGulati](https://github.com/SeepG)
 [RyanRico](https://github.com/rommelryanrico)
 
-## Description of your project, including,
+## Description of application
 
     * Problem definition / purpose
-    * Functionality / features
-    * Screenshots
+    This new website would help in spreading the word in the neighborhood and get more customer footfalls and offers online flexibility of sending customizations via Quote form to CBC(Client)in advance.
+
+    * Functionality/ Features
+    - Nav bar: Navigating to different website pages
+    - Home page: Shows gallery of cake pictures and filipino food
+    - About page: Profile of Cherry's Bakeshop and Cafe
+    - Order page: Book cake with time details and customization options
+    - FAQ: Few questions which they keep getting asked all times.
+    - Contact number on all pages with Facebook & Instagram links
+
+    Admin
+
+    * Website screenshots
 
 ## Tech stack
 
