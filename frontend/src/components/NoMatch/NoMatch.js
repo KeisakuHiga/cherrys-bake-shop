@@ -7,14 +7,18 @@ class NoMatch extends Component {
   render() {
     return (
       <>
-        <h2 className> Oops...We can't seem to find the page you're after.</h2>
-        <pre />
-        <div className={style.nomatchcontainer}>
-          <img
-            className={style.nomatchimage}
-            src={facebook}
-            alt="Page doesn't exist"
-          />
+        <div className={style.nomatchouter}>
+          <div className={style.nomatchtitle}>
+            <h2 className> Oops...We can't seem to find the page you're after.</h2>
+          </div>
+          <pre />
+          <div className={style.nomatchcontainer}>
+            <img
+              className={style.nomatchimage}
+              src={facebook}
+              alt="Page doesn't exist"
+            />
+          </div>
         </div>
       </>
     );

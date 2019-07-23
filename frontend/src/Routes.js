@@ -29,19 +29,6 @@ class Routes extends React.Component {
     }
   };
 
-  handleQuote = () => {
-    if (this.props.authentication) {
-      return <Redirect to="/" />;
-    } else {
-      return (
-        <Quote
-          createNewQuote={this.props.createNewQuote}
-          errorMessage={this.props.errorMessage}
-        />
-      );
-    }
-  };
-
   handleLogin = () => {
     if (this.props.authentication) {
       return <Redirect to="/" />;
@@ -67,7 +54,10 @@ class Routes extends React.Component {
           path="/Quote"
           render={props => {
             return (
-              <Quote {...props} createNewQuote={this.props.createNewQuote} />
+              <Quote {...props} 
+                createNewQuote={this.props.createNewQuote}
+                errorMessage={this.props.errorMessage}
+              />
             );
           }}
         />

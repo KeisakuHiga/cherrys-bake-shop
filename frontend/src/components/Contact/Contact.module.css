@@ -1,5 +1,6 @@
 .contacttitle {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(0,0,0,0.10);
 }
 
 .contactcontainer {
