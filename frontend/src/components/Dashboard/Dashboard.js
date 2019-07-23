@@ -51,7 +51,7 @@ class Dashboard extends Component {
         <div className={style.dashcont}>
           <h1 className={style.dashtitle}>All Quotes</h1>
           <div className={style.sortbutton}>
-            <h4>Order Buttons</h4>
+            <h4>Sorting Buttons</h4>
             <select value={this.state.value} onChange={this.doOrderBy}>
               <option value="">#</option>
               <option value="user.userName.firstName">First Name</option>
