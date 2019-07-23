@@ -1,11 +1,14 @@
-#About Cherry's Bakeshop & Cafe
+#About
+Cherry's Bakeshop and Cafe's (CBC) application allows users to view cake and filipino food options and send their customized requirements by filling a quote form. This is a MERN stack group project utilizing: MongoDb, ExpressJS, ReactJS and NodeJS.
 
-## Deployed
+## Deployment
 
-Client: https://cherrysbakeshopandcafe.netlify.com
-Server: https://cherrysbakeshopandcafe.khiga2943.now.sh
+    * Client: https://cherrysbakeshopandcafe.netlify.com
+    * Server: https://cherrysbakeshopandcafe.khiga2943.now.sh
 
-[Github Repository](https://github.com/KeisakuHiga/cherrys-bake-shop)
+## Github Repository
+
+    https://github.com/KeisakuHiga/cherrys-bake-shop
 
 ## Contributors
 
@@ -13,11 +16,33 @@ Server: https://cherrysbakeshopandcafe.khiga2943.now.sh
 [SeepGulati](https://github.com/SeepG)
 [RyanRico](https://github.com/rommelryanrico)
 
-## Description of your project, including,
+## Description of application
 
-    * Problem definition / purpose
-    * Functionality / features
-    * Screenshots
+Problem definition / purpose
+This new website would help in spreading the word in the neighborhood and get more customer footfalls and offers online flexibility of sending customizations via Quote form to CBC(Client)in advance.
+
+Functionality/ Features
+
+## As User
+
+- Navbar: Allows users to browse through the website and access all pages
+- Side bar: Allows users to call the client, and access social pages of CBC on Facebook & Instagram
+- Footer: Allows User to see CBC shop address and business hours
+- Home page: Landing page, allows users to see gallery of cake pictures and filipino food
+- About page: Users can find about the story/profile of Cherry's Bakeshop and Cafe
+- Quote page: Users can fill the quote form and book cake with time details and customization options.
+- FAQ page: Users can see the frequently asked questions and get answers to their queries
+- Contact page: Users can check the client’s contact information (phone number, address, email address, business hours and the Google map). Users can click on map for a bigger map view, it allows the user to get the directions to the shop.
+
+## As Admin
+
+- Login page: The admin logs in with the valid email and password. Receives Jason Web Token access token with valid credentials. The incorrect credentials don't generate the token. Once logged-in Admin can access Dashboard to see Quote details
+- Dashboard page: Admin can see all quotes
+- Admin can choose an individual quote details by clicking on the quote
+- Admin can sort the quotes based on customer’s first name, last name, phone number, estimated pickup date and time, and the date when the quote is created
+- Logout button: Admin can logout, and JWT will be removed automatically and dashboard link at the Navbar will get hidden
+
+  - Website screenshots
 
 ## Tech stack
 
@@ -57,12 +82,39 @@ Installation
 ## Design documentation including,
 
     * Design process
-    * User stories
-    * A workflow diagram of the user journey/s.
-    * Wireframes
-    * Database Entity Relationship Diagrams
-    * Data Flow Diagram
-    * OO design documentation
+
+## User stories
+
+## As User
+
+User Story 1: As a User, I should be able to see the business phone number on every page when I navigate the website. So that I can call them if I need to make a booking or ask for a quote.
+
+User Story 2: As a User, I want to see a menu or gallery of cake pictures. So that I can decided what I want.
+
+User Story 3: As a User, I want to be able to easily navigate the website. So that I can quickly make an order.
+
+User Story 4: As a User, I want to have a detailed FAQ. So that my questions are answered before sending a quote.
+
+User Story 5: As a User, I want to place an order with special instructions. So that the shop can create a cake according to my requirements.
+
+User Story 6: As a User, I want to see the store's facebook and instagram links. So that I can look at cake inspirations.
+
+## As Admin
+
+Admin Story 1: As Admin, I should be able to see a Dashboard of customers orders when I log into the website. So that I can easily process my orders.
+
+Admin Story 2: As Admin, I should be able to look at customer order in detail and understand what are the special requirements of each customer. So that I can understand my customer needs properly and can address them.
+
+Admin Story 3: As Admin, I should be able to get customer contact details. So that I can contact my customer when the order is ready.
+
+## Workflow diagram of user and admin journey's
+
+![](./docs/workflowuser.jpg)
+![](./docs/workflowadmin.jpg)
+
+_ Wireframes
+_ Database Entity Relationship Diagrams
+\_ Data Flow Diagram \* OO design documentation
 
 ## Details of Project Management & Planning process including,
 
