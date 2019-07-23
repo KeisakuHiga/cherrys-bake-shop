@@ -8,6 +8,7 @@ exports[`<TableBody /> renders component when there is a quotes data 1`] = `
     onClick={[Function]}
   >
     <th
+      className="indexNumber"
       key="194jdalk1l2lda1jk1"
       scope="row"
     >
@@ -83,6 +84,7 @@ exports[`<TableBody /> renders component when there is no data 1`] = `
     onClick={[Function]}
   >
     <th
+      className="indexNumber"
       key="194jdalk1l2lda1jk1"
       scope="row"
     >
