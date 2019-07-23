@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #c8bad9;
 }  
 
 .logoimage {
@@ -11,10 +12,13 @@
 
 .navbar { 
   width: 100%;
+  background-color: #c8bad9;
+  height: 65px;
 }
 
 .navbox {
   text-align: center;
+  background-color: #c8bad9;
 }
 
 .navitem {
@@ -24,12 +28,12 @@
   padding: 10px 0; /* Sets height of nav bar */
 }
 
-.navitem:hover {
+/* .navitem:hover {
   background: white;
-}
+} */
 
 .navlink {
-  color: black;
+  color: white;
   text-decoration: none;
   padding: 12px;
   font-size: 30px;
@@ -39,6 +43,6 @@
 }
 
 .navlink:hover {
-  color: grey;
+  color: black;
   text-decoration: none;
 }

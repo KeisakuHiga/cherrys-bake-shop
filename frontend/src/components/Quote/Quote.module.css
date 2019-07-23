@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #DCDCDC; */
+  background-color: #c8bad9;
 }
 
 .quoteinner {
@@ -14,7 +14,7 @@
   align-items: center;
   width: 900px;
   height: 1500px;
-  background-color: bisque;
+  background-color: white;
 }
 
 .quotecontent {

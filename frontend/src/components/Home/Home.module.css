@@ -4,11 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: black; */
+  background-color: #c8bad9;
 }
 
 .gallerycontainer {
-  /* background-color: yellow; */
+  background-color: yello;
   height: 750px;
   width: 750px;
   display: grid;

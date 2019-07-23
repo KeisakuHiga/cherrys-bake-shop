@@ -48,6 +48,7 @@ class Dashboard extends Component {
     } else {
       return (
         <>
+        <div className={style.dashcont}>
           <h1 className={style.dashtitle}>All Quotes</h1>
           <div className={style.sortbutton}>
             <h4>Order Buttons</h4>
@@ -82,6 +83,7 @@ class Dashboard extends Component {
               </tbody>
             </table>
           </div>
+        </div>
         </>
       )
 
