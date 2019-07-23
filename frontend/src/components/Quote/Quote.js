@@ -4,39 +4,54 @@ import style from "../Quote/Quote.module.css";
 class Quote extends Component {
   state = {
     typeOfProduct: []
-  }
+  };
 
   handleInput = e => {
-    let productArray = this.state.typeOfProduct
-    if(e.target.id === 'typeOfProduct') {
-      productArray.push(e.target.value)
+    let productArray = this.state.typeOfProduct;
+    if (e.target.id === "typeOfProduct") {
+      productArray.push(e.target.value);
       this.setState({
         typeOfProduct: productArray
-      })
+      });
     } else {
       this.setState({
-        [e.target.id]: e.target.value,
-      })
+        [e.target.id]: e.target.value
+      });
     }
-  }
+  };
 
   handleQuote = e => {
-    e.preventDefault()
-    this.props.createNewQuote(this.state)
-  }
+    e.preventDefault();
+    this.props.createNewQuote(this.state);
+  };
 
   render() {
-      return (
-        <>
+    return (
+      <>
         <div className={style.quotecontainer}>
           <div className={style.quoteinner}>
             <form>
               <div className={style.quotecontent}>
                 <div>
                   <p>We are based in Deer Park.</p>
-                  <p>If you are after a quote for a custom made cake or filipino order, please fill out the form below and I will get back to you as soon as possible.</p>
-                  <p>You can also email us directly at: <a href="mailto:cherrysbakeshopandcafe@gmail.com">cherrysbakeshopandcafe@gmail.com</a></p>
-                  <p>Download my filipino food list and cake flavour list <a href="https://drive.google.com/file/d/10feovHfpQSJTftvNRoH3oeT3SOhDqzfx/view">here.</a></p>
+                  <p>
+                    If you are after a quote for a custom made cake or filipino
+                    order, please fill out the form below and I will get back to
+                    you as soon as possible.
+                  </p>
+                  <p>
+                    You can also email us directly at:{" "}
+                    <a href="mailto:cherrysbakeshopandcafe@gmail.com">
+                      cherrysbakeshopandcafe@gmail.com
+                    </a>
+                  </p>
+                  <p>
+                    Download cherrys Bakeshop and Cafe cake and filipino food
+                    menu{" "}
+                    <a href="https://drive.google.com/file/d/10feovHfpQSJTftvNRoH3oeT3SOhDqzfx/view">
+                      here.
+                    </a>
+                  </p>
                 </div>
               </div>
               <div>
@@ -45,49 +60,97 @@ class Quote extends Component {
               <div className={style.checkbox}>
                 <div>
                   <label>
-                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Custom Cakes" onChange={this.handleInput}/>
+                    <input
+                      type="checkbox"
+                      name="typeOfProduct"
+                      id="typeOfProduct"
+                      value="Custom Cakes"
+                      onChange={this.handleInput}
+                    />
                     <span> Custom Cakes</span>
                   </label>
                 </div>
                 <div>
                   <label>
-                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Standard Cakes" onChange={this.handleInput}/>
+                    <input
+                      type="checkbox"
+                      name="typeOfProduct"
+                      id="typeOfProduct"
+                      value="Standard Cakes"
+                      onChange={this.handleInput}
+                    />
                     <span> Standard Cakes</span>
                   </label>
                 </div>
                 <div>
                   <label>
-                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Wedding Cakes" onChange={this.handleInput}/>
+                    <input
+                      type="checkbox"
+                      name="typeOfProduct"
+                      id="typeOfProduct"
+                      value="Wedding Cakes"
+                      onChange={this.handleInput}
+                    />
                     <span> Wedding Cakes</span>
                   </label>
                 </div>
                 <div>
                   <label>
-                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Ube Cakes" onChange={this.handleInput}/>
+                    <input
+                      type="checkbox"
+                      name="typeOfProduct"
+                      id="typeOfProduct"
+                      value="Ube Cakes"
+                      onChange={this.handleInput}
+                    />
                     <span> Ube Cakes</span>
                   </label>
                 </div>
                 <div>
                   <label>
-                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Filipino Cuisine" onChange={this.handleInput}/>
+                    <input
+                      type="checkbox"
+                      name="typeOfProduct"
+                      id="typeOfProduct"
+                      value="Filipino Cuisine"
+                      onChange={this.handleInput}
+                    />
                     <span> Filipino Cuisine/Dessert</span>
                   </label>
                 </div>
                 <div>
                   <label>
-                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Cupcakes" onChange={this.handleInput}/>
+                    <input
+                      type="checkbox"
+                      name="typeOfProduct"
+                      id="typeOfProduct"
+                      value="Cupcakes"
+                      onChange={this.handleInput}
+                    />
                     <span> Cupcakes</span>
                   </label>
                 </div>
                 <div>
                   <label>
-                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Macarons" onChange={this.handleInput}/>
+                    <input
+                      type="checkbox"
+                      name="typeOfProduct"
+                      id="typeOfProduct"
+                      value="Macarons"
+                      onChange={this.handleInput}
+                    />
                     <span> Macarons</span>
                   </label>
                 </div>
                 <div>
                   <label>
-                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Pinoy Bread" onChange={this.handleInput}/>
+                    <input
+                      type="checkbox"
+                      name="typeOfProduct"
+                      id="typeOfProduct"
+                      value="Pinoy Bread"
+                      onChange={this.handleInput}
+                    />
                     <span> Pinoy Bread</span>
                   </label>
                 </div>
@@ -103,7 +166,7 @@ class Quote extends Component {
               </div>
               <div className={style.email}>
                 <label>Email Address</label>
-                <input 
+                <input
                   className={style.emailinput}
                   type="text"
                   name="email"
@@ -145,9 +208,9 @@ class Quote extends Component {
               <div className={style.dateevent}>
                 <label>Date of your event</label>
                 <input
-                  className={style.dateinput} 
-                  type="date" 
-                  name="dateOfEvent" 
+                  className={style.dateinput}
+                  type="date"
+                  name="dateOfEvent"
                   id="dateOfEvent"
                   onChange={this.handleInput}
                 />
@@ -157,21 +220,21 @@ class Quote extends Component {
                   <label>Date of Pick Up</label>
                   <input
                     className={style.dateinput}
-                    type="date" 
-                    name="pickUpDate" 
+                    type="date"
+                    name="pickUpDate"
                     id="pickUpDate"
                     onChange={this.handleInput}
                   />
                 </div>
                 <div className={style.time}>
                   <label>Time of Pick Up</label>
-                  <input 
+                  <input
                     className={style.timeinput}
-                    type="time" 
+                    type="time"
                     name="pickUpTime"
                     id="pickUpTime"
                     onChange={this.handleInput}
-                  />  
+                  />
                 </div>
               </div>
               <div className={style.phone}>
@@ -212,15 +275,19 @@ class Quote extends Component {
                 />
               </div>
               <div className={style.quotesub}>
-                <input type="submit" value="Submit" onClick={this.handleQuote} />
+                <input
+                  type="submit"
+                  value="Submit"
+                  onClick={this.handleQuote}
+                />
               </div>
             </form>
             {this.props.errorMessage && <h1>{this.props.errorMessage}</h1>}
           </div>
         </div>
-        </>
-      )
-    }
+      </>
+    );
+  }
 }
 
 export default Quote;
