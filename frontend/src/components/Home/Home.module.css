@@ -55,7 +55,7 @@
   justify-self: center;
   /* grid-row: 2/3;
   grid-column: 1/2; */
-  background-image: url('./images/ubecakes2.jpg');
+  background-image: url('./images/ubecakes3.jpg');
   background-size: cover;
   height: 250px;
   width: 300px;
@@ -65,7 +65,7 @@
   justify-self: center;
   /* grid-row: 2/3;
   grid-column: 2/3; */
-  background-image: url('./images/filipinocuisine1.jpg');
+  background-image: url('./images/cupcakes4.jpg');
   background-size: cover;
   height: 250px;
   width: 300px;
@@ -75,7 +75,7 @@
   justify-self: center;
   /* grid-row: 2/3;
   grid-column: 3/4; */
-  background-image: url('./images/cupcakes4.jpg');
+  background-image: url('./images/macarons.jpg');
   background-size: cover;
   height: 250px;
   width: 300px;
@@ -85,7 +85,7 @@
   justify-self: center;
   /* grid-row: 3/4;
   grid-column: 1/2; */
-  background-image: url('./images/macarons.jpg');
+  background-image: url('./images/filipinocuisine1.jpg');
   background-size: cover;
   height: 250px;
   width: 300px;
