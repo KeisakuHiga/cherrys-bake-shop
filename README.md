@@ -1,11 +1,14 @@
-#About Cherry's Bakeshop & Cafe
+#About
+Cherry's Bakeshop and Cafe is application for users to see cake and filipino food options and send quotes/customizations to our client to process. This is a MERN stack group project utilizing M- MongoDb, ExpressJS, ReactJS and NodeJS.
 
 ## Deployed
 
-Client: https://cherrysbakeshopandcafe.netlify.com
-Server: https://cherrysbakeshopandcafe.khiga2943.now.sh
+    * Client: https://cherrysbakeshopandcafe.netlify.com
+    * Server: https://cherrysbakeshopandcafe.khiga2943.now.sh
 
-[Github Repository](https://github.com/KeisakuHiga/cherrys-bake-shop)
+## Github Repository
+
+    https://github.com/KeisakuHiga/cherrys-bake-shop
 
 ## Contributors
 
