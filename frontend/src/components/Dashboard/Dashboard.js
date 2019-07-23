@@ -52,7 +52,7 @@ class Dashboard extends Component {
           <h1 className={style.dashtitle}>All Quotes</h1>
           <div className={style.sortbutton}>
             <select value={this.state.value} onChange={this.doOrderBy}>
-              <option value="">Sort By Category</option>
+              <option value="" selected disable hidden>Sort By Category</option>
               <option value="user.userName.firstName">First Name</option>
               <option value="user.userName.lastName">Last Name</option>
               <option value="user.contact.phoneNumber">Phone Number</option>
@@ -60,13 +60,13 @@ class Dashboard extends Component {
               <option value="createdAt">Created At</option>
             </select>
             <select value={this.state.value} onChange={this.doOrder}>
-              <option value="">Sort Order</option>
+              <option value="" selected disable hidden>Sort Order</option>
               <option value="asc">Ascending</option>
               <option value="desc">Descending</option>
             </select>
           </div>
           <div className={style.dashboardcontainer}>
-            <table className="table table-hover">
+            <table className={"table table-hover"}>
               <thead>
                 <tr>
                   <th scope="col" >Number</th>

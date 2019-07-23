@@ -36,7 +36,7 @@ class Quote extends Component {
                   <p>We are based in Deer Park.</p>
                   <p>If you are after a quote for a custom made cake or filipino order, please fill out the form below and I will get back to you as soon as possible.</p>
                   <p>You can also email us directly at: <a href="mailto:cherrysbakeshopandcafe@gmail.com">cherrysbakeshopandcafe@gmail.com</a></p>
-                  <p>Download my filipino food list and cake flavour list <a href="https://drive.google.com/file/d/10feovHfpQSJTftvNRoH3oeT3SOhDqzfx/view">here.</a></p>
+                  <p>Download my filipino food list and cake flavour list <a href="https://drive.google.com/file/d/10feovHfpQSJTftvNRoH3oeT3SOhDqzfx/view">here</a></p>
                 </div>
               </div>
               <div>
@@ -69,7 +69,7 @@ class Quote extends Component {
                 </div>
                 <div>
                   <label>
-                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Filipino Cuisine" onChange={this.handleInput}/>
+                    <input type="checkbox" name="typeOfProduct" id="typeOfProduct" value="Filipino Cuisine/Dessert" onChange={this.handleInput}/>
                     <span> Filipino Cuisine/Dessert</span>
                   </label>
                 </div>

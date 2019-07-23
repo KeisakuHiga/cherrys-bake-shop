@@ -1,14 +1,28 @@
+.nomatchouter {
+  background-color: #c8bad9;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Playball', cursive;
+}
+
 .nomatchcontainer {
   display: flex;
   text-align: center;
   justify-content: center;
+  align-items: center;
 }
+
 h2 {
   text-align: center;
 }
+
 .nomatchimage {
   display: inherit;
   justify-content: center;
   height: 600px;
   width: 500px;
 }
+
