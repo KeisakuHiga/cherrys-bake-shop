@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   width: 900px;
-  height: 1550px;
+  height: 1560px;
   background-color: white;
 }
 
@@ -202,4 +202,8 @@
 
 .quotecontainer span {
   margin-right: 10px;
+}
+
+.errorquote {
+  margin-top: 10px;
 }

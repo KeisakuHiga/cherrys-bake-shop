@@ -30,9 +30,12 @@
   /* background-color: grey; */
   height: 400px;
   width: 500px;
-  /* overflow: auto; */
   font-family: 'Playball', cursive;
   font-size: 19px;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
 }
 
 .abouttitle h1 {

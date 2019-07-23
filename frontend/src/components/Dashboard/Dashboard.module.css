@@ -7,7 +7,18 @@
   width: 100vw;
   max-width: 100%;
   font-family: 'Playball', cursive;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
 }
+
+.dashcont::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
+}
+
+
 
 .dashtitle {
   padding-top: 3vw;
