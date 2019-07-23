@@ -23,7 +23,6 @@ class Quote extends Component {
   handleQuote = e => {
     e.preventDefault()
     this.props.createNewQuote(this.state)
-    window.location = '/'
   }
 
   render() {
@@ -216,7 +215,9 @@ class Quote extends Component {
                 <input type="submit" value="Submit" onClick={this.handleQuote} />
               </div>
             </form>
-            {this.props.errorMessage && <h1>{this.props.errorMessage}</h1>}
+            <div>
+              {this.props.errorMessage && <h2>{this.props.errorMessage}</h2>}
+            </div>
           </div>
         </div>
         </>

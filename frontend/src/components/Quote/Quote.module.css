@@ -14,12 +14,18 @@
 .quoteinner {
   border: solid black 1px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 900px;
   height: 1550px;
   background-color: white;
 }
+
+.quoteinner h2 {
+  color: rgb(212, 0, 255);
+}
+
 
 .quotecontent {
   display: flex;
