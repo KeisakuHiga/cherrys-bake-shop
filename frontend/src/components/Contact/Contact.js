@@ -7,7 +7,9 @@ class Contact extends Component {
     return (
       <>
       <div className={style.contactcontainer}>
-        <h2>Contact Us</h2>
+        <div className={style.contacttitle}>
+          <h2>Contact Us</h2>
+        </div>
         <div className={style.contactinner}>
           <div className={style.googleMapContainer}>
               <iframe className={style.googlemap}
