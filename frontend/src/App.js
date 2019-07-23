@@ -52,9 +52,10 @@ class App extends React.Component {
     const url = process.env.REACT_APP_API_URL;
     try {
       await axios.post(`${url}/quote/newQuote`, quoteInfo);
+      window.location = '/'
     } catch (err) {
       this.setState({
-        errorMessage: `Error => ${err.message}`
+        errorMessage: 'Please fill in all fields!!'
       });
     }
   };
