@@ -44,16 +44,16 @@ class QuoteDetail extends Component {
             </div>
             <div className={style.dateinfo}>
               <h3>Date Info</h3>
-              <p>Quote created at: <Moment local format="MMM DD, YYYY">{oneQuote.createdAt}</Moment></p>
-              <p>Date of event: <Moment local format="MMM DD, YYYY">{oneQuote.dateOfEvent}</Moment></p>
-              <p>Estimated pick up date: <Moment local format="MMM DD, YYYY TL">{oneQuote.pickUpDateAndTime}</Moment></p>
+              <p>Quote created at: <Moment local format="MMM DD, YYYY LT">{oneQuote.createdAT}</Moment></p>
+              <p>Date of event: <Moment local format="MMM DD, YYYY LT">{oneQuote.dateOfEvent}</Moment></p>
+              <p>Estimated pick up date: <Moment local format="MMM DD, YYYY LT">{oneQuote.pickUpDateAndTime}</Moment></p>
             </div>
             <div className={style.aboutproduct}>
               <h3>Product Info</h3>
-              <p>Type of product: {oneQuote.typeOfProduct}</p>
+              <p>Type of product: {oneQuote.typeOfProduct.map(product => <span>{product}, </span>)}</p>
               <p>Type of occasion: {oneQuote.typeOfOccasion}</p>
-              <p>Cake flavour: {oneQuote.cakeFlavour}</p>
-              <p>Filling flavour: {oneQuote.fillingFlavour}</p>
+              <p>Cake flavour: {oneQuote.flavour.cakeFlavour}</p>
+              <p>Filling flavour: {oneQuote.flavour.fillingFlavour}</p>
             </div>
             <div className={style.otherinfo}>
               <h3>Other Info</h3>
