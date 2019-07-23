@@ -1,5 +1,5 @@
 #About
-Cherry's Bakeshop and Cafe is application for users to see cake and filipino food options and send quotes/customizations to our client to process. This is a MERN stack group project utilizing M- MongoDb, ExpressJS, ReactJS and NodeJS.
+Cherry's Bakeshop and Cafe's application for users to see cake and filipino food options and send quotes/customizations to our client to process. This is a MERN stack group project utilizing M- MongoDb, ExpressJS, ReactJS and NodeJS.
 
 ## Deployed
 
