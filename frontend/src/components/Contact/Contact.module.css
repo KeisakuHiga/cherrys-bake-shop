@@ -2,11 +2,16 @@
   text-align: center;
   height: 800px;
   width: 100vw;
-  /* background-color: aqua; */
+  background-color: #c8bad9;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  font-family: 'Playball', cursive;
+}
+
+.contactcontainer h2 {
+  font-size: 40px;
 }
 
 .contactinner {
@@ -40,6 +45,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 20px;
   /* background-color: grey; */
 }
 

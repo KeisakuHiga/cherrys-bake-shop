@@ -8,7 +8,7 @@ class Faq extends Component {
       <div className={style.faqcontainer}>
         <div className={style.faqinnerbox}>
           <div className={style.faqtitle}>
-            <h1>FAQ</h1>
+            <h2>Frequently Asked Questions</h2>
           </div>
           <div className={style.faqcontent}>
             <h5>How do I place an order?</h5>
