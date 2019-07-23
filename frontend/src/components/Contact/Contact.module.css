@@ -1,7 +1,12 @@
+.contacttitle {
+  margin-bottom: 60px;
+}
+
 .contactcontainer {
   text-align: center;
   height: 800px;
   width: 100vw;
+  max-width: 100%;
   background-color: #c8bad9;
   display: flex;
   justify-content: center;
@@ -21,7 +26,8 @@
   /* background-color: yellow; */
   padding: 0px 20px;
   height: 600px;
-  width: 1200px;
+  width: 1100vw;
+  max-width: 100%;
 }
 
 .googleMapContainer {

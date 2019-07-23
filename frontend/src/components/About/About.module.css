@@ -1,6 +1,7 @@
 .aboutcontainer {
   height: 600px;
   width: 100vw;
+  max-width:100%;
   background-color: #c8bad9;
   display: flex;
   justify-content: center;
@@ -34,14 +35,12 @@
   font-size: 19px;
 }
 
-/* .abouttitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.abouttitle h1 {
+  font-size: 40px;
 }
 
 .aboutpara {
   display: flex;
   justify-content: center;
   align-items: center;
-} */
+}
