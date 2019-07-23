@@ -13,11 +13,19 @@
 .faqinnerbox {
   border: solid black 1px;
   text-align: left;
-  overflow: auto;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
   height: 750px;
   width: 1300px;
   background-color: white;
   padding: 0px 20px;
+}
+
+.faqinnerbox::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
 }
 
 .faqtitle {

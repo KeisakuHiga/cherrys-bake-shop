@@ -66,7 +66,7 @@ class Dashboard extends Component {
             </select>
           </div>
           <div className={style.dashboardcontainer}>
-            <table className={"table table-hover"}>
+            <table className="table table-hover">
               <thead>
                 <tr>
                   <th scope="col" >Number</th>

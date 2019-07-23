@@ -55,7 +55,7 @@ class App extends React.Component {
       window.location = '/'
     } catch (err) {
       this.setState({
-        errorMessage: 'Please fill in all fields!!'
+        errorMessage: 'Please fill in all the fields!'
       });
     }
   };

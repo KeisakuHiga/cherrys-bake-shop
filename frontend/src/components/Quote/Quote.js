@@ -215,7 +215,7 @@ class Quote extends Component {
                 <input type="submit" value="Submit" onClick={this.handleQuote} />
               </div>
             </form>
-            <div>
+            <div className={style.errorquote}>
               {this.props.errorMessage && <h2>{this.props.errorMessage}</h2>}
             </div>
           </div>
