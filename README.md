@@ -22,12 +22,14 @@ Cherry's Bakeshop and Cafe's (CBC) application allows users to view cake and fil
     This new website would help in spreading the word in the neighborhood and get more customer footfalls and offers online flexibility of sending customizations via Quote form to CBC(Client)in advance.
 
     * Functionality/ Features
-    - Nav bar: Navigating to different website pages
-    - Home page: Shows gallery of cake pictures and filipino food
-    - About page: Profile of Cherry's Bakeshop and Cafe
+    - Nav bar: Allows easier navigation to different pages of website
+    - Side bar: Allows User to call the outlet, also look at social pages of CBC on Facebook and  Instagram
+    - Footer: Allows User to see outlet address and opening hours
+    - Home page: Landing page, allows User to see gallery of cake pictures and filipino food
+    - About page: can know about the Story/Profile of Cherry's Bakeshop and Cafe
     - Order page: Book cake with time details and customization options
     - FAQ: Few questions which they keep getting asked all times.
-    - Contact number on all pages with Facebook & Instagram links
+    - Contact: The contact page carries outlet Contact number on all pages with Facebook & Instagram links
 
     Admin
 
