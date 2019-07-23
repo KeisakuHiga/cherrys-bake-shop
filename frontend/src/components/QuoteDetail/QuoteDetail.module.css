@@ -2,6 +2,7 @@
 
 .quotedetailouter {
   background-color: #c8bad9;
+  font-family: 'Playball', cursive;
 }
 
 .titleouter {
@@ -12,7 +13,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 38px;
+  font-size: 40px;
+  padding-top: 3vw;
   margin-left: 8vw;
   width: 84vw;
   border-bottom: 2px solid rgba(0,0,0,0.10);

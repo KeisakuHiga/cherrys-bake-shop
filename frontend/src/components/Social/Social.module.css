@@ -5,6 +5,8 @@
   width: 200px;
   display: flex;
   flex-direction: column;
+  font-family: 'Playball', cursive;
+  font-size: 19px;
 }
 
 .social ul {

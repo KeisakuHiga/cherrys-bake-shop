@@ -3,13 +3,15 @@
 .dashcont {
   background-color: #c8bad9;
   height: 100vh;
+  font-family: 'Playball', cursive;
 }
 
 .dashtitle {
+  padding-top: 3vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 38px;
+  font-size: 40px;
   margin-left: 8vw;
   width: 84vw;
   border-bottom: 2px solid rgba(0,0,0,0.10);
@@ -27,6 +29,8 @@
 }
 
 .sortbutton {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 

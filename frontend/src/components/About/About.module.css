@@ -29,11 +29,9 @@
   /* background-color: grey; */
   height: 400px;
   width: 500px;
-  overflow: scroll;
+  /* overflow: auto; */
   font-family: 'Playball', cursive;
-  font-size: 18px;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  font-size: 19px;
 }
 
 /* .abouttitle {
