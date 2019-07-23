@@ -9,7 +9,6 @@
 }
 
 .gallerycontainer {
-  background-color: yello;
   height: 750px;
   width: 750px;
   display: grid;
@@ -96,7 +95,7 @@
   justify-self: center;
   /* grid-row: 3/4;
   grid-column: 2/3; */
-  background-image: url('./images/pandesal.jpg');
+  background-image: url('./images/pandesal1.jpg');
   background-size: cover;
   height: 250px;
   width: 300px;
