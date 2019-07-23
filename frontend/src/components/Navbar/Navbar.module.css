@@ -43,6 +43,7 @@
   /* font-family: 'Pinyon Script', cursive; */
   font-family: 'Playball', cursive;
   /* font-family: 'Pacifico', cursive; */
+  outline: none;
 }
 
 .navlink:hover {
