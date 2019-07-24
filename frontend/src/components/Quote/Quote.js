@@ -20,10 +20,12 @@ class Quote extends Component {
     }
   };
 
-  handleQuote = e => {
+  handleQuote = async (e) => {
     e.preventDefault();
-    this.props.createNewQuote(this.state);
-    window.location = "/";
+    const result = await this.props.createNewQuote(this.state);
+    if (result) {
+      this.props.history.push('/')
+    }
   };
 
   render() {
