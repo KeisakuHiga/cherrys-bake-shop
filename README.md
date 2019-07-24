@@ -27,7 +27,8 @@ Cherry's Bakeshop and Cafe's(CBC) application allows users to view cake and fili
 - [Design Process](#design-process)
 - [User stories](#user-stories)
 - [Tech Stack](#tech-stack)
-- [Testing](#Testing)
+- [Testing](#testing-evidence)
+- [Testing Evidence](#
 - [Tools & methodologies](#tools)
 - [Short answer questions](#short-answer-questions)
 
@@ -66,20 +67,21 @@ We pitched Cherry's Bakeshop & Cafe for becoming our client for our voluntary st
 
 ### Meeting Preparation phase
 
-1. Client Questionnaire - We prepared a questionnaire to understand the business requirements and client business model in detail and shared it with client before the meeting. This helped the client to go through the questions and he was more prepared to answer the questions.
+    1. Client Questionnaire - We prepared a questionnaire to understand the business requirements and client business model in detail and shared it with client before the meeting. This helped the client to go through the questions and he was more prepared to answer the questions.
 
 ![](./docs/clientquestions-1.png)
 ![](./docs/clientquestions-2.png)
 
-- Agenda of the meeting
+    2. Agenda of the meeting
 
-- Moodboard
+    3.  Moodboard
 
-- Sample wireframes
-  ![](./docs/initialwireframes.png)
+    4.  Sample wireframes
 
-  Client minutes: ![](./docs/clientminutes.png)
-  Client diary: https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing
+![](./docs/initialwireframes.png)
+
+Client minutes: ![](./docs/clientminutes.png)
+Client diary: https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing
 
 - Client testimonial
   ![](./docs/clienttestimonial.png)
@@ -165,12 +167,17 @@ Installation
 
 2. This will start the test suites and you will see total tests with coverage.
 
-Evidence of testing
-Testing checklist: ![](./docs/testingchecklist.png)
-[Development](https://youtu.be/31PVBlN3Nhk)
-[Production](https://youtu.be/8K5ywoXLHNc)
-Backend testing coverage: ![](./docs/testcoverage.png)
-Frontend coverage: We tried working on frontend testing, but we didn't get around to fix our tests. We have tried to manually test all elements. Here's a snapshot
+### Testing evidence
+
+- Backend testing coverage: ![](./docs/testcoverage.png)
+
+- Testing checklist: ![](./docs/testingchecklist.png)
+
+- Development Manual Testing: https://youtu.be/31PVBlN3Nhk
+
+- Production Manual Testing: https://youtu.be/8K5ywoXLHNc
+
+- Frontend coverage: We have done manual testing of all frontend elements. As, we started working on frontend testing, but didn't get around to fixing our tests. Here's a snapshot ![](./docs/frontendsnapshot.png)
 
 ## Project timeline
 
