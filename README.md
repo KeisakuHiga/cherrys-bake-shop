@@ -1,7 +1,7 @@
 #About
 Cherry's Bakeshop and Cafe's(CBC) application allows users to view cake and filipino food options and send their customized requirements by filling a quote form. This is a MERN stack group project utilizing: MongoDb(Mongoose ODM) Express, ReactJS and NodeJS.
 
-## Website demo (gif)
+## Website (gif)
 
 ## Deployment
 
@@ -31,9 +31,9 @@ Cherry's Bakeshop and Cafe's(CBC) application allows users to view cake and fili
 
 ## Description of application
 
-Problem definition
+Business requirement
 
-- 90% of young customers are online and
+- 90% of young customers are online and we want
   This new website would help in spreading the word in the neighborhood and get more customer footfalls and offers online flexibility of sending customizations via Quote form to CBC(Client)in advance.
 
 Solution
@@ -78,16 +78,18 @@ We pitched Cherry's Bakeshop & Cafe for becoming our client for our voluntary st
   Client minutes: ![](./docs/clientminutes.png)
   Client diary: https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing
 
-- Client signOff
-  ![](./docs/clientfinalsignoff.png)
+- Client testimonial
+  ![](./docs/clienttestimonial.png)
 
 ## Design process
 
-- Color palette
+To balance bright red client logo, we have utilized a simple colour theme of purple with timeless white and black. 'Playball' font lends the cursive and artistic touch to the website.
+
+Website Wireframes
+
+![](./docs/wireframes.png)
 
 ## User stories
-
-![](./docs/workflowuser.jpg)
 
 1.  As a User, I should be able to see the business phone number on every page when I navigate the website. So that I can call them if I need to make a booking or ask for a quote.
 2.  As a User, I want to see a menu or gallery of cake pictures. So that I can decided what I want.
@@ -96,7 +98,7 @@ We pitched Cherry's Bakeshop & Cafe for becoming our client for our voluntary st
 5.  As a User, I want to place an order with special instructions. So that the shop can create a cake according to my requirements.
 6.  As a User, I want to see the store's facebook and instagram links. So that I can look at cake inspirations.
 
-![](./docs/workflowadmin.jpg)
+![](./docs/workflowuser.jpg)
 
 1. As Admin, I should be able to see a Dashboard of customers orders when I log into the website. So that I can easily process my orders.
 
@@ -104,23 +106,19 @@ We pitched Cherry's Bakeshop & Cafe for becoming our client for our voluntary st
 
 3. As Admin, I should be able to get customer contact details. So that I can contact my customer when the order is ready.
 
-Wireframes
-
-![](./docs/wireframes.png)
+![](./docs/workflowadmin.jpg)
 
 - Menu Design
-  We designed Menu for the client as they
+  As client didn't have any existing menu and flavour list, we designed cake flavours and filipino food menu that can be downloaded on Quote page.
 
   ![](./docs/cakemenu.png)
   ![](./docs/filipinomenu.png)
 
 - Database Entity Relationship Diagrams
 
-K to share?
+* Data Flow Diagram
 
-- Data Flow Diagram
-
-- OO design documentation
+* OO design documentation
 
 ## Tech stack
 
