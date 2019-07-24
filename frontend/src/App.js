@@ -51,8 +51,10 @@ class App extends React.Component {
   createNewQuote = async quoteInfo => {
     const url = process.env.REACT_APP_API_URL;
     try {
-      await axios.post(`${url}/quote/newQuote`, quoteInfo);
-      window.location = '/'
+      const data = await axios.post(`${url}/quote/newQuote`, quoteInfo);
+      if (data) {
+        return 'data posted'
+      }
     } catch (err) {
       this.setState({
         errorMessage: 'Please fill in all the fields!'
