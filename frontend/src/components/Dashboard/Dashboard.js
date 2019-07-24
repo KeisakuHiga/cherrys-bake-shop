@@ -44,7 +44,13 @@ class Dashboard extends Component {
     }); 
 
     if(!allQuotes) {
-      return <h1>Loading...</h1>
+      return ( 
+        <div className={style.quotedetailouterloading}>
+          <div class="spinner-border" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+      )
     } else {
       return (
         <>
