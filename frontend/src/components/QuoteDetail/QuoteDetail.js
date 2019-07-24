@@ -25,7 +25,12 @@ class QuoteDetail extends Component {
   render() { 
     const { oneQuote } = this.state
     if(!oneQuote) {
-      return null
+      return ( <div className={style.quotedetailouterloading}>
+                <div class="spinner-border" role="status">
+                  <span class="sr-only">Loading...</span>
+                </div>
+              </div>
+      )
     } else {
       return (
         <>

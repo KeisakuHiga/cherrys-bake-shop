@@ -1,5 +1,13 @@
 /* desktop design */
 
+.quotedetailouterloading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c8bad9;
+  height: 900px;
+}
+
 .quotedetailouter {
   background-color: #c8bad9;
   font-family: 'Playball', cursive;
