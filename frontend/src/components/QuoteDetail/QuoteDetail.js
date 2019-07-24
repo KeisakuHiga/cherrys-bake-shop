@@ -50,7 +50,7 @@ class QuoteDetail extends Component {
             </div>
             <div className={style.dateinfo}>
               <h3>Date Info</h3>
-              <p>Quote created at: <Moment local format="MMM DD, YYYY LT">{oneQuote.createdAT}</Moment></p>
+              <p>Quote created at: <Moment local format="MMM DD, YYYY LT">{oneQuote.createdAt}</Moment></p>
               <p>Date of event: <Moment local format="MMM DD, YYYY LT">{oneQuote.dateOfEvent}</Moment></p>
               <p>Estimated pick up date: <Moment local format="MMM DD, YYYY LT">{oneQuote.pickUpDateAndTime}</Moment></p>
             </div>
