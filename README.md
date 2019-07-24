@@ -49,10 +49,7 @@ Solution
 - FAQ page: Users can see the frequently asked questions and get answers to their queries
 - Contact page: Users can check the client’s contact information (phone number, address, email address, business hours and the Google map). Users can click on map for a bigger map view, it allows the user to get the directions to the shop.
 
-#### Login details for checking admin functionality
-
-    username: test@gmail.com
-    password: password
+* Admin login details are mentioned in cherrys-bake-shop/frontend/.env.production
 
 - Login page: The admin logs in with the valid email and password. Receives Jason Web Token access token with valid credentials. The incorrect credentials don't generate the token. Once logged-in Admin can access Dashboard to see Quote details
 - Dashboard page: Admin can see all quotes
