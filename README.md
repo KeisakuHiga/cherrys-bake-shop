@@ -1,12 +1,13 @@
-#About
-Cherry's Bakeshop and Cafe's(CBC) application allows users to view cake and filipino food options and send their customized requirements by filling a quote form. This is a MERN stack group project utilizing: MongoDb(Mongoose ODM) Express, ReactJS and NodeJS.
+## About Cherry's Bakeshop and Cafe
+
+Cherry's Bakeshop and Cafe's(CBC) application allows users to view cake and filipino food options and send their customized requirements by filling a quote form. This is a MERN stack group project utilizing: MongoDb (Mongoose ODM) Express, ReactJS and NodeJS.
 
 ## Website (gif)
 
 ## Deployment
 
     Client: https://cherrysbakeshopandcafe.netlify.com
-    Server: https://cherrysbakeshopandcafe.khiga2943.now.sh
+    * Server details are listed in cherrys-bake-shop/frontend/.env.production
 
 ## Github Repository
 
@@ -26,15 +27,17 @@ Cherry's Bakeshop and Cafe's(CBC) application allows users to view cake and fili
 - [Design Process](#design-process)
 - [User stories](#user-stories)
 - [Tech Stack](#tech-stack)
+- [Testing](#Testing)
 - [Tools & methodologies](#tools)
 - [Short answer questions](#short-answer-questions)
 
 ## Description of application
 
-Business requirement
+/Problem definition/Business requirement
 
-- 90% of young customers are online and we want
-  This new website would help in spreading the word in the neighborhood and get more customer footfalls and offers online flexibility of sending customizations via Quote form to CBC(Client)in advance.
+- 90% of young customers are online and the client wanted to cater to this market. They had created a facebook page, wherein they were taking orders. However, they also wanted to have a website to showcase their food options and handle frequently asked questions and have a more robust quote information gathering system.
+
+This new website would help in spreading the word in the neighborhood and get more customer footfalls and offers online flexibility of sending customizations via Quote form to CBC(Client)in advance.
 
 Solution
 
@@ -126,7 +129,7 @@ CherryBakeshop application is built using a simple REST API with NodeJS and Expr
 
 PostMan has been used for testing. Jest has been used for Test suites. UI has been made in React.
 
-## Instructions on how to setup, configure, deploy and use the Application.
+## Instructions
 
 Prerequisites
 
@@ -136,7 +139,7 @@ Prerequisites
 
 Installation
 
-1. You need to open the git repository in a code editor of your choice. We are using visual studio code. Download link: https://code.visualstudio.com/docs/setup/mac
+1. You need to open the repository in a code editor.
 
 2. cd into `backend folder` and run below command.
    `npm install`
@@ -154,6 +157,20 @@ Installation
 
 7. You can now view frontend in the browser on http://localhost:3000
    `npm start`
+
+## Testing
+
+1. To run tests, cd into `backend` and run below command.
+   `npm test`
+
+2. This will start the test suites and you will see total tests with coverage.
+
+Evidence of testing
+Testing checklist: ![](./docs/testingchecklist.png)
+[Development](https://youtu.be/31PVBlN3Nhk)
+[Production](https://youtu.be/8K5ywoXLHNc)
+Backend testing coverage: ![](./docs/testcoverage.png)
+Frontend coverage: We tried working on frontend testing, but we didn't get around to fix our tests. We have tried to manually test all elements. Here's a snapshot
 
 ## Project timeline
 
