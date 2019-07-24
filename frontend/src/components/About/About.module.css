@@ -1,7 +1,7 @@
 .aboutcontainer {
   height: 600px;
   width: 100vw;
-  max-width:100%;
+  max-width: 100%;
   background-color: #c8bad9;
   display: flex;
   justify-content: center;
@@ -36,6 +36,11 @@
   overflow-x: hidden;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.aboutcontent::-webkit-scrollbar { /* WebKit */
+  width: 0;
+  height: 0;
 }
 
 .abouttitle h1 {
