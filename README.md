@@ -31,8 +31,8 @@ Cherry's Bakeshop and Cafe's(CBC) application allows users to view food options 
 - [Design Process](#design-process)
 - [User stories](#user-stories)
 - [Tech Stack](#tech-stack)
-- [Testing](#testing-evidence)
-- [Tools & methodologies](#tools)
+- [Testing](#testing)
+- [Project Management](#project-management)
 - [Short answer questions](#short-answer-questions)
 
 ## Description of application
@@ -70,20 +70,17 @@ We pitched Cherry's Bakeshop & Cafe for becoming our client for our voluntary st
 
 ### Meeting Preparation phase
 
-    1. Client Questionnaire - We prepared a questionnaire to understand the business requirements and client business model in detail and shared it with client before the meeting. This helped the client to go through the questions and he was more prepared to answer the questions.
+    1. Client Questionnaire - We prepared a questionnaire to understand the business requirements and client business model in detail and shared it with client prior to the meeting. This helped the client to go through the questions and he was more prepared to answer the questions.
 
-![](./docs/clientquestions-1.png)
-![](./docs/clientquestions-2.png)
+![](./docs/clientquestions.png)
 
-    2. Agenda of the meeting
+    2.  Moodboard
 
-    3.  Moodboard
-
-    4.  Sample wireframes
+    3.  Sample wireframes
 
 ![](./docs/initialwireframes.png)
 
-Client minutes: ![](./docs/clientminutes.png)
+Client minutes: ![](./docs/client-minutes.png)
 Client diary: https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing
 
 - Client testimonial
@@ -117,14 +114,16 @@ Website Wireframes
 ![](./docs/workflowadmin.jpg)
 
 - Menu Design
+
   As client didn't have any existing menu and flavour list, we designed cake flavours and filipino food menu that can be downloaded on Quote page.
 
-  ![](./docs/cakemenu.png)
-  ![](./docs/filipinomenu.png)
+  ![](./docs/menu.png)
 
 - Database Entity Relationship Diagrams
+  ![](./docs/ERD.png)
 
-* Data Flow Diagram
+- Data Flow Diagram
+  ![](./docs/dataflowdiagram.jpg)
 
 * OO design documentation
 
@@ -182,10 +181,9 @@ Installation
 
 - Frontend coverage: We have done manual testing of all frontend elements. As, we started working on frontend testing, but didn't get around to fixing our tests. Here's a snapshot ![](./docs/frontendsnapshot.png)
 
-## Project timeline
+## Project Management
 
-## Tools
-
+    * Timeline
     * Screenshots of Trello board(s)
     * GitHub - discuss the process of pull requests and screenshot
     * Team Communication screen shots
