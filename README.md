@@ -189,13 +189,109 @@ Installation
 
 ## Short Answer questions
 
-- What are the most important aspects of quality software? 1. No bugs 2. Easy to use 3. Easy to maintain 4. Scaleability 5. Readable code 6. Includes well comments 7.
+### Q1. What are the most important aspects of quality software?
+1. No bugs 
+2. Easy to use 
+3. Easy to maintain 
+4. Scaleability 
+5. Readable code 
+6. Includes well comments 
 
-- What libraries are being used in the app and why? 1. Express 2. React 3. Mongoose 4. Node 5. MongoDB 6. Jest 7. Mocha 8. Chai 9. Json Web Token 10.
 
-* A team is about to engage in a project, developing a website for a small business.
-  What knowledge and skills would they need in order to develop the project? 1. Business requirements 2. Design approach 3. RESTful API knowledge 4. Project management 5. UI development 6. Client documentation 7. User stories 8. Development skills 9. Version control 10. Project documentation (e.g. README.md) 11.
+### Q2. What libraries are being used in the app and why? 
+#### Frontend
+##### dependencies
+    "@fortawesome/fontawesome-svg-core": "^1.2.19",
+    "@fortawesome/free-brands-svg-icons": "^5.9.0",
+    "@fortawesome/free-solid-svg-icons": "^5.9.0",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "dotenv": "^8.0.0",
+    "history": "^4.9.0",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.14",
+    "moment-timezone": "^0.5.26",
+    "netlify-cli": "^2.11.24",
+    "popper.js": "^1.15.0",
+    "react": "^16.8.6",
+    "react-bootstrap": "^1.0.0-beta.9",
+    "react-component-props-table": "0.0.1",
+    "react-dom": "^16.8.6",
+    "react-moment": "^0.9.2",
+    "react-phone-number-input": "^2.3.20",
+    "react-router-dom": "^5.0.1",
+    "react-scripts": "3.0.1"
+    
+##### devDependencies
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "chai": "^4.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.3.5",
+    "react-test-renderer": "^16.8.6",
+    "sinon": "^7.3.2",
+    "sinon-chai": "^3.3.0"
 
-- Within your own project what knowledge or skills were required to complete your project, and overcome challenges? 1. Power of googling (problem solving skills) 2. Merging pull request after team review 3. Frequent team communication - in person(better) 4. Putting all requirement in Trello and discussing everyday 5.
+#### Backend
+##### dependencies
+    "@hapi/joi": "^15.1.0",
+    "bcrypt": "^3.0.6",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "engines": "^0.4.0",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment-timezone": "^0.5.26",
+    "mongoose": "^5.6.3",
+    "nodemon": "^1.19.1",
+    "shortid": "^2.2.14"
 
-- Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature? 1.
+##### devDependencies
+    "jest": "^24.8.0",
+    "now": "^15.7.0",
+    "supertest": "^4.0.2"
+
+### Q3. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project? 
+  - **Understanding about a client's business needs and requirements**: is necessary because developing a project should be the thing to solve client's business issues. Developer team should be a problem-solving team to create the application that gives the solution for the client, not be a group that just makes an application.
+  - **Well communication with the client during the project**: is must skill. Developers have communication many times with their client to confirm whether or not the project is what the client is expecting during the project. This skill allows you to reflect the client's real needs to the project.
+
+  - **Project management skill**: is important for managing the team project. You have to control the each task progress properly over the project as they will be allocated to each team member and it would be hard to integrate all works into one product unless you have this skill.
+
+  - Design approach
+  - RESTful API knowledge
+  - UI development 
+  - Client documentation 
+  - User stories 
+  - Development skills 
+  - Version control 
+  - Project documentation (e.g. README.md) 
+  
+
+### Q4. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
+
+#### Hard skills
+* *Vanilla Javascript*: understanding functional programming principles, asynchronous code, and callbacks.
+* *Document Databases (MongoDB/Mongoose)*: converting a relational databse structure into document database.
+* *Express API/Server*: creating and using middleware to manage requests and respsonses to public and protected routes.
+* *React.js*: working with multiple layers of components and create-react-app folder structure.
+* *Node.js*: using Node.js to run multiple localhost ports on one computer.
+* *NPM and NPM libraries*: researching and applying NPM packages and libraries to our application.
+* *Testing(Frontend: Mocha, Chai, Enzyme, Backend: Jest, Supertest)*: required to test our application code.
+* *GitHub/GitHub*: each of us were required to create branchs, push to master, peer to peer code review and merging or resolving conflicts in GitHub.
+* *HTML5*: compiling semantic HTML in React components logic.
+* *CSS3*: using Sass compilers to create mixins and global variables to refactor code.
+* *Figma*: used as a design tool for wireframes and assets.
+* *Trello*: breakdown of tasks following Agile methodologies.
+* *Distributed Deployment*: client, server and database deployed to Netlify, Now, MongoDB Atlas respectively.
+
+#### Soft skills
+* Team collaboration
+* Good communication skills
+* Project management
+* Research and development skills
+
+### Q5. Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature? 
+
+1. 
