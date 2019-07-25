@@ -226,7 +226,7 @@ Quality software should be able to be run on many platforms. This is so more peo
 
 Quality software needs quality testing. Source code should be tested with the most coverage and most efficient testing methods. Software should also be manageable after deployment.
 
-### Security
+#### Security
 
 Security is very important for software development as applications can have millions of users. A security policy should be created and be applied by having no entry points. This can include authorization, authentication, network attack protections and data encryption.  
 
@@ -238,9 +238,8 @@ Security is very important for software development as applications can have mil
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "axios": "^0.19.0",
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.3.1", - used for styling
     "dotenv": "^8.0.0",
-    "history": "^4.9.0",
     "jquery": "^3.4.1",
     "lodash": "^4.17.14",
     "moment-timezone": "^0.5.26",
@@ -256,7 +255,6 @@ Security is very important for software development as applications can have mil
     "react-scripts": "3.0.1"
     
 ##### devDependencies
-    "@fortawesome/fontawesome-free": "^5.9.0",
     "chai": "^4.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
