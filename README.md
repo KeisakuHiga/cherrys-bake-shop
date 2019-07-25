@@ -174,7 +174,6 @@ Installation
    `npm start`
 
 7. You can now view frontend in the browser on http://localhost:3000
-   `npm start`
 
 ## Testing
 
@@ -193,7 +192,7 @@ Installation
 
 - Production Manual Testing: https://youtu.be/8K5ywoXLHNc
 
-- Frontend coverage: We have done manual testing of all frontend elements. As, we started working on frontend testing, but didn't get around to fixing our tests. Here's a snapshot ![](./docs/frontendsnapshot.png)
+- Frontend coverage: We have done manual testing of all frontend elements. As, we started working on frontend testing, but didn't get around to fix our tests. Here's a snapshot ![](./docs/frontendsnapshot.png)
 
 ## Project Management
 
@@ -316,19 +315,17 @@ _Development Dependencies_
 
 ### Q3. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
 
-- **Understanding about a client's business needs and requirements**: is necessary because developing a project should be the thing to solve client's business issues. Developer team should be a problem-solving team to create the application that gives the solution for the client, not be a group that just makes an application.
-- **Well communication with the client during the project**: is must skill. Developers have communication many times with their client to confirm whether or not the project is what the client is expecting during the project. This skill allows you to reflect the client's real needs to the project.
+- **Understanding client's business needs and requirements**: Is the primary need for developing a project. Developer team should be a able to solve the business problem which is troubling the client.
+- **Communicate often with the client**: The most important skill is having a regular communication with the client and working on application as per client expectations.
+- **Project management**: No project can be successful without having a proper project management set-up. This will allow the team to have a better control of all the workflow and tasks can be allocated as per team members skill-sets.
 
-- **Project management skill**: is important for managing the team project. You have to control the each task progress properly over the project as they will be allocated to each team member and it would be hard to integrate all works into one product unless you have this skill.
-
+Other vital skills are as follows:
 - Design approach
 - RESTful API knowledge
 - UI development
 - Client documentation
 - User stories
-- Development skills
 - Version control
-- Project documentation (e.g. README.md)
 
 ### Q4. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
 
