@@ -322,6 +322,18 @@ Security is very important for software development as applications can have mil
 * Project management
 * Research and development skills
 
-### Q5. Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature? 
+### Q5. Evaluate how effective your knowledge and skills were in this project, using examples, and suggest changes or improvements for future projects of a similar nature? 
 
-1. 
+ In regards to our knowledge and skills as a group, I think we were pretty effective and complimented each others strengths and weaknesses very well. 
+ 
+ Certain skills or tasks that a person was lacking was covered by another team member. We worked together on several difficult tasks even when we didn't have much knowledge in those areas.
+ 
+  We played by the strengths of respective team members, some members were better at frontend, backend, react or styling, while the others were better at documentation and testing. Everyone in our group was willing to do whatever was necessary to complete the project successfully on time.
+  
+  Some improvements for future projects of a similar nature would be:
+  
+  -  Writing the code which can be tested via unit tests from the start. Testing shouldn't be left for last.
+
+  - If we had more time we could have implemented more features. For example a chat room for discussion with customers and the client. 
+  
+  -  Having more accessibility for the client to change content and images.
