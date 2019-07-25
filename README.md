@@ -250,37 +250,6 @@ Security is very important for software development as applications can have mil
 ### Q2. What libraries are being used in the app and why? 
 #### Frontend
 ##### dependencies
-<<<<<<< HEAD
-    "@fortawesome/fontawesome-svg-core": "^1.2.19",
-    "@fortawesome/free-brands-svg-icons": "^5.9.0",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "axios": "^0.19.0",
-    "bootstrap": "^4.3.1", - used for styling
-    "dotenv": "^8.0.0",
-    "jquery": "^3.4.1",
-    "lodash": "^4.17.14",
-    "moment-timezone": "^0.5.26",
-    "netlify-cli": "^2.11.24",
-    "popper.js": "^1.15.0",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.9",
-    "react-component-props-table": "0.0.1",
-    "react-dom": "^16.8.6",
-    "react-moment": "^0.9.2",
-    "react-phone-number-input": "^2.3.20",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
-    
-##### devDependencies
-    "chai": "^4.2.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "enzyme-to-json": "^3.3.5",
-    "react-test-renderer": "^16.8.6",
-    "sinon": "^7.3.2",
-    "sinon-chai": "^3.3.0"
-=======
     "@fortawesome/fontawesome-svg-core": "^1.2.19" - used for social icons 
     "@fortawesome/free-brands-svg-icons": "^5.9.0" - used for social icons 
     "@fortawesome/free-solid-svg-icons": "^5.9.0" - used for social icons
@@ -305,7 +274,6 @@ Security is very important for software development as applications can have mil
     "react-test-renderer": "^16.8.6" - used for frontend testing
     "sinon": "^7.3.2" - used for frontend testing
     "sinon-chai": "^3.3.0" - used for frontend testing
->>>>>>> master
 
 #### Backend
 ##### dependencies
