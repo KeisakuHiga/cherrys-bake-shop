@@ -15,19 +15,20 @@ import NoMatch from "./components/NoMatch/NoMatch";
 class Routes extends React.Component {
   state = {};
 
-  handleSignUp = () => {
-    if (this.props.authentication) {
-      return <Redirect to="/" />;
-    } else {
-      return (
-        <SignUp
-          register={this.props.register}
-          authentication={this.props.authentication}
-          errorMessage={this.props.errorMessage}
-        />
-      );
-    }
-  };
+  // WE DECIDED NOT TO IMPLEMENT SIGN UP FUNCTIONALITY BASED ON THE CLIENT REQUEST
+  // handleSignUp = () => {
+  //   if (this.props.authentication) {
+  //     return <Redirect to="/" />;
+  //   } else {
+  //     return (
+  //       <SignUp
+  //         register={this.props.register}
+  //         authentication={this.props.authentication}
+  //         errorMessage={this.props.errorMessage}
+  //       />
+  //     );
+  //   }
+  // };
 
   handleLogin = () => {
     if (this.props.authentication) {
@@ -62,8 +63,9 @@ class Routes extends React.Component {
           }}
         />
         <Route path="/Login" render={this.handleLogin} />
-        {/* /SignUp route must be deleted before handing over to our client */}
-        <Route path="/SignUp" render={this.handleSignUp} />
+
+        {/* WE DECIDED NOT TO IMPLEMENT SIGN UP FUNCTIONALITY BASED ON THE CLIENT REQUEST */}
+        {/* <Route path="/SignUp" render={this.handleSignUp} />
         {authentication ? (
           <Route
             path="/DashBoard"
@@ -71,7 +73,8 @@ class Routes extends React.Component {
               return <DashBoard {...props} />;
             }}
           />
-        ) : null}
+        ) : null} */}
+
         {authentication ? (
           <Route
             path="/QuoteDetail/:id"

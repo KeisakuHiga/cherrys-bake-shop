@@ -47,15 +47,14 @@ Cherry's Bakeshop and Cafe's(CBC) application allows users to view food options 
     - [Testing evidence](#testing-evidence)
   - [Project Management](#project-management)
   - [Short Answer questions](#short-answer-questions)
-    - [Flexibility and Extensibility](#flexibility-and-extensibility)
-    - [Maintainability and Readability](#maintainability-and-readability)
-    - [Performance and Efficiency](#performance-and-efficiency)
-    - [Scalability](#scalability)
-    - [Usability and Accessability](#usability-and-accessability)
-    - [Platform Capability and Portability](#platform-capability-and-portability)
-    - [Testability and Manageability](#testability-and-manageability)
+      - [Flexibility and Extensibility](#flexibility-and-extensibility)
+      - [Maintainability and Readability](#maintainability-and-readability)
+      - [Performance and Efficiency](#performance-and-efficiency)
+      - [Scalability](#scalability)
+      - [Usability and Accessability](#usability-and-accessability)
+      - [Platform Capability and Portability](#platform-capability-and-portability)
+      - [Testability and Manageability](#testability-and-manageability)
     - [Security](#security)
-    - [Functionality and Correctness](#functionality-and-correctness)
 
 ## Description of application
 
@@ -220,37 +219,37 @@ Installation
 
 - What are the most important aspects of quality software?
 
-### Flexibility and Extensibility
+#### Flexibility and Extensibility
 
 The ability of software to remove, add and modify functionality with ease and without breaking it is important as change is a regular occurence in software development.
 
-### Maintainability and Readability
+#### Maintainability and Readability
 
 Making sure your code has useful interface definitions, proper documentation and code documentation makes your software more maintainable, which includes the ability to change error corrections and minor functions.
 
-### Performance and Efficiency
+#### Performance and Efficiency
 
 This has to do with the response time of the software. Response time should be at acceptable intervals and not increase depending on the amount of transactions. An optimal performance ratio must be the goal.
 
-### Scalability
+#### Scalability
 
+Scalability is the ability of software to grow and handle an increasing amount of work/users. Scalable software has the advantage of adapting to the changing needs or demands of its users and clients.
 
-
-### Usability and Accessability
+#### Usability and Accessability
 
 Simple and easy to use software is best practice as this means less time to complete a task for users. It should also support different accessibility types of control for people with a range of disabilities.
 
-### Platform Capability and Portability
+#### Platform Capability and Portability
 
 Quality software should be able to be run on many platforms. This is so more people can use it. Portability is the ability for software to be converted to run on other platforms.
 
-### Testability and Manageability
+#### Testability and Manageability
 
-Quality software needs quality testing. Source code should be tested with the most coverage and most efficient testing methods. Software should also be manageable after deployment. A proper
+Quality software needs quality testing. Source code should be tested with the most coverage and most efficient testing methods. Software should also be manageable after deployment.
 
 ### Security
 
-### Functionality and Correctness
+Security is very important for software development as applications can have millions of users. A security policy should be created and be applied by having no entry points. This can include authorization, authentication, network attack protections and data encryption. 
 
 - What libraries are being used in the app and why? 1. Express 2. React 3. Mongoose 4. Node 5. MongoDB 6. Jest 7. Mocha 8. Chai 9. Json Web Token 10.
 
