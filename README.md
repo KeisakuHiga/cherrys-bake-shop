@@ -94,6 +94,8 @@ We shared minutes of the meeting with client to ensure that we all are on same p
 
 ![](./docs/client-minutes.png)
 
+![](./docs/clientdiary.png)
+
 **[Client Diary in detail](https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing)**
 
 **Client testimonial ![](./docs/clienttestimonial.png)**
@@ -197,10 +199,16 @@ Installation
 
 ## Project Management
 
-    * Timeline
-    * Screenshots of Trello board(s)
-    * GitHub - discuss the process of pull requests and screenshot
-    * Team Communication screen shots
+**Timeline**
+
+**Screenshots of Trello board(s)**
+
+**Code Review**
+![](./docs/githubrules.png)
+
+We set a Github pull request rule that must be 2 reviewers required for each pull request in order to avoid merging conflicts in the development team. This encouraged each member to understand other members code and only then merge the request.
+
+Team Communication screen shots
 
 ## Short Answer questions
 
