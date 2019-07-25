@@ -104,7 +104,7 @@ We shared minutes of the meeting with client to ensure that we all are on same p
 
 To balance bright red client logo, we have utilized a simple colour theme of purple with timeless white and black. 'Playball' font lends the cursive and artistic touch to the website.
 
-Website Wireframes
+**Website Wireframes**
 
 ![](./docs/wireframes.png)
 
@@ -120,28 +120,26 @@ Website Wireframes
 ![](./docs/workflowuser.jpg)
 
 1. As Admin, I should be able to see a Dashboard of customers orders when I log into the website. So that I can easily process my orders.
-
 2. As Admin, I should be able to look at customer order in detail and understand what are the special requirements of each customer. So that I can understand my customer needs properly and can address them.
-
 3. As Admin, I should be able to get customer contact details. So that I can contact my customer when the order is ready.
 
 ![](./docs/workflowadmin.jpg)
 
-- Menu Design
+**Menu Design**
 
-  As client didn't have any existing menu and flavour list, we designed cake flavours and filipino food menu that can be downloaded on Quote page.
+As client didn't have any existing menu and flavour list, we designed cake flavours and filipino food menu that can be downloaded on Quote page.
 
-  ![](./docs/menu.png)
+![](./docs/menu.png)
 
-- Database Entity Relationship Diagrams
-  ![](./docs/ERD.png)
+**Database Entity Relationship Diagrams**
+![](./docs/ERD.png)
 
-- Data Flow Diagram
-  ![](./docs/dataflowdiagram.png)
+**Data Flow Diagram**
+![](./docs/dataflowdiagram.png)
 
-- OO design documentation
-  ![](./docs/OOdesign.png)
-  This is a representation of the OO Design of our application which shows the methods of our data models.
+**OO design documentation**
+![](./docs/OOdesign.png)
+This is a representation of the OO Design of our application which shows the methods of our data models.
 
 ## Tech stack
 
@@ -155,7 +153,7 @@ Prerequisites
 
 - The first thing you need to have is Node.js on your computer.You can download the Node.js installer from the Node.js website at: https://nodejs.org/en/download/
 
-- Once Node.js is installed, open a terminal and enter the `node --version` on command line to verify that it is installed correctly. This application is using Node 10.16.0 version.?
+- Once Node.js is installed, open a terminal and enter the `node --version` on command line to verify that it is installed correctly.
 
 Installation
 
@@ -199,8 +197,6 @@ Installation
 
 ## Project Management
 
-**Timeline**
-
 [Click to view Trello Board](https://trello.com/b/gjJ35BqP/mern-project)
 
 ![](./docs/trello.png)
@@ -213,27 +209,24 @@ We set a Github pull request rule that must be 2 reviewers required for each pul
 **Team Communication**
 ![](./docs/teamcommunication.png)
 
-    <Timeline>
-    - week1
+**Timeline**
+
+    Week1
         * Setting GitHub repository & first deployment(frontend and backend)
         * Project planning
         * The first meeting with the client
-        * Established client communications
+        * Established client communication
         * Setting up the basic code structure (frontend and backend)
 
-    - week2
+    Week2
         * Coding began in earnest
         * MVP completed
         * Started testing
 
-    - week3
+    Week3
         * Refactoring and debugging code
         * Preparing the documentation
         * Submission
-
-    * Screenshots of Trello board(s)
-    * GitHub - discuss the process of pull requests and screenshot
-    * Team Communication screen shots
 
 ## Short Answer questions
 
