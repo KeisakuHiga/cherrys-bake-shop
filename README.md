@@ -201,14 +201,17 @@ Installation
 
 **Timeline**
 
-**Screenshots of Trello board(s)**
+[Click to view Trello Board](https://trello.com/b/gjJ35BqP/mern-project)
+
+![](./docs/trello.png)
 
 **Code Review**
 ![](./docs/githubrules.png)
 
 We set a Github pull request rule that must be 2 reviewers required for each pull request in order to avoid merging conflicts in the development team. This encouraged each member to understand other members code and only then merge the request.
 
-Team Communication screen shots
+**Team Communication**
+![](./docs/teamcommunication.png)
 
 ## Short Answer questions
 
