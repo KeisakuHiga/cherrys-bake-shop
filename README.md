@@ -1,12 +1,13 @@
-#About
-Cherry's Bakeshop and Cafe's(CBC) application allows users to view cake and filipino food options and send their customized requirements by filling a quote form. This is a MERN stack group project utilizing: MongoDb(Mongoose ODM) Express, ReactJS and NodeJS.
+## About Cherry's Bakeshop and Cafe
 
-## Website demo (gif)
+Cherry's Bakeshop and Cafe's(CBC) application allows users to view cake and filipino food options and send their customized requirements by filling a quote form. This is a MERN stack group project utilizing: MongoDb (Mongoose ODM) Express, ReactJS and NodeJS.
+
+## Website (gif)
 
 ## Deployment
 
     Client: https://cherrysbakeshopandcafe.netlify.com
-    Server: https://cherrysbakeshopandcafe.khiga2943.now.sh
+    * Server details are listed in cherrys-bake-shop/frontend/.env.production
 
 ## Github Repository
 
@@ -26,15 +27,18 @@ Cherry's Bakeshop and Cafe's(CBC) application allows users to view cake and fili
 - [Design Process](#design-process)
 - [User stories](#user-stories)
 - [Tech Stack](#tech-stack)
+- [Testing](#testing-evidence)
+- [Testing Evidence](#
 - [Tools & methodologies](#tools)
 - [Short answer questions](#short-answer-questions)
 
 ## Description of application
 
-Problem definition
+/Problem definition/Business requirement
 
-- 90% of young customers are online and
-  This new website would help in spreading the word in the neighborhood and get more customer footfalls and offers online flexibility of sending customizations via Quote form to CBC(Client)in advance.
+- 90% of young customers are online and the client wanted to cater to this market. They had created a facebook page, wherein they were taking orders. However, they also wanted to have a website to showcase their food options and handle frequently asked questions and have a more robust quote information gathering system.
+
+This new website would help in spreading the word in the neighborhood and get more customer footfalls and offers online flexibility of sending customizations via Quote form to CBC(Client)in advance.
 
 Solution
 
@@ -49,10 +53,7 @@ Solution
 - FAQ page: Users can see the frequently asked questions and get answers to their queries
 - Contact page: Users can check the client’s contact information (phone number, address, email address, business hours and the Google map). Users can click on map for a bigger map view, it allows the user to get the directions to the shop.
 
-#### Login details for checking admin functionality
-
-    username: test@gmail.com
-    password: password
+* Admin login details are mentioned in cherrys-bake-shop/frontend/.env.production
 
 - Login page: The admin logs in with the valid email and password. Receives Jason Web Token access token with valid credentials. The incorrect credentials don't generate the token. Once logged-in Admin can access Dashboard to see Quote details
 - Dashboard page: Admin can see all quotes
@@ -66,31 +67,34 @@ We pitched Cherry's Bakeshop & Cafe for becoming our client for our voluntary st
 
 ### Meeting Preparation phase
 
-1. Client Questionnaire - We prepared a questionnaire to understand the business requirements and client business model in detail and shared it with client before the meeting. This helped the client to go through the questions and he was more prepared to answer the questions.
+    1. Client Questionnaire - We prepared a questionnaire to understand the business requirements and client business model in detail and shared it with client before the meeting. This helped the client to go through the questions and he was more prepared to answer the questions.
 
 ![](./docs/clientquestions-1.png)
 ![](./docs/clientquestions-2.png)
 
-- Agenda of the meeting
+    2. Agenda of the meeting
 
-- Moodboard
+    3.  Moodboard
 
-- Sample wireframes
-  ![](./docs/initialwireframes.png)
+    4.  Sample wireframes
 
-  Client minutes: ![](./docs/clientminutes.png)
-  Client diary: https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing
+![](./docs/initialwireframes.png)
 
-- Client signOff
-  ![](./docs/clientfinalsignoff.png)
+Client minutes: ![](./docs/clientminutes.png)
+Client diary: https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing
+
+- Client testimonial
+  ![](./docs/clienttestimonial.png)
 
 ## Design process
 
-- Color palette
+To balance bright red client logo, we have utilized a simple colour theme of purple with timeless white and black. 'Playball' font lends the cursive and artistic touch to the website.
+
+Website Wireframes
+
+![](./docs/wireframes.png)
 
 ## User stories
-
-![](./docs/workflowuser.jpg)
 
 1.  As a User, I should be able to see the business phone number on every page when I navigate the website. So that I can call them if I need to make a booking or ask for a quote.
 2.  As a User, I want to see a menu or gallery of cake pictures. So that I can decided what I want.
@@ -99,7 +103,7 @@ We pitched Cherry's Bakeshop & Cafe for becoming our client for our voluntary st
 5.  As a User, I want to place an order with special instructions. So that the shop can create a cake according to my requirements.
 6.  As a User, I want to see the store's facebook and instagram links. So that I can look at cake inspirations.
 
-![](./docs/workflowadmin.jpg)
+![](./docs/workflowuser.jpg)
 
 1. As Admin, I should be able to see a Dashboard of customers orders when I log into the website. So that I can easily process my orders.
 
@@ -107,23 +111,19 @@ We pitched Cherry's Bakeshop & Cafe for becoming our client for our voluntary st
 
 3. As Admin, I should be able to get customer contact details. So that I can contact my customer when the order is ready.
 
-Wireframes
-
-![](./docs/wireframes.png)
+![](./docs/workflowadmin.jpg)
 
 - Menu Design
-  We designed Menu for the client as they
+  As client didn't have any existing menu and flavour list, we designed cake flavours and filipino food menu that can be downloaded on Quote page.
 
   ![](./docs/cakemenu.png)
   ![](./docs/filipinomenu.png)
 
 - Database Entity Relationship Diagrams
 
-K to share?
+* Data Flow Diagram
 
-- Data Flow Diagram
-
-- OO design documentation
+* OO design documentation
 
 ## Tech stack
 
@@ -131,7 +131,7 @@ CherryBakeshop application is built using a simple REST API with NodeJS and Expr
 
 PostMan has been used for testing. Jest has been used for Test suites. UI has been made in React.
 
-## Instructions on how to setup, configure, deploy and use the Application.
+## Instructions
 
 Prerequisites
 
@@ -141,7 +141,7 @@ Prerequisites
 
 Installation
 
-1. You need to open the git repository in a code editor of your choice. We are using visual studio code. Download link: https://code.visualstudio.com/docs/setup/mac
+1. You need to open the repository in a code editor.
 
 2. cd into `backend folder` and run below command.
    `npm install`
@@ -159,6 +159,25 @@ Installation
 
 7. You can now view frontend in the browser on http://localhost:3000
    `npm start`
+
+## Testing
+
+1. To run tests, cd into `backend` and run below command.
+   `npm test`
+
+2. This will start the test suites and you will see total tests with coverage.
+
+### Testing evidence
+
+- Backend testing coverage: ![](./docs/testcoverage.png)
+
+- Testing checklist: ![](./docs/testingchecklist.png)
+
+- Development Manual Testing: https://youtu.be/31PVBlN3Nhk
+
+- Production Manual Testing: https://youtu.be/8K5ywoXLHNc
+
+- Frontend coverage: We have done manual testing of all frontend elements. As, we started working on frontend testing, but didn't get around to fixing our tests. Here's a snapshot ![](./docs/frontendsnapshot.png)
 
 ## Project timeline
 

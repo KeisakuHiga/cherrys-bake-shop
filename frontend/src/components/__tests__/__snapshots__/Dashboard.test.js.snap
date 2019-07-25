@@ -1,23 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Dashboard /> test 1`] = `
-Array [
+<div
+  class="dashcont"
+>
   <h1
     class="dashtitle"
   >
     All Quotes
-  </h1>,
+  </h1>
   <div
     class="sortbutton"
   >
-    <h4>
-      Sorting Buttons
-    </h4>
     <select>
       <option
+        hidden=""
+        selected=""
         value=""
       >
-        #
+        Sort By Category
       </option>
       <option
         value="user.userName.firstName"
@@ -47,9 +48,11 @@ Array [
     </select>
     <select>
       <option
+        hidden=""
+        selected=""
         value=""
       >
-        #
+        Sort Order
       </option>
       <option
         value="asc"
@@ -62,7 +65,7 @@ Array [
         Descending
       </option>
     </select>
-  </div>,
+  </div>
   <div
     class="dashboardcontainer"
   >
@@ -105,6 +108,6 @@ Array [
       </thead>
       <tbody />
     </table>
-  </div>,
-]
+  </div>
+</div>
 `;
