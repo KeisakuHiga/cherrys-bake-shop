@@ -81,6 +81,6 @@ const login = async (req, res) => {
 };
 
 module.exports = {
-  register,
+  // register,
   login
 };
