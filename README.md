@@ -10,12 +10,12 @@ Cherry's Bakeshop and Cafe's(CBC) application allows users to view food options 
 
 ## Deployment
 
-Application: https://cherrysbakeshopandcafe.netlify.com  
+[Application](https://cherrysbakeshopandcafe.netlify.com)  
  _Backend server details are listed in `cherrys-bake-shop/frontend/.env.production`_
 
 ## Github Repository
 
-    https://github.com/KeisakuHiga/cherrys-bake-shop
+[Cherry's Bakeshop](https://github.com/KeisakuHiga/cherrys-bake-shop)
 
 ## Contributors
 
