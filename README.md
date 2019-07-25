@@ -246,7 +246,7 @@ Quality software should be able to be run on many platforms. This is so more peo
 
 ### Testability and Manageability
 
-Quality software needs quality testing. Source code should be testes with the most coverage
+Quality software needs quality testing. Source code should be tested with the most coverage and most efficient testing methods. Software should also be manageable after deployment. A proper
 
 ### Security
 
