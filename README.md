@@ -1,23 +1,27 @@
 ## About Cherry's Bakeshop and Cafe
 
-Cherry's Bakeshop and Cafe's(CBC) application allows users to view cake and filipino food options and send their customized requirements by filling a quote form. This is a MERN stack group project utilizing: MongoDb (Mongoose ODM) Express, ReactJS and NodeJS.
+Cherry's Bakeshop and Cafe's(CBC) application allows users to view food options and send their customized requirements to the client. This is a MERN stack group project utilizing: MongoDb (Mongoose ODM) Express, ReactJS and NodeJS.
 
-## Website (gif)
+# Website gif ?
+
+# Website screenshots ?
+
+# Website Sitemap ?
 
 ## Deployment
 
-    Client: https://cherrysbakeshopandcafe.netlify.com
-    * Server details are listed in cherrys-bake-shop/frontend/.env.production
+[Application](https://cherrysbakeshopandcafe.netlify.com)  
+ _Backend server details are listed in `cherrys-bake-shop/frontend/.env.production`_
 
 ## Github Repository
 
-    https://github.com/KeisakuHiga/cherrys-bake-shop
+[Cherry's Bakeshop](https://github.com/KeisakuHiga/cherrys-bake-shop)
 
 ## Contributors
 
-[KeisakuHiga](https://github.com/KeisakuHiga)
-[SeepGulati](https://github.com/SeepG)
-[RyanRico](https://github.com/rommelryanrico)
+[Keisaku Higa](https://github.com/KeisakuHiga)
+[Seep Gulati](https://github.com/SeepG)
+[Ryan Rico](https://github.com/rommelryanrico)
 
 ## Index
 
@@ -27,20 +31,19 @@ Cherry's Bakeshop and Cafe's(CBC) application allows users to view cake and fili
 - [Design Process](#design-process)
 - [User stories](#user-stories)
 - [Tech Stack](#tech-stack)
-- [Testing](#testing-evidence)
-- [Testing Evidence](#
-- [Tools & methodologies](#tools)
+- [Testing](#testing)
+- [Project Management](#project-management)
 - [Short answer questions](#short-answer-questions)
 
 ## Description of application
 
-/Problem definition/Business requirement
+#### Business requirement
 
-- 90% of young customers are online and the client wanted to cater to this market. They had created a facebook page, wherein they were taking orders. However, they also wanted to have a website to showcase their food options and handle frequently asked questions and have a more robust quote information gathering system.
+> 90% of young customers are online and Client wanted to engage with this audience. Though, Client created a Facebook page, wherein they were taking orders via messages, but they had to manually write the quote requirements in their order book. Client thought it would be great to have a simple website that can showcase available food options and have automated quotes information gathering system. Client believed that this new website would help in spreading the word in the neighborhood and get more customer footfalls.
 
-This new website would help in spreading the word in the neighborhood and get more customer footfalls and offers online flexibility of sending customizations via Quote form to CBC(Client)in advance.
+#### Solution
 
-Solution
+Project team worked on the basis of client requirements and created the application which will offer customers the flexibility of sending online customizations via Quote form to Cherry's Bakeshop. It will also help client in fielding frequently asked queries which they used to get on phone and facebook.
 
 ## Functionality
 
@@ -53,7 +56,7 @@ Solution
 - FAQ page: Users can see the frequently asked questions and get answers to their queries
 - Contact page: Users can check the client’s contact information (phone number, address, email address, business hours and the Google map). Users can click on map for a bigger map view, it allows the user to get the directions to the shop.
 
-* Admin login details are mentioned in cherrys-bake-shop/frontend/.env.production
+_Admin login details are mentioned in `cherrys-bake-shop/frontend/.env.production`_
 
 - Login page: The admin logs in with the valid email and password. Receives Jason Web Token access token with valid credentials. The incorrect credentials don't generate the token. Once logged-in Admin can access Dashboard to see Quote details
 - Dashboard page: Admin can see all quotes
@@ -65,26 +68,27 @@ Solution
 
 We pitched Cherry's Bakeshop & Cafe for becoming our client for our voluntary student project of 3 weeks. The client agreed to our proposal and suggested to have a look at their social media pages for content. We requested for a face-to-face team meeting at their shop to discuss business requirements and sign-off deliverables.
 
-### Meeting Preparation phase
+#### Meeting Preparation
 
-    1. Client Questionnaire - We prepared a questionnaire to understand the business requirements and client business model in detail and shared it with client before the meeting. This helped the client to go through the questions and he was more prepared to answer the questions.
+1. Client Questionnaire - We prepared a questionnaire to understand the business requirements and client business model in detail and shared it with client prior to the meeting. This helped the client to go through the questions and he was more prepared to answer the questions.
 
-![](./docs/clientquestions-1.png)
-![](./docs/clientquestions-2.png)
+   ![](./docs/clientquestions.png)
 
-    2. Agenda of the meeting
+2. Moodboard
 
-    3.  Moodboard
+   (Moodboard screenshots) ??
 
-    4.  Sample wireframes
+3)  Sample wireframes - We
 
 ![](./docs/initialwireframes.png)
 
-Client minutes: ![](./docs/clientminutes.png)
-Client diary: https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing
+#### Post Meeting
 
-- Client testimonial
-  ![](./docs/clienttestimonial.png)
+![](./docs/client-minutes.png)
+
+**Client Diary: https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing**
+
+**Client testimonial ![](./docs/clienttestimonial.png)**
 
 ## Design process
 
@@ -114,16 +118,20 @@ Website Wireframes
 ![](./docs/workflowadmin.jpg)
 
 - Menu Design
+
   As client didn't have any existing menu and flavour list, we designed cake flavours and filipino food menu that can be downloaded on Quote page.
 
-  ![](./docs/cakemenu.png)
-  ![](./docs/filipinomenu.png)
+  ![](./docs/menu.png)
 
 - Database Entity Relationship Diagrams
+  ![](./docs/ERD.png)
 
-* Data Flow Diagram
+- Data Flow Diagram
+  ![](./docs/dataflowdiagram.jpg)
 
-* OO design documentation
+- OO design documentation
+  ![](./docs/OOdesign.png)
+  This is a representation of the OO Design of our application which shows the methods of our data models.
 
 ## Tech stack
 
@@ -179,10 +187,9 @@ Installation
 
 - Frontend coverage: We have done manual testing of all frontend elements. As, we started working on frontend testing, but didn't get around to fixing our tests. Here's a snapshot ![](./docs/frontendsnapshot.png)
 
-## Project timeline
+## Project Management
 
-## Tools
-
+    * Timeline
     * Screenshots of Trello board(s)
     * GitHub - discuss the process of pull requests and screenshot
     * Team Communication screen shots
