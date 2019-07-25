@@ -2,11 +2,15 @@
 
 Cherry's Bakeshop and Cafe's(CBC) application allows users to view food options and send their customized requirements to the client. This is a MERN stack group project utilizing: MongoDb (Mongoose ODM) Express, ReactJS and NodeJS.
 
-# Website gif ?
+**Sitemap ![](./docs/sitemap.png)**
 
-# Website screenshots ?
-
-# Website Sitemap ?
+**Screenshots**
+![](./docs/home.png)
+![](./docs/about.png)
+![](./docs/quote.png)
+![](./docs/contact.png)
+![](./docs/dashboard.png)
+![](./docs/quotedetail.png)
 
 ## Deployment
 
@@ -70,23 +74,29 @@ We pitched Cherry's Bakeshop & Cafe for becoming our client for our voluntary st
 
 #### Meeting Preparation
 
-1. Client Questionnaire - We prepared a questionnaire to understand the business requirements and client business model in detail and shared it with client prior to the meeting. This helped the client to go through the questions and he was more prepared to answer the questions.
+_Client Questionnaire - We prepared a questionnaire to understand the business requirements and business model in detail and shared it with client prior to the meeting. This helped the client to go through the questions and he was more prepared to answer the queries._
+![](./docs/clientquestions.png)
 
-   ![](./docs/clientquestions.png)
+_Moodboard - We explored few design options, that will allow the client to get a better idea about website functionality and possible design approach._
+![](./docs/moodboard-1.png)
+![](./docs/moodboard-2.png)
 
-2. Moodboard
-
-   (Moodboard screenshots) ??
-
-3)  Sample wireframes - We
-
+_Sample wireframes - We created sample wireframes for client's reference._
 ![](./docs/initialwireframes.png)
+
+#### During Meeting
+
+We discussed the questionaire with client and had a detail discussion about their business needs and how Project Team can help.
 
 #### Post Meeting
 
+We shared minutes of the meeting with client to ensure that we all are on same page and there is no misunderstanding about any deliverables.
+
 ![](./docs/client-minutes.png)
 
-**Client Diary: https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing**
+![](./docs/clientdiary.png)
+
+**[Client Diary in detail](https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing)**
 
 **Client testimonial ![](./docs/clienttestimonial.png)**
 
@@ -127,7 +137,7 @@ Website Wireframes
   ![](./docs/ERD.png)
 
 - Data Flow Diagram
-  ![](./docs/dataflowdiagram.jpg)
+  ![](./docs/dataflowdiagram.png)
 
 - OO design documentation
   ![](./docs/OOdesign.png)
@@ -137,7 +147,7 @@ Website Wireframes
 
 CherryBakeshop application is built using a simple REST API with NodeJS and Express. Persistence is provided by MongoDb Atlas as a cloud database.
 
-PostMan has been used for testing. Jest has been used for Test suites. UI has been made in React.
+PostMan has been used for testing the routes. Jest has been used for Test suites. UI has been made in React.
 
 ## Instructions
 
@@ -188,6 +198,20 @@ Installation
 - Frontend coverage: We have done manual testing of all frontend elements. As, we started working on frontend testing, but didn't get around to fixing our tests. Here's a snapshot ![](./docs/frontendsnapshot.png)
 
 ## Project Management
+
+**Timeline**
+
+[Click to view Trello Board](https://trello.com/b/gjJ35BqP/mern-project)
+
+![](./docs/trello.png)
+
+**Code Review**
+![](./docs/githubrules.png)
+
+We set a Github pull request rule that must be 2 reviewers required for each pull request in order to avoid merging conflicts in the development team. This encouraged each member to understand other members code and only then merge the request.
+
+**Team Communication**
+![](./docs/teamcommunication.png)
 
     <Timeline>
     - week1
@@ -245,15 +269,16 @@ Quality software needs quality testing. Source code should be tested with the mo
 
 #### Security
 
-Security is very important for software development as applications can have millions of users. A security policy should be created and be applied by having no entry points. This can include authorization, authentication, network attack protections and data encryption.  
+Security is very important for software development as applications can have millions of users. A security policy should be created and be applied by having no entry points. This can include authorization, authentication, network attack protections and data encryption.
 
-### Q2. What libraries are being used in the app and why? 
-#### Frontend
-##### dependencies
-    "@fortawesome/fontawesome-svg-core": "^1.2.19" - used for social icons 
-    "@fortawesome/free-brands-svg-icons": "^5.9.0" - used for social icons 
+### Q2. What libraries are being used in the app and why?
+
+#### Frontend dependencies
+
+    "@fortawesome/fontawesome-svg-core": "^1.2.19" - used for social icons
+    "@fortawesome/free-brands-svg-icons": "^5.9.0" - used for social icons
     "@fortawesome/free-solid-svg-icons": "^5.9.0" - used for social icons
-    "@fortawesome/react-fontawesome": "^0.1.4" - used for social icons 
+    "@fortawesome/react-fontawesome": "^0.1.4" - used for social icons
     "axios": "^0.19.0" - used for CRUD request from frontend to backend
     "bootstrap": "^4.3.1" - used for frontend styling
     "dotenv": "^8.0.0" - used for the configuration of .env files
@@ -265,8 +290,9 @@ Security is very important for software development as applications can have mil
     "react-moment": "^0.9.2" - used for styling the time
     "react-router-dom": "^5.0.1" - used for loading components in different routes
     "react-scripts": "3.0.1" - used for configuring scripts for create-react-app.
-    
-##### devDependencies
+
+_Development Dependencies_
+
     "chai": "^4.2.0" - used for frontend testing
     "enzyme": "^3.10.0" - used for frontend testing
     "enzyme-adapter-react-16": "^1.14.0" - used for frontend testing
@@ -275,77 +301,80 @@ Security is very important for software development as applications can have mil
     "sinon": "^7.3.2" - used for frontend testing
     "sinon-chai": "^3.3.0" - used for frontend testing
 
-#### Backend
-##### dependencies
-    "@hapi/joi": "^15.1.0",
-    "bcrypt": "^3.0.6",
-    "cors": "^2.8.5",
-    "dotenv": "^8.0.0",
-    "engines": "^0.4.0",
-    "express": "^4.17.1",
-    "faker": "^4.1.0",
-    "jsonwebtoken": "^8.5.1",
-    "moment-timezone": "^0.5.26",
-    "mongoose": "^5.6.3",
-    "nodemon": "^1.19.1",
-    "shortid": "^2.2.14"
+#### Backend Dependencies
 
-##### devDependencies
-    "jest": "^24.8.0",
-    "now": "^15.7.0",
-    "supertest": "^4.0.2"
+    "@hapi/joi": "^15.1.0" - For validation
+    "bcrypt": "^3.0.6" - For hashing the password for security
+    "cors": "^2.8.5" - To enable cross origin resource sharing from server (backend) with Client (frontend)
+    "dotenv": "^8.0.0" - For .env configuration
+    "express": "^4.17.1" - For creating backend server
+    "faker": "^4.1.0" - For creating Fake seed data
+    "jsonwebtoken": "^8.5.1" - For utilizing Jason Web Token authentication
+    "moment-timezone": "^0.5.26" - To change the time to local time
+    "mongoose": "^5.6.3" - To serve as ODM for database queries
+    "nodemon": "^1.19.1" - Dynamic reloading
+    "shortid": "^2.2.14" - To create unique shortId URL for testing purpose
 
-### Q3. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project? 
-  - **Understanding about a client's business needs and requirements**: is necessary because developing a project should be the thing to solve client's business issues. Developer team should be a problem-solving team to create the application that gives the solution for the client, not be a group that just makes an application.
-  - **Well communication with the client during the project**: is must skill. Developers have communication many times with their client to confirm whether or not the project is what the client is expecting during the project. This skill allows you to reflect the client's real needs to the project.
+_Development Dependencies_
 
-  - **Project management skill**: is important for managing the team project. You have to control the each task progress properly over the project as they will be allocated to each team member and it would be hard to integrate all works into one product unless you have this skill.
+    "jest": "^24.8.0" - Testing framework
+    "now": "^15.7.0" - For deploying to now.sh
+    "supertest": "^4.0.2" - To test http requests while running test suites
 
-  - Design approach
-  - RESTful API knowledge
-  - UI development 
-  - Client documentation 
-  - User stories 
-  - Development skills 
-  - Version control 
-  - Project documentation (e.g. README.md) 
-  
+### Q3. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
+
+- **Understanding about a client's business needs and requirements**: is necessary because developing a project should be the thing to solve client's business issues. Developer team should be a problem-solving team to create the application that gives the solution for the client, not be a group that just makes an application.
+- **Well communication with the client during the project**: is must skill. Developers have communication many times with their client to confirm whether or not the project is what the client is expecting during the project. This skill allows you to reflect the client's real needs to the project.
+
+- **Project management skill**: is important for managing the team project. You have to control the each task progress properly over the project as they will be allocated to each team member and it would be hard to integrate all works into one product unless you have this skill.
+
+- Design approach
+- RESTful API knowledge
+- UI development
+- Client documentation
+- User stories
+- Development skills
+- Version control
+- Project documentation (e.g. README.md)
 
 ### Q4. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
 
 #### Hard skills
-* *Vanilla Javascript*: understanding functional programming principles, asynchronous code, and callbacks.
-* *Document Databases (MongoDB/Mongoose)*: converting a relational databse structure into document database.
-* *Express API/Server*: creating and using middleware to manage requests and respsonses to public and protected routes.
-* *React.js*: working with multiple layers of components and create-react-app folder structure.
-* *Node.js*: using Node.js to run multiple localhost ports on one computer.
-* *NPM and NPM libraries*: researching and applying NPM packages and libraries to our application.
-* *Testing(Frontend: Mocha, Chai, Enzyme, Backend: Jest, Supertest)*: required to test our application code.
-* *GitHub/GitHub*: each of us were required to create branchs, push to master, peer to peer code review and merging or resolving conflicts in GitHub.
-* *HTML5*: compiling semantic HTML in React components logic.
-* *CSS3*: using Sass compilers to create mixins and global variables to refactor code.
-* *Figma*: used as a design tool for wireframes and assets.
-* *Trello*: breakdown of tasks following Agile methodologies.
-* *Distributed Deployment*: client, server and database deployed to Netlify, Now, MongoDB Atlas respectively.
+
+- _Vanilla Javascript_: Understanding functional programming principles, asynchronous code, and callbacks.
+- _Document Databases (MongoDB/Mongoose)_: Converting a relational databse structure into document database.
+- _Express API/Server_: Creating and using middleware to manage requests and respsonses to public and protected routes.
+- _React.js_: Working with multiple layers of components and create-react-app folder structure.
+- _Node.js_: Using Node.js to run multiple localhost ports on one computer.
+- _NPM and NPM libraries_: Researching and applying NPM packages and libraries to our application.
+- _Testing(Frontend: Mocha, Chai, Enzyme, Backend: Jest, Supertest)_: Required to test our application code.
+- _GitHub/GitHub_: Each of us were required to create branchs, push to master, peer to peer code review and merging or resolving conflicts in GitHub.
+- _HTML5_: Compiling semantic HTML in React components logic.
+- _CSS3_: Using Sass compilers to create mixins and global variables to refactor code.
+- _Figma_: Used as a design tool for wireframes and assets.
+- _Canva_: Used as a design tool for designing Menu.
+- _Trello_: Breakdown of tasks following Agile methodologies.
+- _Distributed Deployment_: Client, server and database deployed to Netlify, Now, MongoDB Atlas respectively.
 
 #### Soft skills
-* Team collaboration
-* Good communication skills
-* Project management
-* Research and development skills
 
-### Q5. Evaluate how effective your knowledge and skills were in this project, using examples, and suggest changes or improvements for future projects of a similar nature? 
+- Team collaboration
+- Good communication skills
+- Project management
+- Research and development skills
 
- In regards to our knowledge and skills as a group, I think we were pretty effective and complimented each others strengths and weaknesses very well. 
- 
- Certain skills or tasks that a person was lacking was covered by another team member. We worked together on several difficult tasks even when we didn't have much knowledge in those areas.
- 
-  We played by the strengths of respective team members, some members were better at frontend, backend, react or styling, while the others were better at documentation and testing. Everyone in our group was willing to do whatever was necessary to complete the project successfully on time.
-  
-  Some improvements for future projects of a similar nature would be:
-  
-  -  Writing the code which can be tested via unit tests from the start. Testing shouldn't be left for last.
+### Q5. Evaluate how effective your knowledge and skills were in this project, using examples, and suggest changes or improvements for future projects of a similar nature?
 
-  - If we had more time we could have implemented more features. For example a chat room for discussion with customers and the client. 
-  
-  -  Having more accessibility for the client to change content and images.
+In regards to our knowledge and skills as a group, I think we were pretty effective and complimented each others strengths and weaknesses very well.
+
+Certain skills or tasks that a person was lacking was covered by another team member. We worked together on several difficult tasks even when we didn't have much knowledge in those areas.
+
+We played by the strengths of respective team members, some members were better at frontend, backend, react or styling, while the others were better at documentation and testing. Everyone in our group was willing to do whatever was necessary to complete the project successfully on time.
+
+Some improvements for future projects of a similar nature would be:
+
+- Writing the code which can be tested via unit tests from the start. Testing shouldn't be left for last.
+
+- If we had more time we could have implemented more features. For example a chat room for discussion with customers and the client.
+
+- Having more accessibility for the client to change content and images.
