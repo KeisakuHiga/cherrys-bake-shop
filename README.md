@@ -1,13 +1,17 @@
 ## About Cherry's Bakeshop and Cafe
 
-Cherry's Bakeshop and Cafe's(CBC) application allows users to view cake and filipino food options and send their customized requirements by filling a quote form. This is a MERN stack group project utilizing: MongoDb (Mongoose ODM) Express, ReactJS and NodeJS.
+Cherry's Bakeshop and Cafe's(CBC) application allows users to view food options and send their customized requirements to the client. This is a MERN stack group project utilizing: MongoDb (Mongoose ODM) Express, ReactJS and NodeJS.
 
-## Website (gif)
+# Website gif ?
+
+# Website screenshots ?
+
+# Website Sitemap ?
 
 ## Deployment
 
-    Client: https://cherrysbakeshopandcafe.netlify.com
-    * Server details are listed in cherrys-bake-shop/frontend/.env.production
+Application: https://cherrysbakeshopandcafe.netlify.com  
+ _Backend server details are listed in `cherrys-bake-shop/frontend/.env.production`_
 
 ## Github Repository
 
@@ -15,9 +19,9 @@ Cherry's Bakeshop and Cafe's(CBC) application allows users to view cake and fili
 
 ## Contributors
 
-[KeisakuHiga](https://github.com/KeisakuHiga)
-[SeepGulati](https://github.com/SeepG)
-[RyanRico](https://github.com/rommelryanrico)
+[Keisaku Higa](https://github.com/KeisakuHiga)
+[Seep Gulati](https://github.com/SeepG)
+[Ryan Rico](https://github.com/rommelryanrico)
 
 ## Index
 
@@ -28,19 +32,18 @@ Cherry's Bakeshop and Cafe's(CBC) application allows users to view cake and fili
 - [User stories](#user-stories)
 - [Tech Stack](#tech-stack)
 - [Testing](#testing-evidence)
-- [Testing Evidence](#
 - [Tools & methodologies](#tools)
 - [Short answer questions](#short-answer-questions)
 
 ## Description of application
 
-/Problem definition/Business requirement
+#### Business requirement
 
-- 90% of young customers are online and the client wanted to cater to this market. They had created a facebook page, wherein they were taking orders. However, they also wanted to have a website to showcase their food options and handle frequently asked questions and have a more robust quote information gathering system.
+> 90% of young customers are online and Client wanted to engage with this audience. Though, Client created a Facebook page, wherein they were taking orders via messages, but they had to manually write the quote requirements in their order book. Client thought it would be great to have a simple website that can showcase available food options and have automated quotes information gathering system. Client believed that this new website would help in spreading the word in the neighborhood and get more customer footfalls.
 
-This new website would help in spreading the word in the neighborhood and get more customer footfalls and offers online flexibility of sending customizations via Quote form to CBC(Client)in advance.
+#### Solution
 
-Solution
+Project team worked on the basis of client requirements and created the application which will offer customers the flexibility of sending online customizations via Quote form to Cherry's Bakeshop. It will also help client in fielding frequently asked queries which they used to get on phone and facebook.
 
 ## Functionality
 
@@ -53,7 +56,7 @@ Solution
 - FAQ page: Users can see the frequently asked questions and get answers to their queries
 - Contact page: Users can check the client’s contact information (phone number, address, email address, business hours and the Google map). Users can click on map for a bigger map view, it allows the user to get the directions to the shop.
 
-* Admin login details are mentioned in cherrys-bake-shop/frontend/.env.production
+_Admin login details are mentioned in `cherrys-bake-shop/frontend/.env.production`_
 
 - Login page: The admin logs in with the valid email and password. Receives Jason Web Token access token with valid credentials. The incorrect credentials don't generate the token. Once logged-in Admin can access Dashboard to see Quote details
 - Dashboard page: Admin can see all quotes
@@ -189,7 +192,9 @@ Installation
 
 ## Short Answer questions
 
-- What are the most important aspects of quality software? 1. No bugs 2. Easy to use 3. Easy to maintain 4. Scaleability 5. Readable code 6. Includes well comments 7.
+- What are the most important aspects of quality software?
+
+1. No bugs 2. Easy to use 3. Easy to maintain 4. Scaleability 5. Readable code 6. Includes well comments 7.
 
 - What libraries are being used in the app and why? 1. Express 2. React 3. Mongoose 4. Node 5. MongoDB 6. Jest 7. Mocha 8. Chai 9. Json Web Token 10.
 
