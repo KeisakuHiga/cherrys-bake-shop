@@ -189,7 +189,24 @@ Installation
 
 ## Project Management
 
-    * Timeline
+    <Timeline>
+    - week1
+        * Setting GitHub repository & first deployment(frontend and backend)
+        * Project planning
+        * The first meeting with the client
+        * Established client communications
+        * Setting up the basic code structure (frontend and backend)
+
+    - week2
+        * Coding began in earnest
+        * MVP completed
+        * Started testing
+
+    - week3
+        * Refactoring and debugging code
+        * Preparing the documentation
+        * Submission
+
     * Screenshots of Trello board(s)
     * GitHub - discuss the process of pull requests and screenshot
     * Team Communication screen shots
