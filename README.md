@@ -189,7 +189,24 @@ Installation
 
 ## Project Management
 
-    * Timeline
+    <Timeline>
+    - week1
+        * Setting GitHub repository & first deployment(frontend and backend)
+        * Project planning
+        * The first meeting with the client
+        * Established client communications
+        * Setting up the basic code structure (frontend and backend)
+
+    - week2
+        * Coding began in earnest
+        * MVP completed
+        * Started testing
+
+    - week3
+        * Refactoring and debugging code
+        * Preparing the documentation
+        * Submission
+
     * Screenshots of Trello board(s)
     * GitHub - discuss the process of pull requests and screenshot
     * Team Communication screen shots
@@ -233,37 +250,30 @@ Security is very important for software development as applications can have mil
 ### Q2. What libraries are being used in the app and why? 
 #### Frontend
 ##### dependencies
-    "@fortawesome/fontawesome-svg-core": "^1.2.19",
-    "@fortawesome/free-brands-svg-icons": "^5.9.0",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "axios": "^0.19.0",
-    "bootstrap": "^4.3.1",
-    "dotenv": "^8.0.0",
-    "history": "^4.9.0",
-    "jquery": "^3.4.1",
-    "lodash": "^4.17.14",
-    "moment-timezone": "^0.5.26",
-    "netlify-cli": "^2.11.24",
-    "popper.js": "^1.15.0",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.9",
-    "react-component-props-table": "0.0.1",
-    "react-dom": "^16.8.6",
-    "react-moment": "^0.9.2",
-    "react-phone-number-input": "^2.3.20",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
+    "@fortawesome/fontawesome-svg-core": "^1.2.19" - used for social icons 
+    "@fortawesome/free-brands-svg-icons": "^5.9.0" - used for social icons 
+    "@fortawesome/free-solid-svg-icons": "^5.9.0" - used for social icons
+    "@fortawesome/react-fontawesome": "^0.1.4" - used for social icons 
+    "axios": "^0.19.0" - used for CRUD request from frontend to backend
+    "bootstrap": "^4.3.1" - used for frontend styling
+    "dotenv": "^8.0.0" - used for the configuration of .env files
+    "lodash": "^4.17.14" - used for sorting functions in Dashboard page
+    "moment-timezone": "^0.5.26" - used for styling the time, which converts GMT to the local time
+    "netlify-cli": "^2.11.24" - used for deployment of frontend to Netlify
+    "react": "^16.8.6" - used for producing view/controller components of our application
+    "react-dom": "^16.8.6" - used for interacting with the DOM
+    "react-moment": "^0.9.2" - used for styling the time
+    "react-router-dom": "^5.0.1" - used for loading components in different routes
+    "react-scripts": "3.0.1" - used for configuring scripts for create-react-app.
     
 ##### devDependencies
-    "@fortawesome/fontawesome-free": "^5.9.0",
-    "chai": "^4.2.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "enzyme-to-json": "^3.3.5",
-    "react-test-renderer": "^16.8.6",
-    "sinon": "^7.3.2",
-    "sinon-chai": "^3.3.0"
+    "chai": "^4.2.0" - used for frontend testing
+    "enzyme": "^3.10.0" - used for frontend testing
+    "enzyme-adapter-react-16": "^1.14.0" - used for frontend testing
+    "enzyme-to-json": "^3.3.5" - used for frontend testing
+    "react-test-renderer": "^16.8.6" - used for frontend testing
+    "sinon": "^7.3.2" - used for frontend testing
+    "sinon-chai": "^3.3.0" - used for frontend testing
 
 #### Backend
 ##### dependencies
