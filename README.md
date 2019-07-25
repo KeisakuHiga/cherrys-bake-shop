@@ -6,7 +6,7 @@ Cherry's Bakeshop and Cafe's(CBC) application allows users to view food options 
 
 # Website screenshots ?
 
-# Website Sitemap ?
+**Website Sitemap ![](./docs/sitemap.png)**
 
 ## Deployment
 
@@ -70,19 +70,23 @@ We pitched Cherry's Bakeshop & Cafe for becoming our client for our voluntary st
 
 #### Meeting Preparation
 
-1. Client Questionnaire - We prepared a questionnaire to understand the business requirements and client business model in detail and shared it with client prior to the meeting. This helped the client to go through the questions and he was more prepared to answer the questions.
+_Client Questionnaire - We prepared a questionnaire to understand the business requirements and business model in detail and shared it with client prior to the meeting. This helped the client to go through the questions and he was more prepared to answer the queries._
+![](./docs/clientquestions.png)
 
-   ![](./docs/clientquestions.png)
+_Moodboard - We explored few design options, that will allow the client to get a better idea about website functionality and possible design approach._
+![](./docs/moodboard-1.png)
+![](./docs/moodboard-2.png)
 
-2. Moodboard
-
-   (Moodboard screenshots) ??
-
-3)  Sample wireframes - We
-
+_Sample wireframes - We created sample wireframes for client's reference._
 ![](./docs/initialwireframes.png)
 
+#### During Meeting
+
+We discussed the questionaire with client and had a detail discussion about their business needs and how Project Team can help.
+
 #### Post Meeting
+
+We shared minutes of the meeting with client to ensure that we all are on same page and there is no misunderstanding about any deliverables.
 
 ![](./docs/client-minutes.png)
 
@@ -127,7 +131,7 @@ Website Wireframes
   ![](./docs/ERD.png)
 
 - Data Flow Diagram
-  ![](./docs/dataflowdiagram.jpg)
+  ![](./docs/dataflowdiagram.png)
 
 - OO design documentation
   ![](./docs/OOdesign.png)
@@ -137,7 +141,7 @@ Website Wireframes
 
 CherryBakeshop application is built using a simple REST API with NodeJS and Express. Persistence is provided by MongoDb Atlas as a cloud database.
 
-PostMan has been used for testing. Jest has been used for Test suites. UI has been made in React.
+PostMan has been used for testing the routes. Jest has been used for Test suites. UI has been made in React.
 
 ## Instructions
 
