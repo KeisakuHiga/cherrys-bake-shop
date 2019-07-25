@@ -25,15 +25,37 @@ Cherry's Bakeshop and Cafe's(CBC) application allows users to view food options 
 
 ## Index
 
-- [Description of application](#description-of-application)
-- [Functionality](#functionality)
-- [Client communication](#client-communication)
-- [Design Process](#design-process)
-- [User stories](#user-stories)
-- [Tech Stack](#tech-stack)
-- [Testing](#testing)
-- [Project Management](#project-management)
-- [Short answer questions](#short-answer-questions)
+- [Website gif ?](#website-gif)
+- [Website screenshots ?](#website-screenshots)
+- [Website Sitemap ?](#website-sitemap)
+  - [Deployment](#deployment)
+  - [Github Repository](#github-repository)
+  - [Contributors](#contributors)
+  - [Index](#index)
+  - [Description of application](#description-of-application)
+      - [Business requirement](#business-requirement)
+      - [Solution](#solution)
+  - [Functionality](#functionality)
+  - [Client communication](#client-communication)
+      - [Meeting Preparation](#meeting-preparation)
+      - [Post Meeting](#post-meeting)
+  - [Design process](#design-process)
+  - [User stories](#user-stories)
+  - [Tech stack](#tech-stack)
+  - [Instructions](#instructions)
+  - [Testing](#testing)
+    - [Testing evidence](#testing-evidence)
+  - [Project Management](#project-management)
+  - [Short Answer questions](#short-answer-questions)
+    - [Flexibility and Extensibility](#flexibility-and-extensibility)
+    - [Maintainability and Readability](#maintainability-and-readability)
+    - [Performance and Efficiency](#performance-and-efficiency)
+    - [Scalability](#scalability)
+    - [Usability and Accessability](#usability-and-accessability)
+    - [Platform Capability and Portability](#platform-capability-and-portability)
+    - [Testability and Manageability](#testability-and-manageability)
+    - [Security](#security)
+    - [Functionality and Correctness](#functionality-and-correctness)
 
 ## Description of application
 
@@ -198,7 +220,37 @@ Installation
 
 - What are the most important aspects of quality software?
 
-1. No bugs 2. Easy to use 3. Easy to maintain 4. Scaleability 5. Readable code 6. Includes well comments 7.
+### Flexibility and Extensibility
+
+The ability of software to remove, add and modify functionality with ease and without breaking it is important as change is a regular occurence in software development.
+
+### Maintainability and Readability
+
+Making sure your code has useful interface definitions, proper documentation and code documentation makes your software more maintainable, which includes the ability to change error corrections and minor functions.
+
+### Performance and Efficiency
+
+This has to do with the response time of the software. Response time should be at acceptable intervals and not increase depending on the amount of transactions. An optimal performance ratio must be the goal.
+
+### Scalability
+
+
+
+### Usability and Accessability
+
+Simple and easy to use software is best practice as this means less time to complete a task for users. It should also support different accessibility types of control for people with a range of disabilities.
+
+### Platform Capability and Portability
+
+Quality software should be able to be run on many platforms. This is so more people can use it. Portability is the ability for software to be converted to run on other platforms.
+
+### Testability and Manageability
+
+Quality software needs quality testing. Source code should be testes with the most coverage
+
+### Security
+
+### Functionality and Correctness
 
 - What libraries are being used in the app and why? 1. Express 2. React 3. Mongoose 4. Node 5. MongoDB 6. Jest 7. Mocha 8. Chai 9. Json Web Token 10.
 
