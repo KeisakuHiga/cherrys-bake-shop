@@ -31,22 +31,23 @@ class App extends React.Component {
     }
   };
 
-  register = async userInfo => {
-    const url = process.env.REACT_APP_API_URL;
-    try {
-      const response = await axios.post(`${url}/auth/register`, userInfo);
-      const token = response.data.token;
-      localStorage.setItem("token", token);
-      this.setState({
-        authentication: true
-      });
-    } catch (err) {
-      this.setState({
-        authentication: false,
-        errorMessage: `Error => ${err.message}`
-      });
-    }
-  };
+  // WE DECIDED NOT TO IMPLEMENT SIGN UP FUNCTIONALITY BASED ON THE CLIENT REQUEST
+  // register = async userInfo => {
+  //   const url = process.env.REACT_APP_API_URL;
+  //   try {
+  //     const response = await axios.post(`${url}/auth/register`, userInfo);
+  //     const token = response.data.token;
+  //     localStorage.setItem("token", token);
+  //     this.setState({
+  //       authentication: true
+  //     });
+  //   } catch (err) {
+  //     this.setState({
+  //       authentication: false,
+  //       errorMessage: `Error => ${err.message}`
+  //     });
+  //   }
+  // };
 
   createNewQuote = async quoteInfo => {
     const url = process.env.REACT_APP_API_URL;
@@ -96,7 +97,8 @@ class App extends React.Component {
         <Social />
         <Routes 
           authentication={authentication} 
-          register={this.register} 
+          // WE DECIDED NOT TO IMPLEMENT SIGN UP FUNCTIONALITY BASED ON THE CLIENT REQUEST
+          // register={this.register} 
           login={this.login} 
           errorMessage={errorMessage}
           createNewQuote={this.createNewQuote}
