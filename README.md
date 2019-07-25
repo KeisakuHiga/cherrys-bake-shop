@@ -2,9 +2,15 @@
 
 Cherry's Bakeshop and Cafe's(CBC) application allows users to view food options and send their customized requirements to the client. This is a MERN stack group project utilizing: MongoDb (Mongoose ODM) Express, ReactJS and NodeJS.
 
-**Website Sitemap ![](./docs/sitemap.png)**
+**Sitemap ![](./docs/sitemap.png)**
 
-# Website screenshots ?
+**Screenshots**
+![](./docs/home.png)
+![](./docs/about.png)
+![](./docs/quote.png)
+![](./docs/contact.png)
+![](./docs/dashboard.png)
+![](./docs/quotedetail.png)
 
 ## Deployment
 
@@ -88,7 +94,7 @@ We shared minutes of the meeting with client to ensure that we all are on same p
 
 ![](./docs/client-minutes.png)
 
-**Client Diary: https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing**
+**[Client Diary in detail](https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing)**
 
 **Client testimonial ![](./docs/clienttestimonial.png)**
 
@@ -230,11 +236,12 @@ Quality software needs quality testing. Source code should be tested with the mo
 
 ### Security
 
-Security is very important for software development as applications can have millions of users. A security policy should be created and be applied by having no entry points. This can include authorization, authentication, network attack protections and data encryption.  
+Security is very important for software development as applications can have millions of users. A security policy should be created and be applied by having no entry points. This can include authorization, authentication, network attack protections and data encryption.
 
-### Q2. What libraries are being used in the app and why? 
-#### Frontend
-##### dependencies
+### Q2. What libraries are being used in the app and why?
+
+#### Frontend Dependencies
+
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
@@ -256,8 +263,9 @@ Security is very important for software development as applications can have mil
     "react-phone-number-input": "^2.3.20",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1"
-    
-##### devDependencies
+
+_Development Dependencies_
+
     "@fortawesome/fontawesome-free": "^5.9.0",
     "chai": "^4.2.0",
     "enzyme": "^3.10.0",
@@ -267,65 +275,68 @@ Security is very important for software development as applications can have mil
     "sinon": "^7.3.2",
     "sinon-chai": "^3.3.0"
 
-#### Backend
-##### dependencies
-    "@hapi/joi": "^15.1.0",
-    "bcrypt": "^3.0.6",
-    "cors": "^2.8.5",
-    "dotenv": "^8.0.0",
-    "engines": "^0.4.0",
-    "express": "^4.17.1",
-    "faker": "^4.1.0",
-    "jsonwebtoken": "^8.5.1",
-    "moment-timezone": "^0.5.26",
-    "mongoose": "^5.6.3",
-    "nodemon": "^1.19.1",
-    "shortid": "^2.2.14"
+#### Backend Dependencies
 
-##### devDependencies
-    "jest": "^24.8.0",
-    "now": "^15.7.0",
-    "supertest": "^4.0.2"
+    "@hapi/joi": "^15.1.0" - For validation
+    "bcrypt": "^3.0.6" - For hashing the password for security
+    "cors": "^2.8.5" - To enable cross origin resource sharing from server (backend) with Client (frontend)
+    "dotenv": "^8.0.0" - For .env configuration
+    "express": "^4.17.1" - For creating backend server
+    "faker": "^4.1.0" - For creating Fake seed data
+    "jsonwebtoken": "^8.5.1" - For utilizing Jason Web Token authentication
+    "moment-timezone": "^0.5.26" - To change the time to local time
+    "mongoose": "^5.6.3" - To serve as ODM for database queries
+    "nodemon": "^1.19.1" - Dynamic reloading
+    "shortid": "^2.2.14" - To create unique shortId URL for testing purpose
 
-### Q3. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project? 
-  - **Understanding about a client's business needs and requirements**: is necessary because developing a project should be the thing to solve client's business issues. Developer team should be a problem-solving team to create the application that gives the solution for the client, not be a group that just makes an application.
-  - **Well communication with the client during the project**: is must skill. Developers have communication many times with their client to confirm whether or not the project is what the client is expecting during the project. This skill allows you to reflect the client's real needs to the project.
+_Development Dependencies_
 
-  - **Project management skill**: is important for managing the team project. You have to control the each task progress properly over the project as they will be allocated to each team member and it would be hard to integrate all works into one product unless you have this skill.
+    "jest": "^24.8.0" - Testing framework
+    "now": "^15.7.0" - For deploying to now.sh
+    "supertest": "^4.0.2" - To test http requests while running test suites
 
-  - Design approach
-  - RESTful API knowledge
-  - UI development 
-  - Client documentation 
-  - User stories 
-  - Development skills 
-  - Version control 
-  - Project documentation (e.g. README.md) 
-  
+### Q3. A team is about to engage in a project, developing a website for a small business. What knowledge and skills would they need in order to develop the project?
+
+- **Understanding about a client's business needs and requirements**: is necessary because developing a project should be the thing to solve client's business issues. Developer team should be a problem-solving team to create the application that gives the solution for the client, not be a group that just makes an application.
+- **Well communication with the client during the project**: is must skill. Developers have communication many times with their client to confirm whether or not the project is what the client is expecting during the project. This skill allows you to reflect the client's real needs to the project.
+
+- **Project management skill**: is important for managing the team project. You have to control the each task progress properly over the project as they will be allocated to each team member and it would be hard to integrate all works into one product unless you have this skill.
+
+- Design approach
+- RESTful API knowledge
+- UI development
+- Client documentation
+- User stories
+- Development skills
+- Version control
+- Project documentation (e.g. README.md)
 
 ### Q4. Within your own project what knowledge or skills were required to complete your project, and overcome challenges?
 
 #### Hard skills
-* *Vanilla Javascript*: understanding functional programming principles, asynchronous code, and callbacks.
-* *Document Databases (MongoDB/Mongoose)*: converting a relational databse structure into document database.
-* *Express API/Server*: creating and using middleware to manage requests and respsonses to public and protected routes.
-* *React.js*: working with multiple layers of components and create-react-app folder structure.
-* *Node.js*: using Node.js to run multiple localhost ports on one computer.
-* *NPM and NPM libraries*: researching and applying NPM packages and libraries to our application.
-* *Testing(Frontend: Mocha, Chai, Enzyme, Backend: Jest, Supertest)*: required to test our application code.
-* *GitHub/GitHub*: each of us were required to create branchs, push to master, peer to peer code review and merging or resolving conflicts in GitHub.
-* *HTML5*: compiling semantic HTML in React components logic.
-* *CSS3*: using Sass compilers to create mixins and global variables to refactor code.
-* *Figma*: used as a design tool for wireframes and assets.
-* *Trello*: breakdown of tasks following Agile methodologies.
-* *Distributed Deployment*: client, server and database deployed to Netlify, Now, MongoDB Atlas respectively.
+
+- _Vanilla Javascript_: Understanding functional programming principles, asynchronous code, and callbacks.
+- _Document Databases (MongoDB/Mongoose)_: Converting a relational databse structure into document database.
+- _Express API/Server_: Creating and using middleware to manage requests and respsonses to public and protected routes.
+- _React.js_: Working with multiple layers of components and create-react-app folder structure.
+- _Node.js_: Using Node.js to run multiple localhost ports on one computer.
+- _NPM and NPM libraries_: Researching and applying NPM packages and libraries to our application.
+- _Testing(Frontend: Mocha, Chai, Enzyme, Backend: Jest, Supertest)_: Required to test our application code.
+- _GitHub/GitHub_: Each of us were required to create branchs, push to master, peer to peer code review and merging or resolving conflicts in GitHub.
+- _HTML5_: Compiling semantic HTML in React components logic.
+- _CSS3_: Using Sass compilers to create mixins and global variables to refactor code.
+- _Figma_: Used as a design tool for wireframes and assets.
+- _Canva_: Used as a design tool for designing Menu.
+- _Trello_: Breakdown of tasks following Agile methodologies.
+- _Distributed Deployment_: Client, server and database deployed to Netlify, Now, MongoDB Atlas respectively.
 
 #### Soft skills
-* Team collaboration
-* Good communication skills
-* Project management
-* Research and development skills
 
-### Q5. Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature? 
+- Team collaboration
+- Good communication skills
+- Project management
+- Research and development skills
 
-1. 
+### Q5. Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature?
+
+1.
