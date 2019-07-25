@@ -68,23 +68,27 @@ _Admin login details are mentioned in `cherrys-bake-shop/frontend/.env.productio
 
 We pitched Cherry's Bakeshop & Cafe for becoming our client for our voluntary student project of 3 weeks. The client agreed to our proposal and suggested to have a look at their social media pages for content. We requested for a face-to-face team meeting at their shop to discuss business requirements and sign-off deliverables.
 
-### Meeting Preparation phase
+#### Meeting Preparation
 
-    1. Client Questionnaire - We prepared a questionnaire to understand the business requirements and client business model in detail and shared it with client prior to the meeting. This helped the client to go through the questions and he was more prepared to answer the questions.
+1. Client Questionnaire - We prepared a questionnaire to understand the business requirements and client business model in detail and shared it with client prior to the meeting. This helped the client to go through the questions and he was more prepared to answer the questions.
 
-![](./docs/clientquestions.png)
+   ![](./docs/clientquestions.png)
 
-    2.  Moodboard
+2. Moodboard
 
-    3.  Sample wireframes
+   (Moodboard screenshots) ??
+
+3)  Sample wireframes - We
 
 ![](./docs/initialwireframes.png)
 
-Client minutes: ![](./docs/client-minutes.png)
-Client diary: https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing
+#### Post Meeting
 
-- Client testimonial
-  ![](./docs/clienttestimonial.png)
+![](./docs/client-minutes.png)
+
+**Client Diary: https://docs.google.com/document/d/1GXz-Ycdg-1Z4bm33R-HGBCuojCI2e6UWefENzfR5Pio/edit?usp=sharing**
+
+**Client testimonial ![](./docs/clienttestimonial.png)**
 
 ## Design process
 
@@ -125,7 +129,9 @@ Website Wireframes
 - Data Flow Diagram
   ![](./docs/dataflowdiagram.jpg)
 
-* OO design documentation
+- OO design documentation
+  ![](./docs/OOdesign.png)
+  This is a representation of the OO Design of our application which shows the methods of our data models.
 
 ## Tech stack
 
