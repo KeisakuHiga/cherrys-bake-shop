@@ -197,13 +197,38 @@ Installation
 ## Short Answer questions
 
 ### Q1. What are the most important aspects of quality software?
-1. No bugs 
-2. Easy to use 
-3. Easy to maintain 
-4. Scaleability 
-5. Readable code 
-6. Includes well comments 
 
+#### Flexibility and Extensibility
+
+The ability of software to remove, add and modify functionality with ease and without breaking it is important as change is a regular occurence in software development.
+
+#### Maintainability and Readability
+
+Making sure your code has useful interface definitions, proper documentation and code documentation makes your software more maintainable, which includes the ability to change error corrections and minor functions.
+
+#### Performance and Efficiency
+
+This has to do with the response time of the software. Response time should be at acceptable intervals and not increase depending on the amount of transactions. An optimal performance ratio must be the goal.
+
+#### Scalability
+
+Scalability is the ability of software to grow and handle an increasing amount of work/users. Scalable software has the advantage of adapting to the changing needs or demands of its users and clients.
+
+#### Usability and Accessability
+
+Simple and easy to use software is best practice as this means less time to complete a task for users. It should also support different accessibility types of control for people with a range of disabilities.
+
+#### Platform Capability and Portability
+
+Quality software should be able to be run on many platforms. This is so more people can use it. Portability is the ability for software to be converted to run on other platforms.
+
+#### Testability and Manageability
+
+Quality software needs quality testing. Source code should be tested with the most coverage and most efficient testing methods. Software should also be manageable after deployment.
+
+### Security
+
+Security is very important for software development as applications can have millions of users. A security policy should be created and be applied by having no entry points. This can include authorization, authentication, network attack protections and data encryption.  
 
 ### Q2. What libraries are being used in the app and why? 
 #### Frontend
