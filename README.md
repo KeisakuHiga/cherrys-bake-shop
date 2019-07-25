@@ -2,11 +2,9 @@
 
 Cherry's Bakeshop and Cafe's(CBC) application allows users to view food options and send their customized requirements to the client. This is a MERN stack group project utilizing: MongoDb (Mongoose ODM) Express, ReactJS and NodeJS.
 
-# Website gif ?
+**Website Sitemap ![](./docs/sitemap.png)**
 
 # Website screenshots ?
-
-**Website Sitemap ![](./docs/sitemap.png)**
 
 ## Deployment
 
