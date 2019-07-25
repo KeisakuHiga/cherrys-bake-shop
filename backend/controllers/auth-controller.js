@@ -25,35 +25,36 @@ const validationSchema = Joi.object().keys({
     .required()
 });
 
-const register = async (req, res) => {
-  const { firstName, lastName, email, phoneNumber, password } = req.body;
-  if (firstName && lastName && email && phoneNumber && password) {
-    try {
-      await validationSchema.validate(req.body, { abortEarly: false });
-      const query = await User.findOne({ "contact.email": email });
-      if (query === null) {
-        const user = await generateUser(
-          firstName,
-          lastName,
-          email,
-          phoneNumber,
-          password
-        );
-        const token = await generateAccessToken(user);
-        return res.send({ token });
-      } else {
-        return res
-          .status(403)
-          .send("The email you want to register already exists");
-      }
-    } catch (validationError) {
-      const errorMessage = validationError.details.map(d => d.message);
-      res.status(400).send(`Validation Error(s) => ${errorMessage}`);
-    }
-  } else {
-    return res.status(403).send("incorrect credentials");
-  }
-};
+// WE DECIDED NOT TO IMPLEMENT SIGN UP FUNCTIONALITY BASED ON THE CLIENT REQUEST
+// const register = async (req, res) => {
+//   const { firstName, lastName, email, phoneNumber, password } = req.body;
+//   if (firstName && lastName && email && phoneNumber && password) {
+//     try {
+//       await validationSchema.validate(req.body, { abortEarly: false });
+//       const query = await User.findOne({ "contact.email": email });
+//       if (query === null) {
+//         const user = await generateUser(
+//           firstName,
+//           lastName,
+//           email,
+//           phoneNumber,
+//           password
+//         );
+//         const token = await generateAccessToken(user);
+//         return res.send({ token });
+//       } else {
+//         return res
+//           .status(403)
+//           .send("The email you want to register already exists");
+//       }
+//     } catch (validationError) {
+//       const errorMessage = validationError.details.map(d => d.message);
+//       res.status(400).send(`Validation Error(s) => ${errorMessage}`);
+//     }
+//   } else {
+//     return res.status(403).send("incorrect credentials");
+//   }
+// };
 
 const login = async (req, res) => {
   const { email, password } = req.body;
