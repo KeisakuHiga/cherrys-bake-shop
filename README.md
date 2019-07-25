@@ -213,6 +213,28 @@ We set a Github pull request rule that must be 2 reviewers required for each pul
 **Team Communication**
 ![](./docs/teamcommunication.png)
 
+    <Timeline>
+    - week1
+        * Setting GitHub repository & first deployment(frontend and backend)
+        * Project planning
+        * The first meeting with the client
+        * Established client communications
+        * Setting up the basic code structure (frontend and backend)
+
+    - week2
+        * Coding began in earnest
+        * MVP completed
+        * Started testing
+
+    - week3
+        * Refactoring and debugging code
+        * Preparing the documentation
+        * Submission
+
+    * Screenshots of Trello board(s)
+    * GitHub - discuss the process of pull requests and screenshot
+    * Team Communication screen shots
+
 ## Short Answer questions
 
 ### Q1. What are the most important aspects of quality software?
@@ -245,46 +267,39 @@ Quality software should be able to be run on many platforms. This is so more peo
 
 Quality software needs quality testing. Source code should be tested with the most coverage and most efficient testing methods. Software should also be manageable after deployment.
 
-### Security
+#### Security
 
 Security is very important for software development as applications can have millions of users. A security policy should be created and be applied by having no entry points. This can include authorization, authentication, network attack protections and data encryption.
 
 ### Q2. What libraries are being used in the app and why?
 
-#### Frontend Dependencies
+#### Frontend dependencies
 
-    "@fortawesome/fontawesome-svg-core": "^1.2.19",
-    "@fortawesome/free-brands-svg-icons": "^5.9.0",
-    "@fortawesome/free-solid-svg-icons": "^5.9.0",
-    "@fortawesome/react-fontawesome": "^0.1.4",
-    "axios": "^0.19.0",
-    "bootstrap": "^4.3.1",
-    "dotenv": "^8.0.0",
-    "history": "^4.9.0",
-    "jquery": "^3.4.1",
-    "lodash": "^4.17.14",
-    "moment-timezone": "^0.5.26",
-    "netlify-cli": "^2.11.24",
-    "popper.js": "^1.15.0",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.9",
-    "react-component-props-table": "0.0.1",
-    "react-dom": "^16.8.6",
-    "react-moment": "^0.9.2",
-    "react-phone-number-input": "^2.3.20",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
+    "@fortawesome/fontawesome-svg-core": "^1.2.19" - used for social icons
+    "@fortawesome/free-brands-svg-icons": "^5.9.0" - used for social icons
+    "@fortawesome/free-solid-svg-icons": "^5.9.0" - used for social icons
+    "@fortawesome/react-fontawesome": "^0.1.4" - used for social icons
+    "axios": "^0.19.0" - used for CRUD request from frontend to backend
+    "bootstrap": "^4.3.1" - used for frontend styling
+    "dotenv": "^8.0.0" - used for the configuration of .env files
+    "lodash": "^4.17.14" - used for sorting functions in Dashboard page
+    "moment-timezone": "^0.5.26" - used for styling the time, which converts GMT to the local time
+    "netlify-cli": "^2.11.24" - used for deployment of frontend to Netlify
+    "react": "^16.8.6" - used for producing view/controller components of our application
+    "react-dom": "^16.8.6" - used for interacting with the DOM
+    "react-moment": "^0.9.2" - used for styling the time
+    "react-router-dom": "^5.0.1" - used for loading components in different routes
+    "react-scripts": "3.0.1" - used for configuring scripts for create-react-app.
 
 _Development Dependencies_
 
-    "@fortawesome/fontawesome-free": "^5.9.0",
-    "chai": "^4.2.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "enzyme-to-json": "^3.3.5",
-    "react-test-renderer": "^16.8.6",
-    "sinon": "^7.3.2",
-    "sinon-chai": "^3.3.0"
+    "chai": "^4.2.0" - used for frontend testing
+    "enzyme": "^3.10.0" - used for frontend testing
+    "enzyme-adapter-react-16": "^1.14.0" - used for frontend testing
+    "enzyme-to-json": "^3.3.5" - used for frontend testing
+    "react-test-renderer": "^16.8.6" - used for frontend testing
+    "sinon": "^7.3.2" - used for frontend testing
+    "sinon-chai": "^3.3.0" - used for frontend testing
 
 #### Backend Dependencies
 
@@ -348,6 +363,18 @@ _Development Dependencies_
 - Project management
 - Research and development skills
 
-### Q5. Evaluate how effective your knowledge and skills were this project, using examples, and suggest changes or improvements for future projects of a similar nature?
+### Q5. Evaluate how effective your knowledge and skills were in this project, using examples, and suggest changes or improvements for future projects of a similar nature?
 
-1.
+In regards to our knowledge and skills as a group, I think we were pretty effective and complimented each others strengths and weaknesses very well.
+
+Certain skills or tasks that a person was lacking was covered by another team member. We worked together on several difficult tasks even when we didn't have much knowledge in those areas.
+
+We played by the strengths of respective team members, some members were better at frontend, backend, react or styling, while the others were better at documentation and testing. Everyone in our group was willing to do whatever was necessary to complete the project successfully on time.
+
+Some improvements for future projects of a similar nature would be:
+
+- Writing the code which can be tested via unit tests from the start. Testing shouldn't be left for last.
+
+- If we had more time we could have implemented more features. For example a chat room for discussion with customers and the client.
+
+- Having more accessibility for the client to change content and images.
