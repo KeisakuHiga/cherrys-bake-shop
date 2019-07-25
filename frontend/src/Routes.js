@@ -65,7 +65,7 @@ class Routes extends React.Component {
         <Route path="/Login" render={this.handleLogin} />
 
         {/* WE DECIDED NOT TO IMPLEMENT SIGN UP FUNCTIONALITY BASED ON THE CLIENT REQUEST */}
-        {/* <Route path="/SignUp" render={this.handleSignUp} />
+        {/* <Route path="/SignUp" render={this.handleSignUp} /> */}
         {authentication ? (
           <Route
             path="/DashBoard"
@@ -73,7 +73,7 @@ class Routes extends React.Component {
               return <DashBoard {...props} />;
             }}
           />
-        ) : null} */}
+        ) : null}
 
         {authentication ? (
           <Route
